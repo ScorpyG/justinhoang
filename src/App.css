@@ -1,0 +1,806 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@600&family=Raleway:ital,wght@0,100;1,100&family=Rubik:wght@300&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    height: 100%;
+    display: grid;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.darkmode {
+    color: rgb(255, 255, 255);
+    background: rgb(10, 10, 10);
+}
+
+.btn-darkmode {
+    color: white;
+    background-color: transparent;
+}
+.btn-darkmode:hover {
+    color: black;
+    background-color:white;
+}
+
+/*--------------Light mode toggle switch-------------*/
+label /* (toggle switch) */{
+    position: absolute;
+    /* Dimension of the label  */
+    width: 22px;
+    height: 45px;
+    /* Location of the label */
+    left: 20px;
+    /* top: 45%; */
+    margin-top: 10px;
+    border: 3px solid;
+    border-radius: 20px;
+    transition-duration: 1s;
+}
+label:before /* (The cirle within the label) */ {
+    position: absolute;
+    content: '';
+    /* Dimension of the circle  */
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    /* Up / Down Stage OR Left / Right */
+    right: 1px;
+    top: 1px;
+    border-radius: 50%;
+    
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+label.active:before {
+    top: 24px;
+    background-color: #fff;
+}
+
+/*---------------------Top Navigator--------------------*/
+.wrapper {
+    margin-bottom: 80px;
+}
+.wrapper a {
+    color:#fff;
+}
+.nav-button {
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin: 10px 10px 0px 0px;
+    overflow: hidden;
+    background: #fff;
+    border: 2px black solid;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease-out;
+}
+
+.active-nav {
+    background-color: #919191;
+}
+
+.wrapper .nav-button:hover {
+    box-shadow: inset 0px 0px 10px 5px #919191;
+    width: 165px;
+}
+
+.wrapper .nav-button .icon{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .nav-button .icon i, .wrapper .nav-button span {
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+}
+
+/*---------------Hero Text / Introduction---------------*/
+#body-text {
+    min-height: calc(100vh - 40px - 40px - 73px - 90px - 35px);
+}
+
+#body-text {
+    width: 40%;
+
+    display: grid;
+    place-content: center; 
+
+    margin: auto;
+     
+    font-size: 28px;
+    text-align: left;
+}
+
+.hero-text h1, .hero-text h2, .hero-text p {
+    margin: 15px 0px 15px 0px;
+    cursor: default;
+}
+
+.hero-text h2 {
+    -webkit-animation: moveInLeft 0.7s ease-out;
+    animation: moveInLeft 0.7s ease-out;
+}
+
+.hero-text h1 {
+    -webkit-animation: moveInLeft 0.8s ease-out;
+    animation: moveInLeft 0.8s ease-out;
+}
+
+.hero-text p {
+    line-height: 40px;
+    font-size: 20px;
+    -webkit-animation: moveInLeft 0.9s ease-out;
+    animation: moveInLeft 0.9s ease-out;
+}
+
+.hero-text a, .about-grid a {
+    margin-top: 10px;
+    transition: 0.5s;
+    -webkit-animation: moveInLeft 1s ease-out;
+    animation: moveInLeft 1s ease-out;
+}
+
+.hero-text a {
+    width: 30%;
+}
+
+.about-grid a {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+}
+
+.high {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.contact-box a {
+    font-family: monospace;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.contact-box a:hover, .hero-text a:hover {
+    letter-spacing: 2px;
+}
+
+.hero-text button {
+    width: 100%;
+}
+
+.contact-box button {
+    background-color: white;
+    font-size: 18px;
+    font-family: monospace;
+    margin: 10px auto 10px auto;
+    width: 25%;
+}
+
+button {
+    border: none;
+    padding: 12px 14px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    border: 2px solid;
+    /* background-color: transparent; */
+    background-color: white;
+    transition-duration: .5s;
+}
+ 
+.card_info button {
+    width: 100%;
+} 
+
+button:hover {
+    transition-duration: .5s;
+    border: 2px solid white;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    word-spacing: 5px;
+}
+
+#clock {
+    text-align: center;
+    width: 50%;
+
+    margin: 30px auto 20px auto;
+
+    font-size: 20px;
+    -webkit-animation: moveInLeft 1s ease-out;
+    animation: moveInLeft 1s ease-out;
+}
+
+/*--------Intro section for 'about me' page---------*/
+.grid-content {
+    width: 60%;
+    padding: 10px 0 30px 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.about-grid h1 {
+    font-size: 30px;
+    text-align: left;
+    margin: 0;
+    -webkit-animation: moveInLeft 0.9s ease-out;
+    animation: moveInLeft 0.9s ease-out;
+}
+
+.about-grid {
+    font-family: 'Rubik', sans-serif;
+    border-left: 2px solid;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 2rem;
+    -webkit-animation: moveInLeft 1s ease-out;
+    animation: moveInLeft 1s ease-out;
+}
+
+.img-grid {
+    margin: 0px auto 0px auto;
+    cursor: crosshair;
+    -webkit-animation: moveInLeft 0.7s ease-out;
+    animation: moveInLeft 0.7s ease-out;
+    transition-duration: 0.5s;
+}
+
+.img-grid:hover {
+    filter: blur(3px);
+}
+
+.img-grid img {
+    border-radius: 50%;
+    transition-duration: 3s;
+}
+
+.technical-skill, .tools {
+    width: 50%;
+    margin: auto;
+    line-height: 2rem;
+    font-size: 18px;
+}
+
+.fun-facts {
+    width: 75%;
+    margin: auto;
+    line-height: 2rem;
+    font-size: 18px;
+}
+
+.tools a {
+    margin: 30px auto 30px auto;
+    filter: grayscale(1);
+    transition: all 0.3s;
+}
+
+.tools a:hover {
+    filter: none;
+    transform: translateY(-5px);
+}
+
+.tools img {
+    width: 50px;
+}
+
+.technical-skill h2, .tools h2, .fun-facts h2{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.skill-set, .skill-set3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.skill-set {
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+
+.skill-set i {
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.hobbies-cards {
+    border: 2px solid #a0a0a0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.hobbies-cards p {
+    margin-bottom: 0;
+}
+
+.hobbies-cards i {
+    font-size: 30px;
+}
+
+.skill-set h3 {
+    margin-top: 5px;
+}
+
+.skill-set2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.skill-set {
+    -webkit-animation: moveInLeft 1.2s ease-out;
+    animation: moveInLeft 1.2s ease-out;
+}
+
+.skill-set2 {
+    -webkit-animation: moveInLeft 1.4s ease-out;
+    animation: moveInLeft 1.4s ease-out;
+}
+
+.skill-set3 {
+    -webkit-animation: moveInLeft 1.6s ease-out;
+    animation: moveInLeft 1.6s ease-out;
+}
+
+/*----------Projects Page----------*/
+.prj_showcase {
+    font-size: 1.4em;
+    font-weight: bold;
+    width: 80%;
+    margin: 30px auto 30px auto;
+    display: grid;
+    max-width: 1350px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+} 
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+
+    -webkit-animation: moveInRight 1.4s ease-out;
+    animation: moveInRight 1.4s ease-out;
+}
+
+.card_content {
+    font-family: monospace;
+    padding: 0px 20px 15px 20px;
+}
+
+.card_content img {
+    width: 100%;
+}
+
+.card_image {
+    width: 100%;
+    display: block;
+}
+
+.card_info {
+    margin-top: auto;
+    padding: 0px 30px 20px 30px;
+    display: grid;
+    gap: 15px;
+    align-items: center;
+}
+
+.lang {
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    margin: 5px 0px 5px 0px;
+}
+
+.prj_showcase h3 {
+    text-align: center;
+    font-size: 21px;
+    transition-duration: .5s;
+}
+
+.prj_showcase h3:hover {
+    word-spacing: 10px;
+}
+
+/*----------Contacts Page----------*/
+.grid-box {
+    min-height: calc(100vh - 277px);
+    place-self: center;
+}
+.random {
+    text-align: center;
+}
+.random h1  {
+    line-height: 2rem;
+    font-size: 30px;
+    margin: 0;
+    animation: moveInRight 1s ease-out;
+    -webkit-animation: moveInRight 1s ease-out;
+}
+.random hr {
+    width: 25%;
+    margin: 2px auto 0px auto;
+}
+.random img {
+    margin-bottom: 20px;
+    /* border-radius: 70%; */
+    animation: moveInRight 1s ease-out;
+    -webkit-animation: moveInRight 1s ease-out;
+}
+
+.contact-box button {
+    animation: moveInLeft 1.4s ease-out;
+    -webkit-animation: moveInLeft 1.4s ease-out;
+}
+
+.content-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/*-------------Error Page-------------*/
+.error {
+    font-size: 40px;
+    height: 71vh;
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+
+.error h1 {
+    transition-duration: 0.3s;
+}
+.error h1:hover {
+    letter-spacing: 10px;
+}
+
+/*----------Random attributes---------*/
+hr {
+    width: 25%;
+}
+
+/*-----------------------Footer----------------------*/
+.media i {
+    transition-duration: 0.3s;
+}
+.media i:hover {
+    transform: translateY(-5px);
+}
+
+.media {
+    margin: 30px 0px 30px 0px;
+    width: auto;
+}
+
+.media a {
+    font-size: 15px;
+    margin: 0px 20px 0px 20px;
+    color: rgb(100, 100, 100);
+    transition-duration: 0.7s;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: rgb(100, 100, 100);
+    letter-spacing: 2px;
+}
+
+/*---------------To-Top Button----------------*/
+#to-top-btn {
+    font-size: 30px;
+
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    outline: none;
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    background-color: white;
+}
+
+#to-top-btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-color: white;
+} 
+
+.btnEnter {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-name: enter_animation;
+}
+
+.btnExit {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-name: exit_animation;
+}
+
+/*-------------Custom Animation------------*/
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-1000px);
+    }
+    
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+} 
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(1000px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes enter_animation {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes exit_animation {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+/*-----------Responsive-----------*/
+@media screen and (min-width: 1200px) {
+    .headings .mid-text {
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    /*--------Home Page Contents---------*/
+    .hero-text a {
+        width: 100%;
+        margin: auto;
+    }
+    .headings .mid-text {
+        display: none;
+    }
+    .about-grid a {
+        width: 80%;
+    }
+
+    /*-------------Project Page-----------*/
+    .prj_showcase {
+        gap: 30px;
+    }
+    .card_info {
+        padding: 0px 20px 20px 20px;
+    }
+
+    /*--------About Page Contents---------*/
+    .technical-skill, .tools, .fun-facts {
+        width: 90%;
+    }
+    .skill-set3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 950px) {
+    .headings .big-text {
+        display: block;
+    }
+    .headings .mid-text {
+        display: none;
+    }
+    .prj_showcase {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-content {
+        width: 80%;
+    }
+    /*--------About Page Contents---------*/
+    .technical-skill, .tools, .fun-facts {
+        width: 90%;
+    }
+    .skill-set, .skill-set2 {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0;
+    }
+    .skill-set3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-box {
+        margin: auto;
+        width: 80%;
+    }
+    .contact-box button {
+        width: 70%;
+    }
+    .about-grid a {
+        width: 100%;
+    }
+    .random img {
+        width: 250px;
+    }
+    .random hr {
+        width: 60%;
+    }
+    .random {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 850px) {
+    #body-text {
+        width: 70%;
+    }
+    .error {
+        font-size: 18px;
+        height: 65vh;
+    }
+    .img-grid {
+        filter: blur(0px);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /*---------Shared Components Responsive----------*/
+    #to-top-btn {
+        display: none;
+        visibility: hidden;
+    }
+    .random hr {
+        width: 70%;
+    }
+    .random {
+        margin: 0;
+    }
+    hr {
+        width: 90%;
+    }
+    .media a {
+        font-size: 1em;
+        margin: 0px 10px 0px 10px;
+    }
+    .card:hover {
+        transform: none;
+    }
+    /*---------------Navigator Buttons---------------*/
+    .wrapper {
+        margin-bottom: 100px;
+        width: 100%;
+    }
+    .wrapper .nav-button {
+        display: flex;
+        justify-content: space-between;
+    }
+    .wrapper .nav-button:hover {
+        width: 50px;
+    }
+    .wrapper span {
+        display: none;
+    }
+    /*-------------Index Page Responsive-------------*/
+    #body-text {
+        width: 85%;
+    }
+    header {
+        width: 90%;
+    }
+    .headings .big-text {
+        display: none;
+    }
+    .headings .mid-text {
+        display: block;
+        width: 95%;
+    }
+    .hero-text h1, .hero-text h2, .hero-text p {
+        margin: 10px 0px 10px 0px;
+    }
+    .hero-text a {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /*-------------About Page Responsive-------------*/
+    .grid-content {
+        grid-gap: 2rem;
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+    .about-grid {
+        border: none;
+        padding: 0;
+    }
+
+    .technical-skill h2, .tools h2, .fun-facts h2{
+        text-align: center;
+        margin: 0px auto 10px auto;
+    }
+
+    .skill-set i {
+        font-size: 40px;
+    }
+    .tools a {
+        margin: 20px auto 20px auto;
+    }
+
+    /*------------Projects Page Responsive------------*/
+    .prj_showcase {
+        font-size: 1.2em;
+        width: 90%;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .card {
+        width: auto;
+    }
+    .card_content img {
+        width: 100%;
+    }
+
+    /*-------------Contact Page Responsive------------*/
+    .contact-box {
+        margin: auto;
+        width: 80%;
+    }
+    .contact-box button {
+        width: 90%;
+    }
+    .random img {
+        display: none;
+    }
+}
