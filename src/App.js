@@ -1,5 +1,6 @@
 import "./App.css";
 import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 function App() {
   return (
@@ -34,8 +35,20 @@ function App() {
               <b>Message me!</b>
             </a>
           </p>
-          <p>
-            Currently Coding: <b>JavaScript | ReactJS | Node | HTML & CSS</b>
+          <p className="type-writer">
+            Currently coding with
+            <b>
+              <Typewriter
+                options={{
+                  cursor: " <",
+                  strings: ["JavaScript", "React.js", "Node.js", "HTML & CSS"],
+                  autoStart: true,
+                  loop: true,
+                  skipAddStyles: true,
+                  wrapperClassName: 'type-writer'
+                }}
+              />
+            </b>
           </p>
         </span>
         <span className="mid-text">

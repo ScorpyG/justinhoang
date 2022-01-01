@@ -116,12 +116,18 @@ label.active:before {
 }
 
 /*---------------Hero Text / Introduction---------------*/
+.type-writer {
+    display: inline-flex;
+    margin-top: 0;
+    margin-left: 5px;
+}
+
 #body-text {
     min-height: calc(100vh - 40px - 40px - 73px - 90px - 35px);
 }
 
 #body-text {
-    width: 40%;
+    width: 35%;
 
     display: grid;
     place-content: center; 
@@ -133,7 +139,7 @@ label.active:before {
 }
 
 .hero-text h1, .hero-text h2, .hero-text p {
-    margin: 15px 0px 15px 0px;
+    margin: 10px 0px 10px 0px;
     cursor: default;
 }
 
@@ -711,7 +717,7 @@ footer {
     }
     .media a {
         font-size: 1em;
-        margin: 0px 10px 0px 10px;
+        margin: 0 2rem;
     }
     .card:hover {
         transform: none;
@@ -733,6 +739,7 @@ footer {
     }
     /*-------------Index Page Responsive-------------*/
     #body-text {
+        min-height: calc(100vh - 100px - 50px - 73px - 90px - 35px);
         width: 85%;
     }
     header {

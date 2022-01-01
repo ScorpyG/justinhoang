@@ -36,11 +36,11 @@ const About = () => {
                     </div>
                     <div>
                         <i className="fab fa-react"></i> 
-                        <h3>ReactJS</h3>
+                        <h3>React.js</h3>
                     </div>
                     <div>
                         <i className="fab fa-node"></i> 
-                        <h3>Node/Express</h3>
+                        <h3>Node.js</h3>
                     </div>
                     <div>
                         <i className="fas fa-code"></i> 
