@@ -3,7 +3,7 @@ const projectList = [
         id: 6,
         projectName: "Quote Generator",
         img: "https://media0.giphy.com/media/gtnWcZlcBbz5p6dcYo/giphy.gif?cid=790b7611850c5a5164b5f703fb91ad4450757e943fddc972&rid=giphy.gif&ct=g",
-        tools: "MongoDB, ExpressJS, ReactJS, NodeJS, Heroku",
+        tools: "MongoDB, Express.js, React.js, Node.js",
         description: 
         [
             "Quote generator app that allow user to view and add their own quotes. MongoDB & ExpressJS are used for backend.",
@@ -41,7 +41,7 @@ const projectList = [
         id: 3,
         projectName: "React To-do", 
         img: "https://media4.giphy.com/media/zj2LJMBEgRHPdv6KM5/giphy.gif?cid=790b76114f2b661890f04f0e2ae2df585687fb8b84a07ba7&rid=giphy.gif&ct=g",
-        tools: "ReactJS, MongoDB, NodeJS",
+        tools: "React.js, MongoDB, Node.js",
         description: 
         [
             "Learning the basics of React JS framework, components design and React Hooks.", 
@@ -55,7 +55,7 @@ const projectList = [
         id: 2,
         projectName: "Porfolio", 
         img: "https://media0.giphy.com/media/cPkdorfj6FMZSMNOy9/giphy.gif?cid=790b7611f128f30a95adbec38ca946140b10ce0ac2244394&rid=giphy.gif&ct=g",
-        tools: "ReactJS",
+        tools: "React.js, Node.js",
         description: 
         [
             "Portfolio with multi-responsive pages.",

@@ -41,7 +41,6 @@ label /* (toggle switch) */{
     height: 45px;
     /* Location of the label */
     left: 20px;
-    /* top: 45%; */
     margin-top: 10px;
     border: 3px solid;
     border-radius: 20px;
@@ -68,6 +67,24 @@ label.active:before {
     background-color: #fff;
 }
 
+.theme-btn i {
+    position: absolute;
+    /* Location of the label */
+    left: 20px;
+    top: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.theme-btn i:hover {
+    color: rgb(120, 120, 120);
+}
+
+.theme-btn i:active {
+    transform: translateY(-30px);
+}
+
 /*---------------------Top Navigator--------------------*/
 .wrapper {
     margin-bottom: 80px;
@@ -90,11 +107,11 @@ label.active:before {
 }
 
 .active-nav {
-    background-color: #919191;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
 }
 
 .wrapper .nav-button:hover {
-    box-shadow: inset 0px 0px 10px 5px #919191;
+    box-shadow: inset 0px 0px 10px 5px #3cd3ad;
     width: 165px;
 }
 
@@ -206,7 +223,7 @@ label.active:before {
 }
 
 button {
-    border: none;
+    border: 2px solid;
     padding: 12px 14px;
     text-align: center;
     font-family: monospace;
@@ -214,22 +231,46 @@ button {
     font-weight: bold;
 
     cursor: pointer;
-    border: 2px solid;
-    /* background-color: transparent; */
     background-color: white;
     transition-duration: .5s;
 }
  
 .card_info button {
     width: 100%;
+    border-radius: 30px;
 } 
 
+.prj-button {
+    border: none;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 0%, rgba(134,134,134,1) 100%, rgba(157,157,157,1) 100%, rgba(179,179,179,1) 100%, rgba(255,255,255,1) 100%);
+    color: rgb(255, 255, 255);
+
+    z-index: 1;
+}
+
+.prj-button::before {
+    position: absolute;
+    content: 'Source Code!';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 12px 14px;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
+    transform: translateX(-100%);
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.prj-button:hover::before {
+    z-index: 2;
+    transform: translateX(0);
+}
+
 button:hover {
-    transition-duration: .5s;
-    border: 2px solid white;
-    background-color: rgb(10, 10, 10);
-    color: white;
-    word-spacing: 5px;
+    background: linear-gradient(180deg, #4cb8c4, #3cd3ad);
 }
 
 #clock {
@@ -390,7 +431,8 @@ button:hover {
 .card {
     display: flex;
     flex-direction: column;
-    border: 2px solid;
+    border-radius: 30px;
+    border: 3px solid rgba(100, 100, 100, 0.3);
 
     -webkit-animation: moveInRight 1.4s ease-out;
     animation: moveInRight 1.4s ease-out;
@@ -398,7 +440,7 @@ button:hover {
 
 .card_content {
     font-family: monospace;
-    padding: 0px 20px 15px 20px;
+    padding: 0px 10px 10px 10px;
 }
 
 .card_content img {
@@ -412,7 +454,7 @@ button:hover {
 
 .card_info {
     margin-top: auto;
-    padding: 0px 30px 20px 30px;
+    padding: 0px 20px 20px 20px;
     display: grid;
     gap: 15px;
     align-items: center;
@@ -456,7 +498,6 @@ button:hover {
 }
 .random img {
     margin-bottom: 20px;
-    /* border-radius: 70%; */
     animation: moveInRight 1s ease-out;
     -webkit-animation: moveInRight 1s ease-out;
 }
@@ -542,9 +583,9 @@ footer {
 }
 
 #to-top-btn:hover {
+    border: 1px solid white;
     background-color: rgb(0, 0, 0);
     color: white;
-    border-color: white;
 } 
 
 .btnEnter {
@@ -722,6 +763,11 @@ footer {
     .card:hover {
         transform: none;
     }
+    .theme-btn i {
+        /* Location of the label */
+        left: 15px;
+        top: 25px;
+    }
     /*---------------Navigator Buttons---------------*/
     .wrapper {
         margin-bottom: 100px;
@@ -786,7 +832,7 @@ footer {
     /*------------Projects Page Responsive------------*/
     .prj_showcase {
         font-size: 1.2em;
-        width: 90%;
+        width: 95%;
         display: grid;
         place-items: center;
         grid-template-columns: repeat(1, 1fr);
@@ -794,6 +840,9 @@ footer {
     }
     .card {
         width: auto;
+    }
+    .card_content {
+        padding: 0px 10px 15px 10px;
     }
     .card_content img {
         width: 100%;

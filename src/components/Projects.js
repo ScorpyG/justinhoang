@@ -7,7 +7,7 @@ const Project = (props) => {
         <div className="card">
             <div className="card_content">
                 <h3>{props.projectName}</h3>
-                <a href={props.siteLink} target="_blank" rel="noreferrer">
+                <a href={props.siteLink} target="_blank" rel="noreferrer" className='prj-img'>
                     <Tilt className="Tilt" options={{scale: 1}}>
                         <img src={props.img} alt={"Project #" + props.id}></img>
                     </Tilt>
@@ -19,7 +19,7 @@ const Project = (props) => {
 
             <div className="card_info">
                 <a href={props.repoLink} target="_blank" rel="noreferrer">
-                    <button className="button">💾 Source Code!</button>
+                    <button className="button prj-button">💾</button>
                 </a>
             </div>
         </div>
