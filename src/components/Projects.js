@@ -19,7 +19,7 @@ const Project = (props) => {
 
             <div className="card_info">
                 <a href={props.repoLink} target="_blank" rel="noreferrer">
-                    <button className="button prj-button">💾</button>
+                    <button className="button prj-button">💾 Source Code</button>
                 </a>
             </div>
         </div>
@@ -31,7 +31,6 @@ const Projects = () => {
         <Fragment>
             <div className="grid-box">
                 <div className="random">
-                    
                     <h1>PROJECTS</h1>
                 </div>
                 <div className="prj_showcase">

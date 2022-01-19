@@ -19,13 +19,6 @@ const Contacts = () => {
         </a>
         <br></br>
 
-        <a href="https://my.indeed.com/p/justinh-o9pdfmq" target="_blank" rel="noreferrer">
-          <button className="button">
-            Indeed <i className="fas fa-info" id="icon"></i>
-          </button>
-        </a>
-        <br></br>
-
         <a href="https://www.linkedin.com/in/justin-hoang-56a46b175/" target="_blank" rel="noreferrer">
           <button className="button">
             <i className="fab fa-linkedin" id="icon"></i> LinkedIn

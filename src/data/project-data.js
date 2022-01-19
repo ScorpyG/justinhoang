@@ -1,6 +1,6 @@
 const projectList = [
     {
-        id: 6,
+        id: 1,
         projectName: "Quote Generator",
         img: "https://media0.giphy.com/media/gtnWcZlcBbz5p6dcYo/giphy.gif?cid=790b7611850c5a5164b5f703fb91ad4450757e943fddc972&rid=giphy.gif&ct=g",
         tools: "MongoDB, Express.js, React.js, Node.js",
@@ -13,7 +13,7 @@ const projectList = [
         siteLink: "https://mern-quote-generator.netlify.app/"
     },
     {
-        id: 5,
+        id: 2,
         projectName: "What's the weather?",
         img: "https://media0.giphy.com/media/mYBYX9kp4C7OVRJMYg/giphy.gif?cid=790b76119cfb623eecb11e82f4deb2f96a92b4c4d5b0c86d&rid=giphy.gif&ct=g",
         tools: "HTML, CSS, JS",
@@ -26,7 +26,7 @@ const projectList = [
         siteLink: "https://scorpyg.github.io/How-The-Weather/"
     },
     {
-        id: 4,
+        id: 3,
         projectName: "Ping Pong Py", 
         img: "https://media2.giphy.com/media/4O05pLjLn4HEVdrcrJ/giphy.gif?cid=790b76110ef9a3a0445b4809ebf6c695879eabceb235f460&rid=giphy.gif&ct=g",
         tools: "Python, Pygame",
@@ -38,21 +38,20 @@ const projectList = [
         siteLink: "https://github.com/ScorpyG/Ping-Pong-Py"
     },
     {
-        id: 3,
-        projectName: "React To-do", 
-        img: "https://media4.giphy.com/media/zj2LJMBEgRHPdv6KM5/giphy.gif?cid=790b76114f2b661890f04f0e2ae2df585687fb8b84a07ba7&rid=giphy.gif&ct=g",
-        tools: "React.js, MongoDB, Node.js",
+        id: 4,
+        projectName: "Password Generator", 
+        img: "https://media2.giphy.com/media/qlU5rvYTjizDaHrA9k/giphy.gif?cid=790b76118aaa1fabf782b72fdffcdd4dbfb0605f3113ee72&rid=giphy.gif&ct=g",
+        tools: "HTML, CSS, JS",
         description: 
         [
-            "Learning the basics of React JS framework, components design and React Hooks.", 
-            "Current .ver hasn't yet support back-end."
-            // "Using MongoDB database to store user data and NodeJS to connect both front-end and back-end."
+            "Generate a random sercure password within recommended length and conditions.",
+            "Explore further on how to protect yourself on the internet."
         ],
-        repoLink: "https://github.com/ScorpyG/react-todo-app",
-        siteLink: "https://scorpyg.github.io/react-todo-app/"
+        repoLink: "https://github.com/ScorpyG/password-generator",
+        siteLink: "https://scorpyg.github.io/password-generator/"
     },
     {
-        id: 2,
+        id: 5,
         projectName: "Porfolio", 
         img: "https://media0.giphy.com/media/cPkdorfj6FMZSMNOy9/giphy.gif?cid=790b7611f128f30a95adbec38ca946140b10ce0ac2244394&rid=giphy.gif&ct=g",
         tools: "React.js, Node.js",
@@ -63,19 +62,6 @@ const projectList = [
         ],
         repoLink: "https://github.com/ScorpyG/justinhoang",
         siteLink: "https://justinhoang.netlify.app/"
-    },
-    {
-        id: 1,
-        projectName: "Pagination", 
-        img: "https://media0.giphy.com/media/3hDmYcQ9ip5XZlUrEM/giphy.gif?cid=790b7611310e045467c6ef2e2d85b2a5185398e2aa82af90&rid=giphy.gif&ct=g",
-        tools: "HTML, CSS, JS",
-        description: 
-        [
-            "Using randomuser API to generate info. JS will divide the users list into each seperate page.",
-            "Search method is currently in development. Allow user to search/filter specific users."
-        ],
-        repoLink: "https://github.com/ScorpyG/Project-2-PageNumbering",
-        siteLink: "https://scorpyg.github.io/Project-2-PageNumbering/"
     },
 ]
 

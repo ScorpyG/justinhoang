@@ -74,7 +74,7 @@ label.active:before {
     top: 20px;
     font-size: 2em;
     cursor: pointer;
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
 }
 
 .theme-btn i:hover {
@@ -82,7 +82,7 @@ label.active:before {
 }
 
 .theme-btn i:active {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
 }
 
 /*---------------------Top Navigator--------------------*/
@@ -96,10 +96,11 @@ label.active:before {
     height: 50px;
     width: 50px;
     float: right;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 15px 0px 0px;
     overflow: hidden;
     background: #fff;
-    border: 2px black solid;
+    border: 2px solid rgb(100, 100, 100);
+    box-shadow: 5px 5px rgba(150, 150, 150, 0.6);
     border-radius: 50px;
     cursor: pointer;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -107,11 +108,14 @@ label.active:before {
 }
 
 .active-nav {
-    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
+    background: linear-gradient(-90deg, #d5bcff, #27c8b7,#4cb8c4);
+    background-size: 800% 400%;
+    transition: all .2s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+    
 }
 
 .wrapper .nav-button:hover {
-    box-shadow: inset 0px 0px 10px 5px #3cd3ad;
     width: 165px;
 }
 
@@ -215,62 +219,46 @@ label.active:before {
 }
 
 .contact-box button {
-    background-color: white;
-    font-size: 18px;
+    font-size: 1.3rem;
     font-family: monospace;
     margin: 10px auto 10px auto;
     width: 25%;
 }
 
 button {
-    border: 2px solid;
     padding: 12px 14px;
     text-align: center;
     font-family: monospace;
     font-size: 18px;
     font-weight: bold;
-
-    cursor: pointer;
+    border: 2px solid rgb(150, 150, 150);
+    border-radius: 30px;
+    box-shadow: 5px 5px rgba(150, 150, 150, 0.6);
     background-color: white;
-    transition-duration: .5s;
+    cursor: pointer;
+    transition-duration: 0.3s;
 }
- 
+
+button:hover {
+    color: white;
+    background-color: rgba(150, 150, 150, 0.6);
+    transform: translateY(6px);
+    transform: translateX(6px);
+    box-shadow: none;
+}
+
 .card_info button {
     width: 100%;
     border-radius: 30px;
 } 
 
 .prj-button {
-    border: none;
-    overflow: hidden;
-    position: relative;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 0%, rgba(134,134,134,1) 100%, rgba(157,157,157,1) 100%, rgba(179,179,179,1) 100%, rgba(255,255,255,1) 100%);
-    color: rgb(255, 255, 255);
-
-    z-index: 1;
-}
-
-.prj-button::before {
-    position: absolute;
-    content: 'Source Code!';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 12px 14px;
-    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
-    transform: translateX(-100%);
-    z-index: -1;
-    transition: all 0.5s;
-}
-
-.prj-button:hover::before {
-    z-index: 2;
-    transform: translateX(0);
-}
-
-button:hover {
-    background: linear-gradient(180deg, #4cb8c4, #3cd3ad);
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
 }
 
 #clock {
@@ -432,6 +420,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     border-radius: 30px;
+    box-shadow: 0 15px 4px -5px rgba(100, 100, 100, 0.3);
     border: 3px solid rgba(100, 100, 100, 0.3);
 
     -webkit-animation: moveInRight 1.4s ease-out;
@@ -568,7 +557,8 @@ footer {
     position: fixed;
     bottom: 15px;
     right: 15px;
-
+    border: 2px solid black;
+    box-shadow: none;
     outline: none;
     width: 60px;
     height: 60px;
@@ -583,7 +573,7 @@ footer {
 }
 
 #to-top-btn:hover {
-    border: 1px solid white;
+    border: 2px solid white;
     background-color: rgb(0, 0, 0);
     color: white;
 } 
@@ -601,6 +591,18 @@ footer {
 }
 
 /*-------------Custom Animation------------*/
+@keyframes gradient {
+    0% {
+     background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -760,8 +762,14 @@ footer {
         font-size: 1em;
         margin: 0 2rem;
     }
+    .card {
+        box-shadow: none;
+    }
     .card:hover {
         transform: none;
+    }
+    button {
+        box-shadow: none;
     }
     .theme-btn i {
         /* Location of the label */
@@ -769,6 +777,11 @@ footer {
         top: 25px;
     }
     /*---------------Navigator Buttons---------------*/
+    .nav-button {
+        margin: 10px 10px 0px 0px;
+        border: none;
+        box-shadow: none;
+    }
     .wrapper {
         margin-bottom: 100px;
         width: 100%;
