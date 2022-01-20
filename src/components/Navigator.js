@@ -23,28 +23,28 @@ const Navigator = () => {
           <div className="icon">
             <i className="fa fa-fw fa-envelope"></i>
           </div>
-          <span>contacts()</span>
+          <span>contacts</span>
         </Link>
 
         <Link to="/projects" className={splitLocation[1] === "projects" ? "nav-button active-nav" : "nav-button"}>
           <div className="icon">
             <i className="fas fa-lightbulb"></i>
           </div>
-          <span>projects()</span>
+          <span>projects</span>
         </Link>
 
         <Link to="/about" className={splitLocation[1] === "about" ? "nav-button active-nav" : "nav-button"}>
           <div className="icon">
             <i className="fa fa-fw fa-user"></i>
           </div>
-          <span>about()</span>
+          <span>about</span>
         </Link>
 
         <Link to="/" className={splitLocation[1] === "" ? "nav-button active-nav" : "nav-button"}>
           <div className="icon">
-            <i className="fas fa-undo"></i>
+            <i className="fas fa-star"></i>
           </div>
-          <span>return()</span>
+          <span>home</span>
         </Link>
       </header>
     </>
