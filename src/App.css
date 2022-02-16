@@ -33,6 +33,20 @@ a {
   background-color: white;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, 
+  *::before, 
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /*--------------Light mode toggle switch-------------*/
 label /* (toggle switch) */ {
   position: absolute;
@@ -118,18 +132,16 @@ label.active:before {
     #4cb8c4
   );
   transform: translateX(5px);
-  transform: translateY(5px);
   box-shadow: none;
-  width: 155px;
+  width: 150px;
   background-size: 800% 400%;
   transition: all 0.2s ease-in-out;
   animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
 }
 
 .wrapper .nav-button:hover {
-    transform: translateX(5px);
-    transform: translateY(5px);
-    box-shadow: none;
+  transform: translateX(5px);
+  box-shadow: none;
 }
 
 .wrapper .nav-button .icon {
@@ -343,7 +355,7 @@ button:hover {
 }
 
 .fun-facts {
-  width: 75%;
+  width: 50%;
   margin: auto;
   line-height: 2rem;
   font-size: 18px;
@@ -371,11 +383,19 @@ button:hover {
   margin-bottom: 0;
 }
 
+.skill-set {
+  gap: 20px;
+}
+
 .skill-set,
 .skill-set3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+}
+
+.skill-set3 {
+  margin-top: 60px;
+  place-items: center;
 }
 
 .skill-set {
@@ -389,9 +409,34 @@ button:hover {
 }
 
 .hobbies-cards {
+  color: #ffffff;
+  background-color: rgba(128, 128, 128, 0.9);
+  box-shadow: 4px 4px 12px 2px rgba(90, 90, 90, 0.5);
+  height: 21rem;
+  width: 17rem;
   border: 2px solid #a0a0a0;
   padding: 15px;
   border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+.hobbies-cards:is(:first-child) {
+  margin-left: 4rem;
+  margin-right: 1rem;
+}
+
+.hobbies-cards {
+  margin-left: -9rem;
+}
+
+.hobbies-cards:hover {
+  background-color: rgba(128, 128, 128, 1);
+  transform: translateY(-2.5rem);
+}
+.hobbies-cards:hover ~ .hobbies-cards {
+  margin-right: -9rem;
+  margin-left: 0;
+  transform: translateX(1rem);
 }
 
 .hobbies-cards p {
@@ -820,6 +865,7 @@ footer {
     justify-content: space-between;
   }
   .wrapper .nav-button:hover {
+    transform: none;
     width: 50px;
   }
   .wrapper span {

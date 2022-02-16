@@ -22,7 +22,7 @@ function App() {
 
         <span className="big-text">
           <p>
-            I'm currently looking for a developer position to join a team of
+            I'm a web developer looking to join a team of
             creative people and help solve problems. Be able to have the freedom
             to create and learn is something I always love. If you want to start
             a project,{" "}
