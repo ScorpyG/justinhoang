@@ -2,6 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import ToTop from "./ToTop";
 import ThemeToggle from "./ThemeToggle";
 
+function refreshPage() {
+  setTimeout(()=>{
+    window.location.reload(false);
+  }, 4);
+}
+
 const Navigator = () => {
   //assigning location variable
   const location = useLocation();
@@ -18,29 +24,28 @@ const Navigator = () => {
       <ThemeToggle />
 
       <header className="wrapper">
-
-         <Link to="/contacts" className={splitLocation[1] === "contacts" ? "nav-button active-nav" : "nav-button"} >
+        <Link to="/contacts" className={splitLocation[1] === "contacts" ? "nav-button active-nav" : "nav-button"} onClick={refreshPage}>
           <div className="icon">
             <i className="fa fa-fw fa-envelope"></i>
           </div>
           <span>contacts</span>
         </Link>
 
-        <Link to="/projects" className={splitLocation[1] === "projects" ? "nav-button active-nav" : "nav-button"}>
+        <Link to="/projects" className={splitLocation[1] === "projects" ? "nav-button active-nav" : "nav-button"} onClick={refreshPage}>
           <div className="icon">
             <i className="fas fa-lightbulb"></i>
           </div>
           <span>projects</span>
         </Link>
 
-        <Link to="/about" className={splitLocation[1] === "about" ? "nav-button active-nav" : "nav-button"}>
+        <Link to="/about" className={splitLocation[1] === "about" ? "nav-button active-nav" : "nav-button"} onClick={refreshPage}>
           <div className="icon">
             <i className="fa fa-fw fa-user"></i>
           </div>
           <span>about</span>
         </Link>
 
-        <Link to="/" className={splitLocation[1] === "" ? "nav-button active-nav" : "nav-button"}>
+        <Link to="/" className={splitLocation[1] === "" ? "nav-button active-nav" : "nav-button"} onClick={refreshPage}>
           <div className="icon">
             <i className="fas fa-star"></i>
           </div>
