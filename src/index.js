@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router forceRefresh={true}>
       <Navigator />
       <Switch>
         <Route exact path="/" component={App} />

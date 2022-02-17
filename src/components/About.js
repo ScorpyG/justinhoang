@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 const About = () => {
   return (
-    <Fragment>
+    <>
       <div className="grid-content">
         <div className="img-grid">
           <img
@@ -39,35 +39,35 @@ const About = () => {
         <h2>Technical</h2>
         <div className="skill-set">
           <div>
-            <i className="fab fa-html5"></i>
+            <i className="fab fa-html5" />
             <h3>HTML</h3>
           </div>
           <div>
-            <i className="fab fa-css3-alt"></i>
+            <i className="fab fa-css3-alt" />
             <h3>CSS</h3>
           </div>
           <div>
-            <i className="fab fa-js-square"></i>
+            <i className="fab fa-js-square" />
             <h3>JavaScript</h3>
           </div>
           <div>
-            <i className="fab fa-react"></i>
+            <i className="fab fa-react" />
             <h3>React.js</h3>
           </div>
           <div>
-            <i className="fab fa-node"></i>
+            <i className="fab fa-node" />
             <h3>Node.js</h3>
           </div>
           <div>
-            <i className="fas fa-code"></i>
+            <i className="fas fa-code" />
             <h3>C++</h3>
           </div>
           <div>
-            <i className="fab fa-python"></i>
+            <i className="fab fa-python" />
             <h3>Python</h3>
           </div>
           <div>
-            <i className="fab fa-envira"></i>
+            <i className="fab fa-envira" />
             <h3>MongoDB</h3>
           </div>
         </div>
@@ -89,72 +89,66 @@ const About = () => {
           <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
             <img src="./img/about-logo/git.png" alt="project" />
           </a>
-          <a
-            href="https://www.virtualbox.org/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://www.virtualbox.org/" target="_blank" rel="noreferrer">
             <img src="./img/about-logo/virtualbox.png" alt="project" />
           </a>
           <a href="https://ubuntu.com/" target="_blank" rel="noreferrer">
             <img src="./img/about-logo/ubuntu.png" alt="project" />
           </a>
-          <a
-            href="https://www.microsoft.com/en-ca/windows"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://www.microsoft.com/en-ca/windows" target="_blank" rel="noreferrer">
             <img src="./img/about-logo/win10.png" alt="project" />
           </a>
         </div>
       </section>
 
-      <section className="fun-facts">
-        <h2>Hobbies</h2>
-        <p style={{ textAlign: "center" }}>A bit of...insights!</p>
-        <div className="skill-set3">
-          <div className="hobbies-cards">
-            <i className="fas fa-brain" style={{ color: "pink" }}></i>
-            <p>
-              I like spending time learning different things outside of
-              programming, like psychology, cooking and sports. Which allow me
-              to keep on diversifying my pre-existing skill-sets and improve
-              myself as individual.
-            </p>
-          </div>
-          <div className="hobbies-cards">
-            <i className="fas fa-fan" style={{ color: "lightblue" }}/>
-            <p>
-                By combining both of my background in art and science help me 
-                design interactive art to many techno interfaces allows 
-                me to illuminating and underline the beauty and the complexity of the 
+      <Fragment>
+        <section className="fun-facts">
+          <h2>Hobbies</h2>
+          <p style={{ textAlign: "center" }}>A bit of...insights!</p>
+          <div className="skill-set3">
+            <div className="hobbies-cards">
+              <i className="fas fa-brain" style={{ color: "pink" }}></i>
+              <p>
+                I like spending time learning different things outside of
+                programming, like psychology, cooking and sports. Which allow me
+                to keep on diversifying my pre-existing skill-sets and improve
+                myself as individual.
+              </p>
+            </div>
+            <div className="hobbies-cards">
+              <i className="fas fa-fan" style={{ color: "lightblue" }} />
+              <p>
+                By combining both of my background in art and science help me
+                design interactive art to many techno interfaces allows me to
+                illuminating and underline the beauty and the complexity of the
                 world around us.
-            </p>
+              </p>
+            </div>
+            <div className="hobbies-cards">
+              <i className="fas fa-crown" style={{ color: "orange" }}></i>
+              <p>
+                Growing up playing video games has turned me into a competitive
+                player. With some of that competitiveness being translated into
+                my present working life. So, I always thrive towards becoming
+                the better version of myself.
+              </p>
+            </div>
+            <div className="hobbies-cards">
+              <i
+                className="fas fa-comment-alt"
+                style={{ color: "rgb(231, 137, 255)" }}
+              ></i>
+              <p>
+                Started off with working in retail and customer services. I
+                developed a deep sense of interpersonal perception that helped
+                me communicate with people and taught me to become a better
+                listener and more efficient at problem solving.
+              </p>
+            </div>
           </div>
-          <div className="hobbies-cards">
-            <i className="fas fa-crown" style={{ color: "orange" }}></i>
-            <p>
-              Growing up playing video games has turned me into a competitive
-              player. With some of that competitiveness being translated into my
-              present working life. So, I always thrive towards becoming the
-              better version of myself.
-            </p>
-          </div>
-          <div className="hobbies-cards">
-            <i
-              className="fas fa-comment-alt"
-              style={{ color: "rgb(231, 137, 255)" }}
-            ></i>
-            <p>
-              Started off with working in retail and customer services. I
-              developed a deep sense of interpersonal perception that helped me
-              communicate with people and taught me to become a better listener
-              and more efficient at problem solving.
-            </p>
-          </div>
-        </div>
-      </section>
-    </Fragment>
+        </section>
+      </Fragment>
+    </>
   );
 };
 

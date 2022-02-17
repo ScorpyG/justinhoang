@@ -24,15 +24,6 @@ a {
   background: rgb(10, 10, 10);
 }
 
-.btn-darkmode {
-  color: white;
-  background-color: transparent;
-}
-.btn-darkmode:hover {
-  color: black;
-  background-color: white;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -234,7 +225,6 @@ label.active:before {
 }
 
 .contact-box a {
-  font-family: monospace;
   color: white;
   transition-duration: 0.5s;
 }
@@ -250,28 +240,35 @@ label.active:before {
 
 .contact-box button {
   font-size: 1.3rem;
-  font-family: monospace;
   margin: 10px auto 10px auto;
   width: 25%;
+}
+
+.btn-darkmode {
+  color: white;
+  background-color: transparent;
+}
+.btn-darkmode:hover {
+  color: black;
+  background-color: white;
 }
 
 button {
   padding: 12px 14px;
   text-align: center;
-  font-family: monospace;
+  font-family: "Rubik", sans-serif;
   font-size: 18px;
   font-weight: bold;
   border: 2px solid rgb(150, 150, 150);
   border-radius: 30px;
   box-shadow: 5px 5px rgba(150, 150, 150, 0.6);
-  background-color: white;
   cursor: pointer;
   transition-duration: 0.3s;
 }
 
 button:hover {
   color: white;
-  background-color: rgba(150, 150, 150, 0.6);
+  background-color: black;
   transform: translateY(6px);
   transform: translateX(6px);
   box-shadow: none;
@@ -394,7 +391,7 @@ button:hover {
 }
 
 .skill-set3 {
-  margin-top: 60px;
+  margin-top: 40px;
   place-items: center;
 }
 
@@ -409,6 +406,7 @@ button:hover {
 }
 
 .hobbies-cards {
+  margin-left: -9rem;
   height: 21rem;
   width: 17rem;
   border: 2px solid #a0a0a0;
@@ -422,12 +420,7 @@ button:hover {
   margin-right: 1rem;
 }
 
-.hobbies-cards {
-  margin-left: -9rem;
-}
-
-.hobbies-cards:hover {
-  /* background-color: rgba(128, 128, 128, 1); */
+.hobbies-cards:hover, .hobbies-cards:active {
   transform: translateY(-2.5rem);
 }
 .hobbies-cards:hover ~ .hobbies-cards {
@@ -492,7 +485,7 @@ button:hover {
 }
 
 .card_content {
-  font-family: monospace;
+  font-size: 1.2rem;
   padding: 0px 10px 10px 10px;
 }
 
@@ -813,6 +806,14 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+  * {
+    transform: none;
+    transition:none; 
+    -moz-transition:none; 
+    -o-transition:none; 
+    -webkit-transition:none;
+  }
+
   /*---------Shared Components Responsive----------*/
   #to-top-btn {
     display: none;
@@ -918,6 +919,42 @@ footer {
     margin: 20px auto 20px auto;
   }
 
+  .hobbies-cards {
+    width: 90%;
+    margin: 10px auto 10px auto;
+    height: 20rem;
+    padding: 15px;
+    box-shadow: none;
+
+    transform: none;
+    transition:none; 
+    -moz-transition:none; 
+    -o-transition:none; 
+    -webkit-transition:none;
+  }
+
+  .hobbies-cards:is(:first-child) {
+    margin: 10px auto 10px auto;
+  }
+
+  .hobbies-cards:hover ~ .hobbies-cards {
+    transform: none;
+    margin: 10px auto 10px auto;
+    transition:none; 
+    -moz-transition:none; 
+    -o-transition:none; 
+    -webkit-transition:none;
+  }
+
+  .hobbies-cards:hover, .hobbies-cards:active {
+    transform: none;
+    translate: none;
+    transition:none; 
+    -moz-transition:none; 
+    -o-transition:none; 
+    -webkit-transition:none;
+  }
+
   /*------------Projects Page Responsive------------*/
   .prj_showcase {
     font-size: 1.2em;
@@ -946,6 +983,6 @@ footer {
     width: 90%;
   }
   .random img {
-    display: none;
+    width: 90%;
   }
 }

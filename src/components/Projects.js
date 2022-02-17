@@ -19,7 +19,7 @@ const Project = (props) => {
 
             <div className="card_info">
                 <a href={props.repoLink} target="_blank" rel="noreferrer">
-                    <button className="button prj-button">💾 Source Code</button>
+                    <button className="button prj-button">💾 Git Repository</button>
                 </a>
             </div>
         </div>
