@@ -712,6 +712,42 @@ footer {
   }
 }
 @media screen and (max-width: 1200px) {
+  .hobbies-cards {
+    width: 90%;
+    margin: 10px auto 10px auto;
+    /* height: 10rem; */
+    padding: 15px;
+    box-shadow: none;
+
+    transform: none;
+    transition:none; 
+    -moz-transition:none; 
+    -o-transition:none; 
+    -webkit-transition:none;
+  }
+
+  .hobbies-cards:is(:first-child) {
+    margin: 10px auto 10px auto;
+  }
+
+  .hobbies-cards:hover ~ .hobbies-cards {
+    transform: none;
+    margin: 10px auto 10px auto;
+    transition:none; 
+    -moz-transition:none; 
+    -o-transition:none; 
+    -webkit-transition:none;
+  }
+
+  .hobbies-cards:hover, .hobbies-cards:active {
+    transform: none;
+    translate: none;
+    transition:none; 
+    -moz-transition:none; 
+    -o-transition:none; 
+    -webkit-transition:none;
+  }
+
   /*--------Home Page Contents---------*/
   .hero-text a {
     width: 100%;
@@ -793,6 +829,15 @@ footer {
   }
 }
 @media screen and (max-width: 850px) {
+  .grid-content {
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+  .about-grid {
+    border: none;
+    padding: 0;
+  }
   #body-text {
     width: 70%;
   }
@@ -895,16 +940,6 @@ footer {
   }
 
   /*-------------About Page Responsive-------------*/
-  .grid-content {
-    grid-gap: 2rem;
-    grid-template-columns: 1fr;
-    width: 80%;
-  }
-  .about-grid {
-    border: none;
-    padding: 0;
-  }
-
   .technical-skill h2,
   .tools h2,
   .fun-facts h2 {
@@ -917,42 +952,6 @@ footer {
   }
   .tools a {
     margin: 20px auto 20px auto;
-  }
-
-  .hobbies-cards {
-    width: 90%;
-    margin: 10px auto 10px auto;
-    height: 20rem;
-    padding: 15px;
-    box-shadow: none;
-
-    transform: none;
-    transition:none; 
-    -moz-transition:none; 
-    -o-transition:none; 
-    -webkit-transition:none;
-  }
-
-  .hobbies-cards:is(:first-child) {
-    margin: 10px auto 10px auto;
-  }
-
-  .hobbies-cards:hover ~ .hobbies-cards {
-    transform: none;
-    margin: 10px auto 10px auto;
-    transition:none; 
-    -moz-transition:none; 
-    -o-transition:none; 
-    -webkit-transition:none;
-  }
-
-  .hobbies-cards:hover, .hobbies-cards:active {
-    transform: none;
-    translate: none;
-    transition:none; 
-    -moz-transition:none; 
-    -o-transition:none; 
-    -webkit-transition:none;
   }
 
   /*------------Projects Page Responsive------------*/
