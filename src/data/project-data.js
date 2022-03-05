@@ -29,10 +29,10 @@ const projectList = [
         id: 3,
         projectName: "Ping Pong Py", 
         img: "https://media2.giphy.com/media/4O05pLjLn4HEVdrcrJ/giphy.gif?cid=790b76110ef9a3a0445b4809ebf6c695879eabceb235f460&rid=giphy.gif&ct=g",
-        tools: "Python, Pygame",
+        tools: "Python, PyGame",
         description: [
-            "Ping Pong Py is a 2 player game that was created with Python package called Pygame",
-            "Learning the basics of package dependecies and GUI design."
+            "Ping Pong Py is a 2 player game that was created with Python package called PyGame",
+            "Learning the basics of package dependencies and GUI design."
         ],
         repoLink: "https://github.com/ScorpyG/Ping-Pong-Py",
         siteLink: "https://github.com/ScorpyG/Ping-Pong-Py"
@@ -44,24 +44,11 @@ const projectList = [
         tools: "HTML, CSS, JS",
         description: 
         [
-            "Generate a random sercure password within recommended length and conditions.",
+            "Generate a random secure password within recommended length and conditions.",
             "Explore further on how to protect yourself on the internet."
         ],
         repoLink: "https://github.com/ScorpyG/password-generator",
         siteLink: "https://scorpyg.github.io/password-generator/"
-    },
-    {
-        id: 5,
-        projectName: "Porfolio", 
-        img: "https://media0.giphy.com/media/cPkdorfj6FMZSMNOy9/giphy.gif?cid=790b7611f128f30a95adbec38ca946140b10ce0ac2244394&rid=giphy.gif&ct=g",
-        tools: "React.js, Node.js",
-        description: 
-        [
-            "Portfolio with multi-responsive pages.",
-            "More projects and improvements are being added overtime."
-        ],
-        repoLink: "https://github.com/ScorpyG/justinhoang",
-        siteLink: "https://justinhoang.netlify.app/"
     },
 ]
 
