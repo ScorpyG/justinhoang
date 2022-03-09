@@ -20,7 +20,7 @@ a {
 }
 
 .darkmode {
-  color: rgb(255, 255, 255);
+  color: rgb(220, 220, 220);
   background: rgb(10, 10, 10);
 }
 
@@ -328,19 +328,18 @@ button:hover {
 
 .img-grid {
   margin: 0px auto 0px auto;
-  cursor: crosshair;
+  cursor: pointer;
   -webkit-animation: moveInLeft 0.7s ease-out;
   animation: moveInLeft 0.7s ease-out;
   transition-duration: 0.5s;
 }
 
 .img-grid:hover {
-  filter: blur(3px);
+  filter: blur(2px);
 }
 
 .img-grid img {
-  border-radius: 50%;
-  transition-duration: 3s;
+  border-radius: 10px;
 }
 
 .technical-skill,
@@ -778,6 +777,21 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .grid-content {
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+  .about-grid {
+    border-left: none;
+    border-top: 2px solid;
+    padding: 20px 0 0 0;
+  }
+}
+
+
 @media screen and (max-width: 950px) {
   .headings .big-text {
     display: block;
@@ -829,15 +843,6 @@ footer {
   }
 }
 @media screen and (max-width: 850px) {
-  .grid-content {
-    grid-gap: 2rem;
-    grid-template-columns: 1fr;
-    width: 80%;
-  }
-  .about-grid {
-    border: none;
-    padding: 0;
-  }
   #body-text {
     width: 70%;
   }

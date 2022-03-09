@@ -14,7 +14,7 @@ const Contacts = () => {
       <div className="contact-box" style={{ textAlign: "center" }}>
         <a href="mailto:justinhoang90@gmail.com" target="_blank" rel="noreferrer">
           <button className="button">
-            <i className="fas fa-envelope" id="icon"></i> Email
+            Email <i className="fas fa-envelope" id="icon"></i>
           </button>
         </a>
         <br></br>

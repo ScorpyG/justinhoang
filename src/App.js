@@ -36,7 +36,7 @@ function App() {
             </a>
           </p>
           <p className="type-writer">
-            Currently coding with
+            Currently developing with
             <b>
               <Typewriter
                 options={{

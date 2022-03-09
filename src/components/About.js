@@ -1,26 +1,72 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import Tilt from "react-tilt";
 
+// Profile Image JSX
+const ToggleImage = ({ active, handleChangeActive }) => {
+  const ghostImg =
+    "https://media0.giphy.com/media/LjA6BWuO1vvnE830dT/giphy.gif?cid=790b7611e3742461ede2d7ce38651cf98c05667af7efc2cb&rid=giphy.gif&ct=s";
+  const profilePic = "./img/about-logo/profile.jpg";
+
+  return (
+    <>
+      {active ? (
+        <img
+          width={340}
+          src={profilePic}
+          alt="profile"
+          id="profileImg"
+          onClick={handleChangeActive}
+        />
+      ) : (
+        <img
+          width={340}
+          src={ghostImg}
+          alt="ghost"
+          id="ghostImg"
+          onClick={handleChangeActive}
+        />
+      )}
+    </>
+  );
+};
+
+// About Page JSX
 const About = () => {
+  const [active, setActive] = useState(false);
+
+  const handleChangeActive = () => {
+    setActive((prevImg) => {
+      return !prevImg;
+    });
+  };
+
   return (
     <>
       <div className="grid-content">
         <div className="img-grid">
-          <img
-            src="https://media0.giphy.com/media/LjA6BWuO1vvnE830dT/giphy.gif?cid=790b7611e3742461ede2d7ce38651cf98c05667af7efc2cb&rid=giphy.gif&ct=s"
-            alt="Profile"
-          ></img>
+          <Tilt options={{scale: 1, speed: 1000}}>
+          <ToggleImage
+            active={active}
+            handleChangeActive={handleChangeActive}
+          />
+          </Tilt>
         </div>
         <div className="about-grid">
           <h1>ABOUT ME</h1>
           <p>
-            I'm a developer seeking for opportunity to advance my knowledge and
-            skills within the I.T. world. I'm passionate about computers and
-            love to share my ideas for an innovative world.
+            I'm a software developer seeking for opportunity to advance my
+            knowledge and skills within software development. Besides grinding
+            academic credits, I've enjoyed learning different technologies and
+            building applications to challenge my own intellect, creativity,
+            problem-solving, planning, and organization.
           </p>
           <p>
-            I have the foundation levels of programming languages like C++, C#
-            and Python with some extensive experience with front-end languages
-            like HTML, CSS and JavaScript.
+            Skills/Interests:{" "}
+            <b>
+              JavaScript, HTML, CSS, SASS, React.js, UX/UI, Node, Git, Github,
+              SQL, NoSQL, Python, C++, Next.js, Vite, Rust, DeFi, crypto,
+              Web3.0, SaaS
+            </b>
           </p>
           <a
             href="https://docs.google.com/document/d/1keGfeTA8uYQEpV_unXnjeFpRyvSMBYK9HhW1UxVVdN4/edit?usp=sharing"
@@ -89,13 +135,21 @@ const About = () => {
           <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
             <img src="./img/about-logo/git.png" alt="project" />
           </a>
-          <a href="https://www.virtualbox.org/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.virtualbox.org/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="./img/about-logo/virtualbox.png" alt="project" />
           </a>
           <a href="https://ubuntu.com/" target="_blank" rel="noreferrer">
             <img src="./img/about-logo/ubuntu.png" alt="project" />
           </a>
-          <a href="https://www.microsoft.com/en-ca/windows" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.microsoft.com/en-ca/windows"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="./img/about-logo/win10.png" alt="project" />
           </a>
         </div>
