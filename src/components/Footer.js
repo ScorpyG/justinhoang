@@ -11,7 +11,7 @@ const Footer = () => {
 
       <hr></hr>
 
-      {/* Footer with hyperlinked / respsonive icons */}
+      {/* Footer with hyperlinked / responsive icons */}
       <footer>
         <div className="media">
           <a

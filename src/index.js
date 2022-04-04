@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router forceRefresh={true}>
+    <Router forceRefresh={true}> { /* force refresh on page change to change component theme styling */ }
       <Navigator />
       <Switch>
         <Route exact path="/" component={App} />

@@ -2,6 +2,7 @@ import "./App.css";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 
+// Landing Page component
 function App() {
   return (
     <div className="hero-text" id="body-text">
@@ -38,10 +39,11 @@ function App() {
           <p className="type-writer">
             Currently developing with
             <b>
+              {/* Type writer animation */}
               <Typewriter
                 options={{
                   cursor: " <",
-                  strings: ["JavaScript", "React.js", "Node.js", "HTML & CSS"],
+                  strings: ["JavaScript", "React.js", "Node.js", "HTML & CSS", "Python", "SASS"],
                   autoStart: true,
                   loop: true,
                   skipAddStyles: true,

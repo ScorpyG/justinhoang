@@ -34,6 +34,7 @@ const ToggleImage = ({ active, handleChangeActive }) => {
 const About = () => {
   const [active, setActive] = useState(false);
 
+  // Toggle images on click
   const handleChangeActive = () => {
     setActive((prevImg) => {
       return !prevImg;
@@ -44,11 +45,11 @@ const About = () => {
     <>
       <div className="grid-content">
         <div className="img-grid">
-          <Tilt options={{scale: 1, speed: 1000}}>
-          <ToggleImage
-            active={active}
-            handleChangeActive={handleChangeActive}
-          />
+          <Tilt options={{ scale: 1, speed: 1000 }}>
+            <ToggleImage
+              active={active}
+              handleChangeActive={handleChangeActive}
+            />
           </Tilt>
         </div>
         <div className="about-grid">
@@ -173,9 +174,8 @@ const About = () => {
               <i className="fas fa-fan" style={{ color: "lightblue" }} />
               <p>
                 By combining both of my background in art and science help me
-                design interactive art to many techno interfaces allows me to
-                illuminating and underline the beauty and the complexity of the
-                world around us.
+                design interactive interfaces allows me to illuminating and
+                underline the beauty and the complexity of the world around us.
               </p>
             </div>
             <div className="hobbies-cards">
