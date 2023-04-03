@@ -1,0 +1,47 @@
+@import "../../utilities/constants/variables.module.scss";
+
+.container {
+    @include desktop-view;
+    height: 80px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.logo {
+    align-items: center;
+}
+
+.menu {
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 45px;
+        width: 45px;
+        border-radius: 9px;
+        border: 2px solid $blackout;
+
+        @include standard-transition-time;
+        @include cursor-as-pointer;
+
+        &:hover {
+            fill: $light-theme;
+            background-color: $dark-theme;
+        }
+    }
+
+    .nav {
+
+        li {
+            list-style: none;
+        }
+
+    }
+}

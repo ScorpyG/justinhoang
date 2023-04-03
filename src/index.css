@@ -1,0 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body, main {
+    font-family: "DMSans-Regular";
+    margin: 0;
+    /* screen height - topnav height - footer height */
+    height: calc(100vh - 80px - 80px);
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,79 @@
+@import "../../utilities/constants/variables.module.scss";
+
+.container {
+  @include desktop-view;
+  margin: auto;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    width: 840px;
+
+    img {
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .bio {
+      padding-left: 20px;
+      border-left: 2px solid $blackout;
+
+      p {
+        font-size: $subtitle-size;
+        margin: 10px 0;
+      }
+
+      a {
+        margin: 10px 0;
+        color: $dark-theme;
+        padding: 10px 20px;
+        border: 2px solid $dark-theme;
+        border-radius: 30px;
+        background: transparent;
+        cursor: pointer;
+        @include standard-transition-time;
+
+        &:hover {
+          color: $light-theme;
+          background-color: $dark-theme;
+        }
+      }
+    }
+  }
+
+  .technical {
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+
+    height: 300px;
+    width: 100%;
+    background-color: transparentize($color: #929292, $amount: 0.5);
+
+    @keyframes infiniteCarousel {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(100% ,0 ,0);
+      }
+    }
+
+    .technology {
+      animation: infiniteCarousel 10s linear infinite;
+    }
+  }
+
+  .hobbies {
+    text-align: center;
+  }
+}

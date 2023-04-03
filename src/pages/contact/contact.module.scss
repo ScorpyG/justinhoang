@@ -1,0 +1,83 @@
+@import '../../utilities/constants/variables.module.scss';
+
+.container {
+  @include desktop-view;
+  height: 100%;
+  margin: auto;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .header {
+    hr {
+      margin: 5px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 15px 15px;
+    border-radius: 20px;
+    border: 3px solid $dark-theme;
+    margin-bottom: 10px;
+
+    label {
+      text-align: left;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    input {
+      border: none;
+      border-radius: 5px;
+      background-color: $field;
+      padding: 10px 10px;
+    }
+
+    p {
+      text-align: left;
+      color: $error;
+    }
+
+    textarea {
+      border: none;
+      border-radius: 5px;
+      background-color: $field;
+      padding: 10px 10px;
+      resize: none;
+      min-width: 340px;
+      min-height: 150px;
+      font-family: "DMSans-Regular";
+    }
+  }
+
+  .button {
+    color: $dark-theme;
+    padding: 10px 15px;
+    border: 2px solid $dark-theme;
+    border-radius: 30px;
+    background: transparent;
+    cursor: pointer;
+    @include standard-transition-time;
+
+    &:hover {
+      color: $light-theme;
+      background-color: $dark-theme;
+    }
+  }
+}

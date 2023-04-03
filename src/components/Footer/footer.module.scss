@@ -1,0 +1,42 @@
+@import "../../utilities/constants/variables.module.scss";
+
+.footerContainer {
+    @include desktop-view;
+    height: 80px;
+    padding: 0 20px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footerText {
+        font-size: $standard-font-size;
+        color: $balance-color;
+    }
+
+    .media {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 40px;
+            width: 40px;
+            border: 1px solid $blackout;
+            border-radius: 50%;
+
+            @include standard-transition-time;
+
+            &:hover {
+                transform: translateY(-3px);
+                fill: $light-theme;
+                background-color: $dark-theme;
+            }
+        }
+    }
+}

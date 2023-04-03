@@ -1,0 +1,105 @@
+// ------- Colors ---------
+$dark-theme: #2E2E2E;
+$light-theme: #FFF;
+$blackout: #000;
+$balance-color: #9c9c9c;
+$field: #dbdbdb;
+$error: #ff0000;
+$success: #00ff00;
+
+// -------- Font size ---------
+$mini-font-size: 12px;
+$standard-font-size: 14px;
+$subtitle-size: 1.1rem;
+$title-size: 2em;
+
+/* #region animations */
+@mixin standard-transition-time {
+    transition-duration: .3s;
+}
+
+@mixin animation-transition-time {
+    transition-duration: .5;
+}
+
+@mixin cursor-as-pointer {
+    cursor: pointer;
+}
+/* #endregion animations */
+
+/* #region breakpoints */
+$desktop-max-width: 1512px;
+$desktop-min-width: 1200px;
+$tablet-min-width: 1024px;
+$mobile-min-width: 360px;
+
+@mixin desktop-view {
+    max-width: $desktop-max-width;
+    @media (min-width: $desktop-min-width) and (max-width: $desktop-max-width)  {
+        @content;
+    }
+}
+
+@mixin tablet-view {
+    @media only screen and (min-width: $tablet-min-width) {
+        @content;
+    }
+}
+
+@mixin mobile-view {
+    @media only screen and (min-width: $mobile-min-width) {
+        @content;
+    }
+}
+/* #endregion breakpoints */
+
+/* #region custom-fonts */
+@font-face {
+    font-family: "DMSans-Bold";
+    src: local("DMSansBold"),
+    url('../fonts/DMSans/DMSans-Bold.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-BoldItalic";
+    src: local("DMSansBoldItalic"),
+    url('../fonts/DMSans/DMSans-BoldItalic.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-Italic";
+    src: local("DMSansItalic"),
+    url('../fonts/DMSans/DMSans-Italic.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-Medium";
+    src: local("DMSansMedium"),
+    url('../fonts/DMSans/DMSans-Medium.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-MediumItalic";
+    src: local("DMSansRegular"),
+    url('../fonts/DMSans/DMSans-MediumItalic.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-Regular";
+    src: local("DMSansRegular"),
+    url('../fonts/DMSans/DMSans-Regular.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "Horizon";
+    src: local("Horizon"),
+    url('../fonts/Horizon/Horizon-nMeM.ttf')
+    format("truetype");
+}
+/* #endregion custom-fonts */
