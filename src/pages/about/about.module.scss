@@ -50,26 +50,43 @@
   }
 
   .technical {
-    overflow: hidden;
-    display: flex;
-    margin: 0 auto;
-
-    height: 300px;
     width: 100%;
-    background-color: transparentize($color: #929292, $amount: 0.5);
+    height: 200px;   
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: transparentize($color: #808080, $amount: 0.9);
 
-    @keyframes infiniteCarousel {
-      0% {
-        transform: translate3d(0, 0, 0);
-      }
-
-      100% {
-        transform: translate3d(100% ,0 ,0);
-      }
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    .technology {
-      animation: infiniteCarousel 10s linear infinite;
+    .carousel {
+      display: flex;
+      margin: 0 auto;
+      height: 100%;
+      @include long-transition-time;
+
+      &:hover {
+        will-change: transform; 
+        transform: translateX(-100%);
+      }
+   
+      .technology {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+  
+        width: 15vw;
+  
+        svg {
+          // width: 80px;
+          height: 70px;
+        }
+      }
     }
   }
 
