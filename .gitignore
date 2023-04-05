@@ -2,6 +2,7 @@
 
 # Secret file
 /.netlify
+.env
 
 # dependencies
 /node_modules

@@ -1,5 +1,6 @@
 @import "../../utilities/constants/variables.module.scss";
 
+// TODO: Add breakpoints and make this responsive
 .container {
   @include desktop-view;
   margin: auto;
@@ -51,7 +52,7 @@
 
   .technical {
     width: 100%;
-    height: 200px;   
+    height: 200px;
     overflow-x: auto;
     white-space: nowrap;
     background-color: transparentize($color: #808080, $amount: 0.9);
@@ -67,10 +68,10 @@
       @include long-transition-time;
 
       &:hover {
-        will-change: transform; 
+        will-change: transform;
         transform: translateX(-100%);
       }
-   
+
       .technology {
         display: flex;
         flex-shrink: 0;
@@ -79,12 +80,34 @@
         text-align: center;
         align-items: center;
         gap: 10px;
-  
+
         width: 15vw;
-  
+
         svg {
           // width: 80px;
           height: 70px;
+        }
+      }
+    }
+  }
+
+  .toolbar {
+    min-width: 840px;
+    text-align: center;
+
+    .tools {
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        filter: grayscale(1);
+        @include standard-transition-time;
+
+        &:hover {
+          filter: none;
+          transform: translateY(-5px);
         }
       }
     }

@@ -3,31 +3,29 @@ html {
 }
 
 body, main {
-    font-family: "DMSans-Regular";
-    margin: 0;
-    /* screen height - topnav height - footer height */
-    height: calc(100vh - 80px - 80px);
+  font-family: "DMSans-Regular";
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5 {
-    margin: 0;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-      scroll-behavior: auto;
-    }
-    *, 
-    *::before, 
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01 !important;
-      scroll-behavior: auto !important;
-    }
+  html:focus-within {
+    scroll-behavior: auto;
   }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01 !important;
+    scroll-behavior: auto !important;
+  }
+}

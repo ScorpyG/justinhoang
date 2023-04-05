@@ -1,8 +1,9 @@
 @import "../../src/utilities/constants/variables.module.scss";
 
+// TODO: Add breakpoints and make this responsive
 .hero {
   @include desktop-view;
-  height: 100%;
+  @include center-a-div;
   margin: auto;
 
   display: flex;

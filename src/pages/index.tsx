@@ -17,13 +17,12 @@ export default function Home() {
       <main>
         <div className={styles.hero}>
           <div className={styles.bio}>
-            <h2>Hi, I'm</h2>
+            <h2>Hi, I&apos;m</h2>
             <h1>Justin Hoang</h1>
             <p>
-              I'm a software developer based in Vancouver with a passion for technology
-              from planning, design, write codes and all the way to solve real-life
-              problems. Be able to create and learn along side an innovative team is
-              something I always love.
+              I&apos;m a software developer based in Vancouver with a passion for technology from planning, design,
+              write codes and all the way to solve real-life problems. Be able to create and learn along side an
+              innovative team is something I always love.
             </p>
             <div className={styles.typewriter}>
               Current working with
@@ -34,14 +33,7 @@ export default function Home() {
                     autoStart: true,
                     loop: true,
                     skipAddStyles: true,
-                    strings: [
-                      'TypeScript',
-                      'React.js',
-                      'Next.js',
-                      'GraphQL',
-                      'MongoDB',
-                      'SASS',
-                    ],
+                    strings: ['TypeScript', 'React.js', 'Next.js', 'GraphQL', 'MongoDB', 'SASS'],
                   }}
                 />
               }

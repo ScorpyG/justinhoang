@@ -1,8 +1,9 @@
 @import '../../utilities/constants/variables.module.scss';
 
+// TODO: Add breakpoints and make this responsive
 .container {
   @include desktop-view;
-  height: 100%;
+  @include center-a-div;
   margin: auto;
 
   text-align: center;
