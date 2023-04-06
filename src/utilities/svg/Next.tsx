@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -11,12 +11,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   >
     <path fill="url(#a)" d="M0 0h414v248H0z" />
     <defs>
-      <pattern
-        id="a"
-        patternContentUnits="objectBoundingBox"
-        width={1}
-        height={1}
-      >
+      <pattern id="a" patternContentUnits="objectBoundingBox" width={1} height={1}>
         <use xlinkHref="#b" transform="scale(.00242 .00403)" />
       </pattern>
       <image
@@ -27,6 +22,6 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
       />
     </defs>
   </svg>
-)
+);
 
-export default SvgComponent
+export default SvgComponent;

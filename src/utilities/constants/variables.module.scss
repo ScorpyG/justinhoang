@@ -7,6 +7,11 @@ $field: #dbdbdb;
 $error: #ff0000;
 $success: #00ff00;
 
+$pink: #ffc0cb;
+$lightblue: #add8e6;
+$orange: #ffa500;
+$payton: #81BE83;
+
 // -------- Font size ---------
 $mini-font-size: 12px;
 $standard-font-size: 14px;
@@ -34,7 +39,6 @@ $title-size: 2em;
 @mixin long-transition-time {
     transition-duration: 5s;
 }
-
 /* #endregion animations */
 
 /* #region breakpoints */
@@ -115,3 +119,12 @@ $mobile-min-width: 360px;
     format("truetype");
 }
 /* #endregion custom-fonts */
+
+/* #region exports-color */
+:export {
+    colorPink: $pink;
+    colorLightBlue: $lightblue;
+    colorOrange: $orange;
+    colorPayton: $payton;
+}
+/* #endregion exports-color */

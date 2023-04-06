@@ -65,12 +65,24 @@
       display: flex;
       margin: 0 auto;
       height: 100%;
-      @include long-transition-time;
 
-      &:hover {
-        will-change: transform;
-        transform: translateX(-100%);
+      @keyframes moveLeftToRight {
+        0% {
+          transform: translateX(-80%);
+        } 50% {
+          transform: translateX(0);
+        } 100% {
+          transform: translateX(-80%);
+        }
       }
+
+      animation: moveLeftToRight 30s linear infinite;
+
+      // @include long-transition-time;
+      // &:hover {
+      //   will-change: transform;
+      //   transform: translateX(-100%);
+      // }
 
       .technology {
         display: flex;
@@ -81,7 +93,7 @@
         align-items: center;
         gap: 10px;
 
-        width: 15vw;
+        width: 250px;
 
         svg {
           // width: 80px;
@@ -115,5 +127,13 @@
 
   .hobbies {
     text-align: center;
+    margin: auto;
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 20px;
+    }
   }
 }

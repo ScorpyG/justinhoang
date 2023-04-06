@@ -1,69 +1,69 @@
-import JavaScript from "../svg/JavaScript";
-import TypeScript from "../svg/TypeScript";
-import React from "../svg/React";
-import HTML from "../svg/HTML";
-import CSS from "../svg/CSS";
-import SASS from "../svg/SASS";
-import Python from "../svg/Python";
-import Database from "../svg/Database";
-import Vue from "../svg/Vue";
-import Code from "../svg/Code";
-import Node from "../svg/Node";
-import Next from "../svg/Next";
+import CSS from '../svg/CSS';
+import Code from '../svg/Code';
+import HTML from '../svg/HTML';
+import JavaScript from '../svg/JavaScript';
+import MongoDB from '../svg/MongoDB';
+import Next from '../svg/Next';
+import Node from '../svg/Node';
+import Python from '../svg/Python';
+import React from '../svg/React';
+import SASS from '../svg/SASS';
+import TypeScript from '../svg/TypeScript';
+import Vue from '../svg/Vue';
 
 export type TechnologyLogo = {
   name: string;
   icon: JSX.Element;
-}
+};
 
 const techList = [
   {
     name: 'TypeScript',
-    icon: <TypeScript/> 
+    icon: <TypeScript />,
   },
   {
-    name: "JavaScript",
-    icon: <JavaScript/>,
+    name: 'JavaScript',
+    icon: <JavaScript />,
   },
   {
     name: 'React.js',
-    icon: <React/>
+    icon: <React />,
   },
   {
     name: 'Next.js',
-    icon: <Next/>
+    icon: <Next />,
   },
   {
     name: 'HTML',
-    icon: <HTML/>
+    icon: <HTML />,
   },
   {
     name: 'CSS',
-    icon: <CSS/>
+    icon: <CSS />,
   },
   {
     name: 'SASS',
-    icon: <SASS/>
+    icon: <SASS />,
   },
   {
     name: 'Python',
-    icon: <Python/>
+    icon: <Python />,
   },
   {
     name: 'MongoDB',
-    icon: <Database/>
+    icon: <MongoDB />,
   },
   {
     name: 'Node.js',
-    icon: <Node/>
+    icon: <Node />,
   },
   {
     name: 'Vue.js',
-    icon: <Vue/>
+    icon: <Vue />,
   },
   {
     name: 'C++',
-    icon: <Code/>
+    icon: <Code />,
   },
 ];
 

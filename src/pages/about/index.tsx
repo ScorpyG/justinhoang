@@ -4,8 +4,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { hobbyList } from '../../utilities/constants/cardData';
 import styles from './about.module.scss';
 
+// images
+import HobbyCard from '@/components/Card/HobbyCard';
 import apple from '../../../public/images/apple.png';
 import figma from '../../../public/images/figma.png';
 import ghostImgUrl from '../../../public/images/ghost.gif';
@@ -82,6 +85,14 @@ export default function About() {
     <div className={`${styles.hobbies}`}>
       <h1>Hobbies</h1>
       <p>A bit of...insights!</p>
+
+      <div className={`${styles.cards}`}>
+        {hobbyList.length > 0 ? (
+          hobbyList.map((hobby) => <HobbyCard {...hobby} key={hobby.color} />)
+        ) : (
+          <h1>No Card Available!</h1>
+        )}
+      </div>
     </div>
   );
 
