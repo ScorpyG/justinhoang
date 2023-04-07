@@ -8,7 +8,7 @@ import { hobbyList } from '../../utilities/constants/cardData';
 import styles from './about.module.scss';
 
 // images
-import HobbyCard from '@/components/Card/HobbyCard';
+import Card from '@/components/Card';
 import apple from '../../../public/images/apple.png';
 import figma from '../../../public/images/figma.png';
 import ghostImgUrl from '../../../public/images/ghost.gif';
@@ -88,7 +88,7 @@ export default function About() {
 
       <div className={`${styles.cards}`}>
         {hobbyList.length > 0 ? (
-          hobbyList.map((hobby) => <HobbyCard {...hobby} key={hobby.color} />)
+          hobbyList.map((hobby, index) => <Card type="HobbyCard" key={index} hobbyData={hobby} />)
         ) : (
           <h1>No Card Available!</h1>
         )}

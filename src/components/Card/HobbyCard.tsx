@@ -1,19 +1,20 @@
-import { Color } from '@/utilities/type/types';
+import { HobbyCardData } from '@/utilities/type/types';
 import styles from './card.module.scss';
 
-export type HobbyCardProps = {
-  color: Color;
-  icon: JSX.Element;
-  text: string;
-};
+export interface HobbyCardProps {
+  hobbyData: HobbyCardData;
+  handleClick?: () => void;
+}
 
 export default function HobbyCard(props: HobbyCardProps) {
+  const { hobbyData } = props;
+
   return (
-    <div className={`${styles.hobbyCard}`} style={{ borderColor: props.color }}>
-      <div className={`${styles.icon}`} style={{ fill: props.color }}>
-        {props.icon}
+    <div className={`${styles.hobbyCard}`} style={{ borderColor: hobbyData.color }}>
+      <div className={`${styles.icon}`} style={{ fill: hobbyData.color }}>
+        {hobbyData.icon}
       </div>
-      <p style={{ color: props.color }}>{props.text}</p>
+      <p style={{ color: hobbyData.color }}>{hobbyData.text}</p>
     </div>
   );
 }
