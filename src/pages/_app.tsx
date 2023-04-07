@@ -1,10 +1,8 @@
 import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-
-import TopNavbar from '../components/TopNavbar/TopNavbar';
-
 import { Suspense } from 'react';
+import TopNavbar from '../components/TopNavbar/TopNavbar';
 import '../index.css';
 
 export default function App({ Component, pageProps }: AppProps) {

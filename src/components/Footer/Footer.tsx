@@ -14,7 +14,7 @@ export default function Footer() {
   const [userTime, setUserTime] = useState(new Date());
 
   function timeZoneAsString(date: string) {
-    if (date!) {
+    if (date) {
       return date.match(/\((.*)\)/); // This return an array
     }
   }
@@ -32,20 +32,15 @@ export default function Footer() {
     <div className={styles.footerContainer}>
       <p className={styles.footerText}>&copy; {currentTime.getFullYear()} JUSTIN HOANG</p>
 
-      {/* Live update create asynchronous render with SSR vs. CSR causing error while hydrating */}
       <div className={styles.footerText}>
         <div>
           {currentTime !== undefined
             ? `${formatInTimeZone(currentTime, 'America/Vancouver', 'h:mm:ss a')} | ${
-                timeZoneAsString(currentTime.toString())![1]
+                timeZoneAsString(currentTime.toString())?.[1]
               }`
             : null}
-          {userTime! &&
-          timeZoneAsString(currentTime.toString())![1] !==
-            timeZoneAsString(userTime.toString())![1]
-            ? `&rarr; ${format(userTime, 'h:mm a')} | ${
-                timeZoneAsString(userTime.toString())![1]
-              }`
+          {userTime && timeZoneAsString(currentTime.toString())?.[1] !== timeZoneAsString(userTime.toString())?.[1]
+            ? `&rarr; ${format(userTime, 'h:mm a')} | ${timeZoneAsString(userTime.toString())?.[1]}`
             : null}
         </div>
       </div>

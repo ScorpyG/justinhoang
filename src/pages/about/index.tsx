@@ -26,8 +26,6 @@ export default function About() {
     <div className={`${styles.header}`}>
       <Image
         src={isProfileUrl ? headshotImgUrl : ghostImgUrl}
-        width={260}
-        height={260}
         alt="Headshot"
         onClick={() => setProfileUrl((profileUrl) => !profileUrl)}
       />
@@ -70,13 +68,13 @@ export default function About() {
       <h1>Tools</h1>
       <p>My development toolkit</p>
       <div className={`${styles.tools}`}>
-        <Image src={vscode} width={50} height={50} alt="vscode logo" />
-        <Image src={figma} width={30} height={50} alt="Figma logo" />
-        <Image src={git} width={50} height={50} alt="Git logo" />
-        <Image src={github} width={50} height={50} alt="Github logo" />
-        <Image src={notion} width={50} height={50} alt="Notion logo" />
-        <Image src={apple} width={50} height={50} alt="Apple logo" />
-        <Image src={window} width={50} height={50} alt="window logo" />
+        <Image src={vscode} height={50} alt="vscode logo" />
+        <Image src={figma} height={50} alt="Figma logo" />
+        <Image src={git} height={50} alt="Git logo" />
+        <Image src={github} height={50} alt="Github logo" />
+        <Image src={notion} height={50} alt="Notion logo" />
+        <Image src={apple} height={50} alt="Apple logo" />
+        <Image src={window} height={50} alt="window logo" />
       </div>
     </div>
   );

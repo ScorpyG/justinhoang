@@ -1,7 +1,19 @@
 @import "../../utilities/constants/variables.module.scss";
 
+
+@include desktop-view {
+    .container {
+        max-width: $desktop-max-width;
+    }
+}
+
+@include mobile-view {
+    .container {
+        min-width: $mobile-min-width;
+    }
+}
+
 .container {
-    @include desktop-view;
     height: 80px;
     margin: auto;
 

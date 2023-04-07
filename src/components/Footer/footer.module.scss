@@ -1,24 +1,63 @@
 @import "../../utilities/constants/variables.module.scss";
 
-.footerContainer {
-    @include desktop-view;
-    height: 80px;
-    padding: 0 20px;
-    margin: auto;
+@include desktop-view {
+    .footerContainer {
+        max-width: $desktop-max-width;
+        height: 80px;
+        padding: 0 20px;
+        justify-content: space-between;
 
+        .footerText {
+            font-size: $standard-font-size;
+        }
+
+        .media {
+            gap: 15px;
+
+            a {
+                &:hover {
+                    transform: translateY(-3px);
+                    fill: $light-theme;
+                    background-color: $dark-theme;
+                }
+            }
+        }
+    }
+}
+
+@include all-except-desktop {
+    .footerContainer {
+        min-width: $mobile-min-width;
+        width: 100%;
+        flex-direction: column-reverse;
+
+        .footerText {
+            font-size: $mini-font-size;
+        }
+
+        .media {
+            margin-bottom: 10px;
+            gap: 20px;
+
+            a:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
+.footerContainer {
+    margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     .footerText {
-        font-size: $standard-font-size;
         color: $balance-color;
     }
 
     .media {
         display: flex;
         flex-direction: row;
-        gap: 15px;
 
         a {
             display: flex;
@@ -31,12 +70,6 @@
             border-radius: 50%;
 
             @include standard-transition-time;
-
-            &:hover {
-                transform: translateY(-3px);
-                fill: $light-theme;
-                background-color: $dark-theme;
-            }
         }
     }
 }
