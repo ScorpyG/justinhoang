@@ -21,5 +21,25 @@
 }
 
 .projectCard {
+  padding: 20px;
+  border: 2px solid $blackout;
+  border-radius: 15px;
 
+  @include all-except-mobile {
+    max-width: min-content;
+  }
+
+  @include mobile-view {
+    width: 290px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .projectInfo {
+    h3 {
+      margin-top: 10px;
+    }
+  }
 }

@@ -13,7 +13,8 @@
     padding-right: 30px;
 
     @include mobile-view {
-        min-width: $mobile-min-width;
+        max-width: $mobile-min-width;
+        padding: 0 10px;
     }
 }
 
