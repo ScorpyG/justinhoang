@@ -31,19 +31,17 @@ export default function TopNavbar() {
   ];
 
   const navMenu = (
-    <nav className={styles.nav}>
-      <ul>
-        {routeUrls.map((route, index) => {
-          return (
-            <li onClick={() => setMenuOpen((menuOpen) => !menuOpen)} key={index}>
-              <Link href={`${route.url}`}>
-                {route.icon} {route.pageName}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+    <ul className={styles.nav}>
+      {routeUrls.map((route, index) => {
+        return (
+          <li onClick={() => setMenuOpen((menuOpen) => !menuOpen)} key={index}>
+            <Link href={`${route.url}`}>
+              {route.icon} {route.pageName}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 
   return (
