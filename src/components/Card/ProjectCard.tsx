@@ -1,4 +1,4 @@
-import { ProjectCardData } from '@/utilities/type/types';
+import { ProjectCardData } from '@/utilities/types';
 import Link from 'next/link';
 import styles from './card.module.scss';
 

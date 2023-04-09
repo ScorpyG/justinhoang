@@ -1,4 +1,4 @@
-import { HobbyCardData } from '@/utilities/type/types';
+import { HobbyCardData } from '@/utilities/types';
 import styles from './card.module.scss';
 
 export interface HobbyCardProps {

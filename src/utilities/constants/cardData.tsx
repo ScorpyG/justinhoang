@@ -2,7 +2,7 @@ import Brain from '../svg/Brain';
 import Chat from '../svg/Chat';
 import Crown from '../svg/Crown';
 import Fan from '../svg/Fan';
-import { HobbyCardData, ProjectCardData } from '../type/types';
+import { HobbyCardData, ProjectCardData } from '../types';
 
 export const hobbyList: Array<HobbyCardData> = [
   {
