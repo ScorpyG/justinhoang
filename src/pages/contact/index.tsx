@@ -21,7 +21,7 @@ export default function Contact() {
   const onSubmit: SubmitHandler<ContactFormValues> = async (values: ContactFormValues) => {
     const config = {
       method: 'POST',
-      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      url: `/api/contact`,
       headers: {
         'Content-Type': 'application/json',
       },
