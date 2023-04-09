@@ -1,0 +1,227 @@
+@import "../../utilities/constants/variables.module.scss";
+
+.container {
+  max-width: $desktop-max-width;
+  margin: auto;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop-view {
+    gap: 50px;
+  }
+
+  @include all-except-desktop {
+    gap: 20px;
+  }
+}
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  @include desktop-view {
+    width: 840px;
+  }
+
+  @include all-except-desktop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include desktop-view {
+      width: 260px;
+      height: 260px;
+    }
+    @include all-except-desktop {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .bio {
+    @include desktop-view {
+      padding-left: 20px;
+      border-left: 2px solid $blackout;
+    }
+
+    @include tablet-view {
+      width: 70vw;
+    }
+
+    @include mobile-view {
+      margin: 0 20px;
+    }
+
+    p {
+      font-size: $subtitle-size;
+      margin: 10px 0;
+    }
+
+    a {
+      margin: 10px 0;
+      color: $dark-theme;
+      padding: 10px 20px;
+      border: 2px solid $dark-theme;
+      border-radius: 30px;
+      background: transparent;
+      cursor: pointer;
+      @include standard-transition-time;
+
+      &:hover {
+        color: $light-theme;
+        background-color: $dark-theme;
+      }
+    }
+  }
+}
+
+.technical {
+  width: 100%;
+  overflow-x: hidden;
+  height: 200px;
+  background-color: transparentize($color: #808080, $amount: 0.9);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include all-except-desktop {
+    overflow-x: scroll;
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .carousel {
+    display: flex;
+    margin: 0 auto;
+    height: 100%;
+
+    @include desktop-view {
+      @keyframes moveLeftToRight {
+        0% {
+          transform: translateX(-100%);
+        }
+
+        50% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      animation: moveLeftToRight 30s linear infinite;
+    }
+
+    .technology {
+      display: flex;
+      flex-shrink: 0;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      gap: 10px;
+
+      @include desktop-view {
+        width: 250px;
+        svg {
+          height: 70px;
+        }
+      }
+
+      @include all-except-desktop {
+        width: 160px;
+
+        svg {
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+.toolbar {
+  width: 840px;
+  text-align: center;
+  margin: auto;
+
+  @include all-except-desktop {
+    p {
+      margin: 0;
+    }
+    width: 80vw;
+  }
+
+  .tools {
+    @include desktop-view {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 100px;
+    }
+
+    @include tablet-view {
+      margin: 20px auto 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      row-gap: 50px;
+    }
+
+    @include mobile-view {
+      margin: 20px auto 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      row-gap: 20px;
+    }
+
+    img {
+      filter: grayscale(1);
+      @include standard-transition-time;
+
+      @include all-except-desktop {
+        &:hover {
+          transform: none;
+        }
+        filter: none;
+      }
+
+      &:hover {
+        filter: none;
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+.hobbies {
+  text-align: center;
+  margin: 20px auto;
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    @include tablet-view {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile-view {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

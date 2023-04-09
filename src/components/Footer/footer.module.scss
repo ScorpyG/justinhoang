@@ -1,0 +1,75 @@
+@import "../../utilities/constants/variables.module.scss";
+
+@include desktop-view {
+    .footerContainer {
+        max-width: $desktop-max-width;
+        height: 80px;
+        padding: 0 20px;
+        justify-content: space-between;
+
+        .footerText {
+            font-size: $standard-font-size;
+        }
+
+        .media {
+            gap: 15px;
+
+            a {
+                &:hover {
+                    transform: translateY(-3px);
+                    fill: $light-theme;
+                    background-color: $dark-theme;
+                }
+            }
+        }
+    }
+}
+
+@include all-except-desktop {
+    .footerContainer {
+        min-width: $mobile-min-width;
+        width: 100%;
+        flex-direction: column-reverse;
+
+        .footerText {
+            font-size: $mini-font-size;
+        }
+
+        .media {
+            margin-bottom: 10px;
+            gap: 20px;
+
+            a:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
+.footerContainer {
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    .footerText {
+        color: $balance-color;
+    }
+
+    .media {
+        display: flex;
+        flex-direction: row;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 40px;
+            width: 40px;
+            border: 1px solid $blackout;
+            border-radius: 50%;
+
+            @include standard-transition-time;
+        }
+    }
+}

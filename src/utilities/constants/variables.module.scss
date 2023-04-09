@@ -1,0 +1,126 @@
+// ------- Colors ---------
+$dark-theme: #2E2E2E;
+$light-theme: #FFF;
+$blackout: #000;
+$balance-color: #9c9c9c;
+$field: #dbdbdb;
+$error: #ff0000;
+$success: #00ff00;
+
+$pink: #ffc0cb;
+$lightblue: #add8e6;
+$orange: #ffa500;
+$payton: #81BE83;
+
+// -------- Font size ---------
+$mini-font-size: 12px;
+$standard-font-size: 14px;
+$subtitle-size: 1.1rem;
+$title-size: 2em;
+
+@mixin center-a-div {
+    /* screen height - topnav height - footer height */
+    height: calc(100vh - 80px - 80px);
+}
+
+@mixin cursor-as-pointer {
+    cursor: pointer;
+}
+
+/* #region animations */
+@mixin standard-transition-time {
+    transition-duration: .3s;
+}
+
+@mixin animation-transition-time {
+    transition-duration: .5;
+}
+
+@mixin long-transition-time {
+    transition-duration: 5s;
+}
+/* #endregion animations */
+
+/* #region breakpoints */
+$desktop-max-width: 1512px;
+$desktop-min-width: 1200px;
+$tablet-min-width: 600px;
+$mobile-min-width: 360px;
+
+@mixin desktop-view {
+    // Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: $desktop-min-width) {
+        @content;
+    }
+}
+
+@mixin tablet-view {
+    // Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: $tablet-min-width) and (max-width: $desktop-min-width){
+        @content;
+    }
+}
+
+@mixin mobile-view {
+    // Extra small devices (phones, 600px and down)
+    @media only screen and (max-width: $tablet-min-width) {
+        @content;
+    }
+}
+
+@mixin all-except-desktop {
+    @media screen and (max-width: $desktop-min-width) {
+        @content;
+    }
+}
+
+@mixin all-except-mobile {
+    @media screen and (min-width: $tablet-min-width) {
+        @content;
+    }
+}
+/* #endregion breakpoints */
+
+/* #region custom-fonts */
+@font-face {
+    font-family: "DMSans-Bold";
+    src: local("DMSansBold"),
+    url('../fonts/DMSans/DMSans-Bold.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-BoldItalic";
+    src: local("DMSansBoldItalic"),
+    url('../fonts/DMSans/DMSans-BoldItalic.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-Italic";
+    src: local("DMSansItalic"),
+    url('../fonts/DMSans/DMSans-Italic.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-Medium";
+    src: local("DMSansMedium"),
+    url('../fonts/DMSans/DMSans-Medium.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-MediumItalic";
+    src: local("DMSansRegular"),
+    url('../fonts/DMSans/DMSans-MediumItalic.ttf')
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DMSans-Regular";
+    src: local("DMSansRegular"),
+    url('../fonts/DMSans/DMSans-Regular.ttf')
+    format("truetype");
+}
+/* #endregion custom-fonts */

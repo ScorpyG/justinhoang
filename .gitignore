@@ -2,6 +2,7 @@
 
 # Secret file
 /.netlify
+.env
 
 # dependencies
 /node_modules
@@ -13,6 +14,7 @@
 
 # production
 /build
+/.next
 
 # misc
 .DS_Store
