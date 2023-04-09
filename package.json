@@ -39,6 +39,7 @@
   },
   "main": "index.js",
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.33.0",
     "@types/nodemailer": "^6.4.7",
     "eslint-config-semistandard": "^17.0.0",
     "eslint-config-standard": "^17.0.0",
