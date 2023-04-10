@@ -1,8 +1,9 @@
 # Justin Hoang's Portfolio
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ae6e4ecf-512f-4617-bea8-8f1e01e619e0/deploy-status)](https://app.netlify.com/sites/justinhoang/deploys)
+
 - This is updated version of the portfolio using [Next.js v13.2.3](https://nextjs.org/) and [React.js v18.2.0](https://reactjs.org/)
 - Rewrite using [TypeScript](https://www.typescriptlang.org/)
-- [Figma Design](https://www.figma.com/file/jkCvoSXzaDnsWSAHJiLucR/Justin-Hoang-Logo?node-id=0%3A1&t=9JGXkOoO39PK80zP-1)
 
 ## Getting Started
 
@@ -37,10 +38,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 **Useful resources**
 
+- Using Three.js with React project: [react three fiber docs](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
 - If you need to name a color variable: [reverse color name lookup](https://www.color-name.com/).
 - If you need to generate gradient: [CSS Gradient](https://cssgradient.io/)
 - If you need help figuring out the standard structure for **Design System**: [Material Design](https://m3.material.io/foundations)
 - If you need to convert .svg file into .tsx file: [SVGR playground](https://react-svgr.com/playground/?typescript=true)
 - Common viewport sizing look-up: [General](https://yesviz.com/viewport/), [Mobile-only](https://www.icwebdesign.co.uk/common-viewport-sizes).
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ae6e4ecf-512f-4617-bea8-8f1e01e619e0/deploy-status)](https://app.netlify.com/sites/justinhoang/deploys)
