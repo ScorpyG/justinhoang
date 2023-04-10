@@ -1,5 +1,6 @@
+'use client';
 import { ProjectCardData } from '@/utilities/types';
-import Link from 'next/link';
+import { Link } from '@chakra-ui/next-js';
 import Tilt from 'react-parallax-tilt';
 import styles from './card.module.scss';
 
@@ -20,7 +21,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       </Tilt>
 
       <div className={`${styles.projectInfo}`}>
-        <Link href={project.repoLink} target="_blank">
+        <Link href={project.repoLink} target="_blank" color="blue.400" _hover={{ color: 'blue.500' }}>
           <h2>{project.title}</h2>
         </Link>
 
@@ -30,3 +31,4 @@ export default function ProjectCard(props: ProjectCardProps) {
     </div>
   );
 }
+††
