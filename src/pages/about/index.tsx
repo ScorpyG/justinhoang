@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import Tilt from 'react-parallax-tilt';
 import { hobbyList } from '../../utilities/constants/cardData';
 import styles from './about.module.scss';
 
@@ -24,11 +25,13 @@ export default function About() {
 
   const biography = (
     <div className={`${styles.header}`}>
-      <Image
-        src={isProfileUrl ? headshotImgUrl : ghostImgUrl}
-        alt="Headshot"
-        onClick={() => setProfileUrl((profileUrl) => !profileUrl)}
-      />
+      <Tilt scale={1.1}>
+        <Image
+          src={isProfileUrl ? headshotImgUrl : ghostImgUrl}
+          alt="Headshot"
+          onClick={() => setProfileUrl((profileUrl) => !profileUrl)}
+        />
+      </Tilt>
 
       <div className={`${styles.bio}`}>
         <h1>ABOUT ME</h1>

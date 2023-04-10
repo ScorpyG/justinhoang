@@ -10,13 +10,9 @@ import React from '../svg/React';
 import SASS from '../svg/SASS';
 import TypeScript from '../svg/TypeScript';
 import Vue from '../svg/Vue';
+import { TechnologyLogo } from '../types';
 
-export type TechnologyLogo = {
-  name: string;
-  icon: JSX.Element;
-};
-
-const techList = [
+const techList: Array<TechnologyLogo> = [
   {
     name: 'TypeScript',
     icon: <TypeScript />,

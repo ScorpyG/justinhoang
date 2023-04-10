@@ -1,5 +1,6 @@
 import { ProjectCardData } from '@/utilities/types';
 import Link from 'next/link';
+import Tilt from 'react-parallax-tilt';
 import styles from './card.module.scss';
 
 export interface ProjectCardProps {
@@ -12,9 +13,11 @@ export default function ProjectCard(props: ProjectCardProps) {
 
   return (
     <div className={`${styles.projectCard}`}>
-      <Link href={project.siteLink} target="_blank">
-        <img src={project.image} alt="Project GIF" />
-      </Link>
+      <Tilt>
+        <Link href={project.siteLink} target="_blank">
+          <img src={project.image} alt="Project GIF" />
+        </Link>
+      </Tilt>
 
       <div className={`${styles.projectInfo}`}>
         <Link href={project.repoLink} target="_blank">
