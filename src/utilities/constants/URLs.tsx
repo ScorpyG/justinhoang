@@ -1,5 +1,3 @@
-export const projectUrls = [];
-
 // professional
 export const resume =
   'https://docs.google.com/document/d/1keGfeTA8uYQEpV_unXnjeFpRyvSMBYK9HhW1UxVVdN4/edit?usp=sharing';
