@@ -1,7 +1,8 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function handler(req: any, res: any) {
+async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
