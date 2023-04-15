@@ -8,7 +8,7 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:@typescript-eslint/recommended',
-		'plugin:react-hooks/recommended'
+		'plugin:react-hooks/recommended',
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -28,6 +28,6 @@ module.exports = {
 		"react/react-in-jsx-scope": "off", // suppress errors for missing 'import React' in files
 		"react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
 		"react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
-		"no-unused-vars": "warn",
+		"@typescript-eslint/no-explicit-any": "error"
 	}
 };
