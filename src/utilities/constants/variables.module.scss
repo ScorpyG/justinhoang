@@ -85,42 +85,42 @@ $mobile-min-width: 360px;
 @font-face {
     font-family: "DMSans-Bold";
     src: local("DMSansBold"),
-    url('../fonts/DMSans/DMSans-Bold.ttf')
+    url('/public/static/fonts/DMSans/DMSans-Bold.ttf')
     format("truetype");
 }
 
 @font-face {
     font-family: "DMSans-BoldItalic";
     src: local("DMSansBoldItalic"),
-    url('../fonts/DMSans/DMSans-BoldItalic.ttf')
+    url('/public/static/fonts/DMSans/DMSans-BoldItalic.ttf')
     format("truetype");
 }
 
 @font-face {
     font-family: "DMSans-Italic";
     src: local("DMSansItalic"),
-    url('../fonts/DMSans/DMSans-Italic.ttf')
+    url('/public/static/fonts/DMSans/DMSans-Italic.ttf')
     format("truetype");
 }
 
 @font-face {
     font-family: "DMSans-Medium";
     src: local("DMSansMedium"),
-    url('../fonts/DMSans/DMSans-Medium.ttf')
+    url('/public/static/fonts/DMSans/DMSans-Medium.ttf')
     format("truetype");
 }
 
 @font-face {
     font-family: "DMSans-MediumItalic";
     src: local("DMSansRegular"),
-    url('../fonts/DMSans/DMSans-MediumItalic.ttf')
+    url('/public/static/fonts/DMSans/DMSans-MediumItalic.ttf')
     format("truetype");
 }
 
 @font-face {
     font-family: "DMSans-Regular";
     src: local("DMSansRegular"),
-    url('../fonts/DMSans/DMSans-Regular.ttf')
+    url('/public/static/fonts/DMSans/DMSans-Regular.ttf')
     format("truetype");
 }
 /* #endregion custom-fonts */

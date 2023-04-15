@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-import CloseIcon from '../../utilities/svg/Close';
-import DarkLogo from '../../utilities/svg/DarkLogo';
-import MenuIcon from '../../utilities/svg/Hamburger';
-import LightBulb from '../../utilities/svg/Lightbulb';
-import PaperPlane from '../../utilities/svg/PaperPlane';
-import Profile from '../../utilities/svg/Profile';
+import CloseIcon from '../../utilities/svgr/Close';
+import DarkLogo from '../../utilities/svgr/DarkLogo';
+import MenuIcon from '../../utilities/svgr/Hamburger';
+import LightBulb from '../../utilities/svgr/Lightbulb';
+import PaperPlane from '../../utilities/svgr/PaperPlane';
+import Profile from '../../utilities/svgr/Profile';
 import styles from './topnavbar.module.scss';
 
 export default function TopNavbar() {

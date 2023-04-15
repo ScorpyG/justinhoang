@@ -33,7 +33,7 @@ export default function Home() {
                     autoStart: true,
                     loop: true,
                     skipAddStyles: true,
-                    strings: ['TypeScript', 'React.js', 'Next.js', 'GraphQL', 'MongoDB', 'SASS'],
+                    strings: ['TypeScript', 'React.js', 'Next.js', 'GraphQL', 'MongoDB', 'ChakraUI', 'SASS'],
                   }}
                 />
               }

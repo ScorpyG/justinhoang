@@ -1,15 +1,15 @@
-import CSS from '../svg/CSS';
-import Code from '../svg/Code';
-import HTML from '../svg/HTML';
-import JavaScript from '../svg/JavaScript';
-import MongoDB from '../svg/MongoDB';
-import Next from '../svg/Next';
-import Node from '../svg/Node';
-import Python from '../svg/Python';
-import React from '../svg/React';
-import SASS from '../svg/SASS';
-import TypeScript from '../svg/TypeScript';
-import Vue from '../svg/Vue';
+import CSS from '../svgr/CSS';
+import Code from '../svgr/Code';
+import HTML from '../svgr/HTML';
+import JavaScript from '../svgr/JavaScript';
+import MongoDB from '../svgr/MongoDB';
+import Next from '../svgr/Next';
+import Node from '../svgr/Node';
+import Python from '../svgr/Python';
+import React from '../svgr/React';
+import SASS from '../svgr/SASS';
+import TypeScript from '../svgr/TypeScript';
+import Vue from '../svgr/Vue';
 import { TechnologyLogo } from '../types';
 
 const techList: Array<TechnologyLogo> = [

@@ -37,10 +37,6 @@
     border-radius: 50%;
     cursor: pointer;
 
-    @include desktop-view {
-      width: 260px;
-      height: 260px;
-    }
     @include all-except-desktop {
       width: 200px;
       height: 200px;
@@ -206,13 +202,11 @@
 }
 
 .hobbies {
-  text-align: center;
   margin: 20px auto;
 
   .cards {
     display: flex;
     flex-direction: row;
-    gap: 20px;
 
     @include tablet-view {
       display: grid;

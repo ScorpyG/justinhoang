@@ -3,9 +3,9 @@ import { formatInTimeZone } from 'date-fns-tz';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { devCommunity, github, linkedin } from '../../utilities/constants/URLs';
-import DEVIcon from '../../utilities/svg/DEV';
-import GithubIcon from '../../utilities/svg/Github';
-import LinkedInIcon from '../../utilities/svg/LinkedIn';
+import DEVIcon from '../../utilities/svgr/DEV';
+import GithubIcon from '../../utilities/svgr/Github';
+import LinkedInIcon from '../../utilities/svgr/LinkedIn';
 import styles from './footer.module.scss';
 
 export default function Footer() {

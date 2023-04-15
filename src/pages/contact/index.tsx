@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Head from 'next/head';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import Location from '../../utilities/svg/Location';
+import Location from '../../utilities/svgr/Location';
 import styles from './contact.module.scss';
 
 type ContactFormValues = {

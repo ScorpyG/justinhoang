@@ -12,7 +12,7 @@
     "lint": "eslint './**/*.{ts,tsx}' --max-warnings 0"
   },
   "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "./**/*.{js,jsx,ts,tsx,json}": [
       "prettier --write",
       "yarn lint",
       "git add"

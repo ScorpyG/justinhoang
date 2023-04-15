@@ -1,6 +1,6 @@
-'use client';
-import { ProjectCardData } from '@/utilities/types';
 import { Link } from '@chakra-ui/next-js';
+import { Box } from '@chakra-ui/react';
+import Image from 'next/image';
 import Tilt from 'react-parallax-tilt';
 import styles from './card.module.scss';
 
@@ -9,14 +9,23 @@ export interface ProjectCardProps {
   handleClick?: () => void;
 }
 
+export type ProjectCardData = {
+  title: string;
+  image: string;
+  technologies: Array<string>;
+  desc: string;
+  repoLink: string;
+  siteLink: string;
+};
+
 export default function ProjectCard(props: ProjectCardProps) {
   const { project } = props;
 
   return (
-    <div className={`${styles.projectCard}`}>
+    <Box className={`${styles.projectCard}`}>
       <Tilt>
         <Link href={project.siteLink} target="_blank">
-          <img src={project.image} alt="Project GIF" />
+          <Image src={project.image} height={270} width={420} alt="Project GIF" />
         </Link>
       </Tilt>
 
@@ -28,6 +37,6 @@ export default function ProjectCard(props: ProjectCardProps) {
         <h3>{project.technologies.join(' | ').toString()}</h3>
         <p>{project.desc}</p>
       </div>
-    </div>
+    </Box>
   );
 }
