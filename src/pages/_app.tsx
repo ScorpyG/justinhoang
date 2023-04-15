@@ -10,8 +10,6 @@ export default function App({ Component, pageProps }: AppProps) {
     ssr: false,
   });
 
-  const test = 'hi';
-
   // TODO: Fix component styling with ChakraUI
   return (
     // <ChakraBaseProvider>
