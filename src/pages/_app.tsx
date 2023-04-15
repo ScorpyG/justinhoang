@@ -6,13 +6,13 @@ import TopNavbar from '../components/TopNavbar/TopNavbar';
 import '../index.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-  // NO SSR
   const DynamicFooter = dynamic(() => import('../components/Footer/Footer'), {
     ssr: false,
   });
 
-  // TODO: Fix component styling with ChakraUI
+  const test = 'hi';
 
+  // TODO: Fix component styling with ChakraUI
   return (
     // <ChakraBaseProvider>
     <Suspense fallback={null}>
