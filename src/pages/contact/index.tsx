@@ -19,7 +19,7 @@ import Location from '../../utilities/svgr/Location';
 import { ServerRes } from '../api/contact';
 import styles from './contact.module.scss';
 
-type ContactFormValues = {
+export type ContactFormValues = {
   name: string;
   email: string;
   message: string;
