@@ -1,4 +1,4 @@
-@import "../../utilities/constants/variables.module.scss";
+@import "../../utilities/variables.module.scss";
 
 .container {
   max-width: $desktop-max-width;
@@ -197,25 +197,6 @@
         filter: none;
         transform: translateY(-5px);
       }
-    }
-  }
-}
-
-.hobbies {
-  margin: 20px auto;
-
-  .cards {
-    display: flex;
-    flex-direction: row;
-
-    @include tablet-view {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include mobile-view {
-      display: flex;
-      flex-direction: column;
     }
   }
 }

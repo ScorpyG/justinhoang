@@ -29,7 +29,7 @@ export default function About() {
       </Tilt>
 
       <Box className={`${styles.bio}`}>
-        <Heading as="h1">ABOUT ME</Heading>
+        <Heading>ABOUT ME</Heading>
         <p>
           I&apos;m a software developer based in <u>Vancouver</u> with a passion for technology and design. I enjoy
           learning different technologies and building applications to challenge my own creativity, problem-solving,
@@ -63,7 +63,7 @@ export default function About() {
 
   const tools = (
     <Flex flexDirection="column" className={`${styles.toolbar}`}>
-      <Heading as="h1">Tools</Heading>
+      <Heading>Tools</Heading>
       <Text>My development toolkit</Text>
       <Flex className={`${styles.tools}`}>
         <Image src="/images/vscode.png" width={50} height={50} alt="vscode logo" />
@@ -79,10 +79,10 @@ export default function About() {
 
   const hobbies = (
     <Box className={`${styles.hobbies}`} textAlign="center">
-      <Heading as="h1">Hobbies</Heading>
+      <Heading>Hobbies</Heading>
       <Text>A bit of...insights!</Text>
 
-      <Flex className={`${styles.cards}`} gap="20px">
+      <Flex gap="20px" mt="8" flexWrap={'wrap'} justifyContent={'center'}>
         {hobbyList.length > 0 ? (
           hobbyList.map((hobby, index) => <Card type="HobbyCard" key={index} hobbyData={hobby} />)
         ) : (
