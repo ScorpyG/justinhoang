@@ -1,7 +1,9 @@
+import { useToast } from '@chakra-ui/react';
 import axios from 'axios';
 import Head from 'next/head';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Location from '../../utilities/svgr/Location';
+import { ServerRes } from '../api/contact';
 import styles from './contact.module.scss';
 
 type ContactFormValues = {
@@ -11,6 +13,8 @@ type ContactFormValues = {
 };
 
 export default function Contact() {
+  const toastNotification = useToast();
+
   const {
     register,
     handleSubmit,
@@ -30,12 +34,31 @@ export default function Contact() {
 
     try {
       const response = await axios(config);
+      const data: ServerRes = response.data;
+
       if (response.status === 200) {
-        // TODO: use chakraUI toast for status update
+        toastNotification({
+          title: data.title,
+          description: data.description,
+          status: data.toastStatus,
+          isClosable: true,
+        });
         reset();
+      } else {
+        toastNotification({
+          title: data.title,
+          description: data.description,
+          status: data.toastStatus,
+          isClosable: false,
+        });
       }
     } catch (err) {
-      // TODO: use chakraUI toast for status update
+      toastNotification({
+        title: `${err}`,
+        description: `${err}`,
+        status: 'error',
+        isClosable: true,
+      });
     }
   };
 

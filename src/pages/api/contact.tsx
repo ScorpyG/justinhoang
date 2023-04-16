@@ -1,9 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { name, email, message } = req.body;
+export type ServerRes = {
+  title: string;
+  description: string;
+  toastStatus: 'success' | 'error' | 'warning' | 'info'; // ChakraUI Toast statuses
+};
+
+async function handler(request: NextApiRequest, response: NextApiResponse<ServerRes>) {
+  const { name, email, message } = request.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -25,9 +30,13 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       `,
     });
 
-    return res.status(200).json({ success: true });
+    return response.status(200).json({ title: 'Success', description: 'Email Sent!', toastStatus: 'success' });
   } catch (err) {
-    return res.status(400).json(err);
+    return response.status(500).json({
+      title: 'Failed',
+      description: 'Sorry, something went wrong \n Please try again later',
+      toastStatus: 'error',
+    });
   }
 }
 
