@@ -1,67 +1,45 @@
+import { routeUrls } from '@/utilities/constants/URLs';
+import { Box, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, Spacer } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useState } from 'react';
-
 import CloseIcon from '../../utilities/svgr/Close';
 import DarkLogo from '../../utilities/svgr/DarkLogo';
-import MenuIcon from '../../utilities/svgr/Hamburger';
-import LightBulb from '../../utilities/svgr/Lightbulb';
-import PaperPlane from '../../utilities/svgr/PaperPlane';
-import Profile from '../../utilities/svgr/Profile';
+import Hamburger from '../../utilities/svgr/Hamburger';
 import styles from './topnavbar.module.scss';
 
 export default function TopNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const routeUrls = [
-    {
-      pageName: 'About',
-      icon: <Profile />,
-      url: '/about',
-    },
-    {
-      pageName: 'Projects',
-      icon: <LightBulb />,
-      url: '/projects',
-    },
-    {
-      pageName: 'Contact',
-      icon: <PaperPlane />,
-      url: '/contact',
-    },
-  ];
-
-  const navMenu = (
-    <ul className={styles.nav}>
-      {routeUrls.map((route, index) => {
-        return (
-          <li onClick={() => setMenuOpen((menuOpen) => !menuOpen)} key={index}>
-            <Link href={`${route.url}`}>
-              {route.icon} {route.pageName}
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
-  );
-
   return (
-    <div className={styles.container}>
-      <div className={styles.logo}>
+    <Flex justifyContent={'center'} alignItems={'center'} height={'80px'} padding={'0 30px'}>
+      <Box className={styles.logo}>
         <Link href="/">
           <DarkLogo />
         </Link>
-      </div>
-      <div className={styles.menu}>
-        <div
-          className={styles.hamburger}
-          onClick={() => {
-            setMenuOpen((menuOpen) => !menuOpen);
-          }}
-        >
-          {menuOpen ? <CloseIcon /> : <MenuIcon />}
-        </div>
-        {menuOpen ? navMenu : undefined}
-      </div>
-    </div>
+      </Box>
+
+      <Spacer />
+
+      <Menu closeOnSelect>
+        <MenuButton
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Options"
+          variant={'outline'}
+          as={IconButton}
+          icon={menuOpen ? <CloseIcon /> : <Hamburger />}
+          border={'2px'}
+          borderColor={'black'}
+          borderRadius={'9px'}
+        />
+
+        <MenuList border={'2px'} borderColor={'black'} borderRadius={'9px'}>
+          {routeUrls.map((route, index) => (
+            <Link href={route.url} key={index}>
+              <MenuItem icon={route.icon}>{route.pageName}</MenuItem>
+            </Link>
+          ))}
+        </MenuList>
+      </Menu>
+    </Flex>
   );
 }

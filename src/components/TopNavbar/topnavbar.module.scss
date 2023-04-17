@@ -5,13 +5,6 @@
     height: 80px;
     margin: auto;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding-left: 30px;
-    padding-right: 30px;
-
     @include mobile-view {
         max-width: $mobile-min-width;
         padding: 0 10px;
