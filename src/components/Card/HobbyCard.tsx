@@ -7,11 +7,11 @@ export interface HobbyCardProps {
   handleClick?: () => void;
 }
 
-export type HobbyCardData = {
+export interface HobbyCardData {
   color: Color;
   icon: JSX.Element;
   text: string;
-};
+}
 
 export default function HobbyCard(props: HobbyCardProps) {
   const { hobbyData } = props;

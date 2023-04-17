@@ -9,14 +9,14 @@ export interface ProjectCardProps {
   handleClick?: () => void;
 }
 
-export type ProjectCardData = {
+export interface ProjectCardData {
   title: string;
   image: string;
   technologies: Array<string>;
   desc: string;
   repoLink: string;
   siteLink: string;
-};
+}
 
 export default function ProjectCard(props: ProjectCardProps) {
   const { project } = props;

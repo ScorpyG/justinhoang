@@ -4,7 +4,7 @@ type HEX = `#${string}`;
 
 export type Color = RGB | RGBA | HEX;
 
-export type TechnologyLogo = {
+export interface TechnologyLogo {
   name: string;
   icon: JSX.Element;
-};
+}

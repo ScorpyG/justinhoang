@@ -19,11 +19,11 @@ import Location from '../../utilities/svgr/Location';
 import { ServerRes } from '../api/contact';
 import styles from './contact.module.scss';
 
-export type ContactFormValues = {
+export interface ContactFormValues {
   name: string;
   email: string;
   message: string;
-};
+}
 
 export default function Contact() {
   const toastNotification = useToast();

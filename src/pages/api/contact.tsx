@@ -2,11 +2,11 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import { ContactFormValues } from '../contact';
 
-export type ServerRes = {
+export interface ServerRes {
   title: string;
   description: string;
   toastStatus: 'success' | 'error' | 'warning' | 'info'; // ChakraUI Toast statuses
-};
+}
 
 const CONTACT_MESSAGE_FIELDS: ContactFormValues = {
   email: 'Email',
@@ -14,6 +14,7 @@ const CONTACT_MESSAGE_FIELDS: ContactFormValues = {
   message: 'Message',
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const generateEmailContent = (data: ContactFormValues) => {
   const stringData = Object.entries(data).reduce(
     (str, [key, value]) => (str += `${CONTACT_MESSAGE_FIELDS[key as keyof ContactFormValues]}: \n${value} \n \n`),
@@ -61,6 +62,7 @@ const generateEmailContent = (data: ContactFormValues) => {
   };
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function handler(request: NextApiRequest, response: NextApiResponse<ServerRes>) {
   const { name } = request.body;
 
