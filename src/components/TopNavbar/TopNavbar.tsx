@@ -11,7 +11,14 @@ export default function TopNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <Flex justifyContent={'center'} alignItems={'center'} height={'80px'} padding={'0 30px'}>
+    <Flex
+      justifyContent={'center'}
+      alignItems={'center'}
+      maxW={'1512px'}
+      height={'80px'}
+      padding={'0 20px'}
+      margin={'auto'}
+    >
       <Box className={styles.logo}>
         <Link href="/">
           <DarkLogo />
@@ -20,7 +27,7 @@ export default function TopNavbar() {
 
       <Spacer />
 
-      <Menu closeOnSelect>
+      <Menu closeOnSelect autoSelect={false}>
         <MenuButton
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Options"
@@ -30,11 +37,13 @@ export default function TopNavbar() {
           border={'2px'}
           borderColor={'black'}
           borderRadius={'9px'}
+          h={'45px'}
+          w={'45px'}
         />
 
         <MenuList border={'2px'} borderColor={'black'} borderRadius={'9px'}>
           {routeUrls.map((route, index) => (
-            <Link href={route.url} key={index}>
+            <Link href={route.url} key={index} onClick={() => setMenuOpen(!menuOpen)}>
               <MenuItem icon={route.icon}>{route.pageName}</MenuItem>
             </Link>
           ))}
