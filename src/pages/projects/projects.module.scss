@@ -1,20 +1,17 @@
 @import '../../utilities/variables.module.scss';
 
 .container {
+  margin: auto;
+  max-width: $desktop-max-width;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: auto;
+  align-items: center;
+  gap: 15px;
 
   @include mobile-view {
     margin-bottom: 20px;
   }
-}
-
-.header {
-  font-size: 25px;
-  text-align: center;
-  margin: 30px;
 }
 
 .showcase {
