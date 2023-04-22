@@ -183,18 +183,15 @@
     }
 
     img {
-      filter: grayscale(1);
       @include standard-transition-time;
 
       @include all-except-desktop {
         &:hover {
           transform: none;
         }
-        filter: none;
       }
 
       &:hover {
-        filter: none;
         transform: translateY(-5px);
       }
     }
