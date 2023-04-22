@@ -45,8 +45,10 @@ export const projectList: Array<ProjectCardData> = [
   {
     title: 'Quote Generator',
     image: '/images/quotegen.gif',
-    technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
-    desc: 'Quote generator app that allow user to view and add their own quotes',
+    technologies: ['MongoDB', 'Express', 'React', 'Node'],
+    desc: `1st Full-stack application Quote generator app that allow user to view and add their own quotes.
+     Expand further by building an API from scratch to explore and learn the structure of HTTPS requests and CORS
+     (Cross Origin Resources Sharing).`,
     repoLink: 'https://github.com/ScorpyG/Quote-Generator',
     siteLink: 'https://mern-quote-generator.netlify.app/',
   },
@@ -54,7 +56,9 @@ export const projectList: Array<ProjectCardData> = [
     title: "What's the weather?",
     image: '/images/weather.gif',
     technologies: ['HTML', 'CSS', 'JS'],
-    desc: 'The project is created with OpenWeatherMap API.',
+    desc: `The project is created with OpenWeatherMap API. Learning how to make an API request
+      and resolving promises and manipulate the DOM to display requested content. Along with learning the basics of
+      HTML and CSS styling.`,
     repoLink: 'https://github.com/ScorpyG/How-The-Weather',
     siteLink: 'https://scorpyg.github.io/How-The-Weather/',
   },
@@ -62,7 +66,7 @@ export const projectList: Array<ProjectCardData> = [
     title: 'Ping Pong Py',
     image: '/images/pingpong.gif',
     technologies: ['Python', 'PyGame'],
-    desc: 'Ping Pong Game created with Python package called PyGame',
+    desc: 'A classic 2 players Ping Pong game created with Python package called PyGame.',
     repoLink: 'https://github.com/ScorpyG/Ping-Pong-Py',
     siteLink: 'https://github.com/ScorpyG/Ping-Pong-Py',
   },
@@ -70,7 +74,9 @@ export const projectList: Array<ProjectCardData> = [
     title: 'Password Generator',
     image: '/images/passgen.gif',
     technologies: ['HTML', 'CSS', 'JS'],
-    desc: 'Generate a random secure password within recommended length and conditions. Explore further on how to protect yourself on the internet.',
+    desc: `Generate a random secure password within recommended length and conditions.
+      Explore further on how to protect yourself on the internet. Learning DOM manipulation
+      and RegEx (Regular Expression).`,
     repoLink: 'https://github.com/ScorpyG/password-generator',
     siteLink: 'https://scorpyg.github.io/password-generator/',
   },
