@@ -1,6 +1,7 @@
+import { Link } from '@chakra-ui/next-js';
+import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Link from 'next/link';
 import styles from './home.module.scss';
 
 export default function Home() {
@@ -15,16 +16,16 @@ export default function Home() {
         <title>Portfolio | Home</title>
       </Head>
       <main>
-        <div className={styles.hero}>
-          <div className={styles.bio}>
-            <h2>Hi, I&apos;m</h2>
-            <h1>Justin Hoang</h1>
+        <Box className={styles.hero}>
+          <Box className={styles.bio}>
+            <Heading>Hi, I&apos;m</Heading>
+            <Heading my={'3'}>Justin Hoang</Heading>
             <p>
               I&apos;m a software developer based in Vancouver with a passion for technology from planning, design,
               write codes and all the way to solve real-life problems. Be able to create and learn along side an
               innovative team is something I always love.
             </p>
-            <div className={styles.typewriter}>
+            <Flex gap={'5px'} margin={'10px 0'}>
               Current working with
               {
                 <DynamicTypeWriter
@@ -33,16 +34,30 @@ export default function Home() {
                     autoStart: true,
                     loop: true,
                     skipAddStyles: true,
-                    strings: ['TypeScript', 'React.js', 'Next.js', 'GraphQL', 'MongoDB', 'SASS'],
+                    strings: ['TypeScript', 'React.js', 'Next.js', 'GraphQL', 'MongoDB', 'ChakraUI', 'SASS'],
                   }}
                 />
               }
-            </div>
+            </Flex>
             <br />
-            <Link href="/about">LEARN MORE</Link>
-          </div>
-          <div className={styles.model}></div>
-        </div>
+            <Link
+              href="/about"
+              textDecoration={'none'}
+              padding={'10px 25px'}
+              border={'2px solid'}
+              borderRadius={'30px'}
+              transitionDuration={'.3s'}
+              _hover={{
+                borderColor: useColorModeValue('#2E2E2E', '#FFF'),
+                color: useColorModeValue('#FFF', '#2E2E2E'),
+                backgroundColor: useColorModeValue('#2E2E2E', '#FFF'),
+              }}
+            >
+              LEARN MORE
+            </Link>
+          </Box>
+          <Box className={styles.model}></Box>
+        </Box>
       </main>
     </>
   );

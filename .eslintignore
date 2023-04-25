@@ -1,2 +1,5 @@
-*.js
-*.jsx
+*.css
+*.scss
+*.svg
+!.eslintrc.js
+node_modules

@@ -1,40 +1,35 @@
+import Card from '@/components/Card';
 import { resume } from '@/utilities/constants/URLs';
 import techList from '@/utilities/constants/techList';
+import { Link } from '@chakra-ui/next-js';
+import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { hobbyList } from '../../utilities/constants/cardData';
 import styles from './about.module.scss';
 
-// images
-import Card from '@/components/Card';
-import apple from '../../../public/images/apple.png';
-import figma from '../../../public/images/figma.png';
-import ghostImgUrl from '../../../public/images/ghost.gif';
-import git from '../../../public/images/git.png';
-import github from '../../../public/images/github.png';
-import notion from '../../../public/images/notion.png';
-import headshotImgUrl from '../../../public/images/profile.jpg';
-import vscode from '../../../public/images/vscode.png';
-import window from '../../../public/images/win10.png';
-
 export default function About() {
+  const headshotImgUrl = '/images/profile.jpg';
+  const ghostImgUrl = '/images/ghost.gif';
+
   const [isProfileUrl, setProfileUrl] = useState(false);
 
   const biography = (
-    <div className={`${styles.header}`}>
-      <Tilt scale={1.1}>
+    <Box className={`${styles.header}`}>
+      <Tilt scale={1.1} style={{ width: '100%', height: '100%', position: 'relative' }}>
         <Image
           src={isProfileUrl ? headshotImgUrl : ghostImgUrl}
           alt="Headshot"
           onClick={() => setProfileUrl((profileUrl) => !profileUrl)}
+          width={260}
+          height={260}
         />
       </Tilt>
 
-      <div className={`${styles.bio}`}>
-        <h1>ABOUT ME</h1>
+      <Box className={`${styles.bio}`}>
+        <Heading>ABOUT ME</Heading>
         <p>
           I&apos;m a software developer based in <u>Vancouver</u> with a passion for technology and design. I enjoy
           learning different technologies and building applications to challenge my own creativity, problem-solving,
@@ -46,55 +41,70 @@ export default function About() {
         </p>
         <br />
 
-        <Link href={resume} target="_blank">
+        <Link
+          href={resume}
+          target="_blank"
+          textDecoration={'none'}
+          padding={'10px 25px'}
+          border={'2px solid'}
+          borderRadius={'30px'}
+          transitionDuration={'.3s'}
+          _hover={{
+            borderColor: useColorModeValue('#2E2E2E', '#FFF'),
+            color: useColorModeValue('#FFF', '#2E2E2E'),
+            backgroundColor: useColorModeValue('#2E2E2E', '#FFF'),
+          }}
+        >
           resume.docx
         </Link>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 
   const technologies = (
     <div className={`${styles.technical}`}>
       <div className={`${styles.carousel}`}>
-        {techList.map((technology, key) => (
-          <div className={`${styles.technology}`} key={key}>
+        {techList?.map((technology, key) => (
+          <Flex className={`${styles.technology}`} key={key}>
             {technology.icon}
-            <h3>{technology.name}</h3>
-          </div>
+            <Heading as={'h3'} size={'md'}>
+              {technology.name}
+            </Heading>
+          </Flex>
         ))}
       </div>
     </div>
   );
 
   const tools = (
-    <div className={`${styles.toolbar}`}>
-      <h1>Tools</h1>
-      <p>My development toolkit</p>
-      <div className={`${styles.tools}`}>
-        <Image src={vscode} height={50} alt="vscode logo" />
-        <Image src={figma} height={50} alt="Figma logo" />
-        <Image src={git} height={50} alt="Git logo" />
-        <Image src={github} height={50} alt="Github logo" />
-        <Image src={notion} height={50} alt="Notion logo" />
-        <Image src={apple} height={50} alt="Apple logo" />
-        <Image src={window} height={50} alt="window logo" />
-      </div>
-    </div>
+    <Flex flexDirection="column" className={`${styles.toolbar}`}>
+      <Heading>Tools</Heading>
+      <Text>My development toolkit</Text>
+      <Flex className={`${styles.tools}`}>
+        <Image src="/images/vscode.png" width={50} height={50} alt="vscode logo" />
+        <Image src="/images/figma.png" width={30} height={50} alt="Figma logo" />
+        <Image src="/images/git.png" width={50} height={50} alt="Git logo" />
+        <Image src="/images/github.png" width={50} height={50} alt="Github logo" />
+        <Image src="/images/notion.png" width={50} height={50} alt="Notion logo" />
+        <Image src="/images/apple.png" width={50} height={50} alt="Apple logo" />
+        <Image src="/images/win10.png" width={50} height={50} alt="window logo" />
+      </Flex>
+    </Flex>
   );
 
   const hobbies = (
-    <div className={`${styles.hobbies}`}>
-      <h1>Hobbies</h1>
-      <p>A bit of...insights!</p>
+    <Box className={`${styles.hobbies}`} textAlign="center">
+      <Heading>Hobbies</Heading>
+      <Text>A bit of...insights!</Text>
 
-      <div className={`${styles.cards}`}>
+      <Flex gap="20px" mt="8" flexWrap={'wrap'} justifyContent={'center'}>
         {hobbyList.length > 0 ? (
-          hobbyList.map((hobby, index) => <Card type="HobbyCard" key={index} hobbyData={hobby} />)
+          hobbyList?.map((hobby, index) => <Card type="HobbyCard" key={index} hobbyData={hobby} />)
         ) : (
           <h1>No Card Available!</h1>
         )}
-      </div>
-    </div>
+      </Flex>
+    </Box>
   );
 
   return (

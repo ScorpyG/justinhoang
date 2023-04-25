@@ -1,8 +1,9 @@
-import Brain from '../svg/Brain';
-import Chat from '../svg/Chat';
-import Crown from '../svg/Crown';
-import Fan from '../svg/Fan';
-import { HobbyCardData, ProjectCardData } from '../types';
+import { HobbyCardData } from '@/components/Card/HobbyCard';
+import { ProjectCardData } from '@/components/Card/ProjectCard';
+import Brain from '../svgr/Brain';
+import Chat from '../svgr/Chat';
+import Crown from '../svgr/Crown';
+import Fan from '../svgr/Fan';
 
 export const hobbyList: Array<HobbyCardData> = [
   {
@@ -43,37 +44,39 @@ export const hobbyList: Array<HobbyCardData> = [
 export const projectList: Array<ProjectCardData> = [
   {
     title: 'Quote Generator',
-    image:
-      'https://media0.giphy.com/media/gtnWcZlcBbz5p6dcYo/giphy.gif?cid=790b7611850c5a5164b5f703fb91ad4450757e943fddc972&rid=giphy.gif&ct=g',
-    technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
-    desc: 'Quote generator app that allow user to view and add their own quotes',
+    image: '/images/quotegen.gif',
+    technologies: ['MongoDB', 'Express', 'React', 'Node'],
+    desc: `1st Full-stack application Quote generator app that allow user to view and add their own quotes.
+     Expand further by building an API from scratch to explore and learn the structure of HTTPS requests and CORS
+     (Cross Origin Resources Sharing).`,
     repoLink: 'https://github.com/ScorpyG/Quote-Generator',
     siteLink: 'https://mern-quote-generator.netlify.app/',
   },
   {
     title: "What's the weather?",
-    image:
-      'https://media0.giphy.com/media/mYBYX9kp4C7OVRJMYg/giphy.gif?cid=790b76119cfb623eecb11e82f4deb2f96a92b4c4d5b0c86d&rid=giphy.gif&ct=g',
+    image: '/images/weather.gif',
     technologies: ['HTML', 'CSS', 'JS'],
-    desc: 'The project is created with OpenWeatherMap API.',
+    desc: `The project is created with OpenWeatherMap API. Learning how to make an API request
+      and resolving promises and manipulate the DOM to display requested content. Along with learning the basics of
+      HTML and CSS styling.`,
     repoLink: 'https://github.com/ScorpyG/How-The-Weather',
     siteLink: 'https://scorpyg.github.io/How-The-Weather/',
   },
   {
     title: 'Ping Pong Py',
-    image:
-      'https://media2.giphy.com/media/4O05pLjLn4HEVdrcrJ/giphy.gif?cid=790b76110ef9a3a0445b4809ebf6c695879eabceb235f460&rid=giphy.gif&ct=g',
+    image: '/images/pingpong.gif',
     technologies: ['Python', 'PyGame'],
-    desc: 'Ping Pong Game created with Python package called PyGame',
+    desc: 'A classic 2 players Ping Pong game created with Python package called PyGame.',
     repoLink: 'https://github.com/ScorpyG/Ping-Pong-Py',
     siteLink: 'https://github.com/ScorpyG/Ping-Pong-Py',
   },
   {
     title: 'Password Generator',
-    image:
-      'https://media2.giphy.com/media/qlU5rvYTjizDaHrA9k/giphy.gif?cid=790b76118aaa1fabf782b72fdffcdd4dbfb0605f3113ee72&rid=giphy.gif&ct=g',
+    image: '/images/passgen.gif',
     technologies: ['HTML', 'CSS', 'JS'],
-    desc: 'Generate a random secure password within recommended length and conditions. Explore further on how to protect yourself on the internet.',
+    desc: `Generate a random secure password within recommended length and conditions.
+      Explore further on how to protect yourself on the internet. Learning DOM manipulation
+      and RegEx (Regular Expression).`,
     repoLink: 'https://github.com/ScorpyG/password-generator',
     siteLink: 'https://scorpyg.github.io/password-generator/',
   },

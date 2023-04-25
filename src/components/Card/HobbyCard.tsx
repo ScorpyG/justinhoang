@@ -1,10 +1,16 @@
-import { HobbyCardData } from '@/utilities/types';
+import { Color } from '@/utilities/types';
+import { Box, Card, Text } from '@chakra-ui/react';
 import Tilt from 'react-parallax-tilt';
-import styles from './card.module.scss';
 
 export interface HobbyCardProps {
   hobbyData: HobbyCardData;
   handleClick?: () => void;
+}
+
+export interface HobbyCardData {
+  color: Color;
+  icon: JSX.Element;
+  text: string;
 }
 
 export default function HobbyCard(props: HobbyCardProps) {
@@ -12,12 +18,22 @@ export default function HobbyCard(props: HobbyCardProps) {
 
   return (
     <Tilt>
-      <div className={`${styles.hobbyCard}`} style={{ borderColor: hobbyData.color }}>
-        <div className={`${styles.icon}`} style={{ fill: hobbyData.color }}>
+      <Card
+        padding="20px"
+        borderRadius="3xl"
+        border={'4px'}
+        borderColor={hobbyData.color}
+        maxW="2xs"
+        height="xs"
+        background={'transparent'}
+      >
+        <Box style={{ fill: hobbyData.color }} width="30px" mb="10px">
           {hobbyData.icon}
-        </div>
-        <p style={{ color: hobbyData.color }}>{hobbyData.text}</p>
-      </div>
+        </Box>
+        <Text color={hobbyData.color} textAlign={'left'}>
+          {hobbyData.text}
+        </Text>
+      </Card>
     </Tilt>
   );
 }

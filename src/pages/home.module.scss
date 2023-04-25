@@ -1,4 +1,4 @@
-@import "../../src/utilities/constants/variables.module.scss";
+@import "../../src/utilities/variables.module.scss";
 
 // TODO: Add breakpoints and make this responsive
 .hero {
@@ -14,27 +14,6 @@
   .bio {
     height: 50%;
     width: 50%;
-
-    .typewriter {
-      display: flex;
-      gap: 5px;
-      margin: 10px 0;
-    }
-
-    a {
-      color: $dark-theme;
-      padding: 10px 25px;
-      border: 2px solid $dark-theme;
-      border-radius: 30px;
-      background: transparent;
-      cursor: pointer;
-      @include standard-transition-time;
-
-      &:hover  {
-        color: $light-theme;
-        background-color: $dark-theme;
-      }
-    }
   }
 
 }

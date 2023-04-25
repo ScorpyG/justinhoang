@@ -1,67 +1,79 @@
+import { routeUrls } from '@/utilities/constants/URLs';
+import LightLogo from '@/utilities/svgr/LightLogo';
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import {
+  Box,
+  Flex,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Spacer,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import Link from 'next/link';
 import { useState } from 'react';
-
-import CloseIcon from '../../utilities/svg/Close';
-import DarkLogo from '../../utilities/svg/DarkLogo';
-import MenuIcon from '../../utilities/svg/Hamburger';
-import LightBulb from '../../utilities/svg/Lightbulb';
-import PaperPlane from '../../utilities/svg/PaperPlane';
-import Profile from '../../utilities/svg/Profile';
+import DarkLogo from '../../utilities/svgr/DarkLogo';
 import styles from './topnavbar.module.scss';
 
 export default function TopNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const routeUrls = [
-    {
-      pageName: 'About',
-      icon: <Profile />,
-      url: '/about',
-    },
-    {
-      pageName: 'Projects',
-      icon: <LightBulb />,
-      url: '/projects',
-    },
-    {
-      pageName: 'Contact',
-      icon: <PaperPlane />,
-      url: '/contact',
-    },
-  ];
-
-  const navMenu = (
-    <ul className={styles.nav}>
-      {routeUrls.map((route, index) => {
-        return (
-          <li onClick={() => setMenuOpen((menuOpen) => !menuOpen)} key={index}>
-            <Link href={`${route.url}`}>
-              {route.icon} {route.pageName}
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
-  );
+  const { toggleColorMode } = useColorMode();
 
   return (
-    <div className={styles.container}>
-      <div className={styles.logo}>
-        <Link href="/">
-          <DarkLogo />
-        </Link>
-      </div>
-      <div className={styles.menu}>
-        <div
-          className={styles.hamburger}
-          onClick={() => {
-            setMenuOpen((menuOpen) => !menuOpen);
-          }}
-        >
-          {menuOpen ? <CloseIcon /> : <MenuIcon />}
-        </div>
-        {menuOpen ? navMenu : undefined}
-      </div>
-    </div>
+    <Flex
+      justifyContent={'center'}
+      alignItems={'center'}
+      maxW={'1512px'}
+      height={'80px'}
+      padding={'0 20px'}
+      margin={'auto'}
+    >
+      <Box className={styles.logo}>
+        <Link href="/">{useColorModeValue(<DarkLogo />, <LightLogo />)}</Link>
+      </Box>
+
+      <Spacer />
+
+      <IconButton
+        aria-label="Theme Toggle"
+        icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+        onClick={toggleColorMode}
+        variant={'outline'}
+        border={'2px'}
+        borderRadius={'9px'}
+        h={'45px'}
+        w={'45px'}
+        mr={'10px'}
+      />
+
+      <Menu closeOnSelect autoSelect={false}>
+        {({ isOpen }) => (
+          <>
+            <MenuButton
+              aria-label="Menu Options"
+              variant={'outline'}
+              as={IconButton}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              border={'2px'}
+              borderRadius={'9px'}
+              h={'45px'}
+              w={'45px'}
+            />
+            <MenuList border={'2px'} borderRadius={'9px'}>
+              {routeUrls?.map((route, index) => (
+                <Link href={route.url} key={index} onClick={() => setMenuOpen(!menuOpen)}>
+                  <MenuItem icon={route.icon} iconSpacing={'5'}>
+                    {route.pageName}
+                  </MenuItem>
+                </Link>
+              ))}
+            </MenuList>
+          </>
+        )}
+      </Menu>
+    </Flex>
   );
 }

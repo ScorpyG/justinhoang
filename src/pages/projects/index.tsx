@@ -1,7 +1,7 @@
 import Card from '@/components/Card';
 import { projectList } from '@/utilities/constants/cardData';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import Head from 'next/head';
-import styles from './projects.module.scss';
 
 export default function Projects() {
   return (
@@ -10,18 +10,28 @@ export default function Projects() {
         <title>Portfolio | Projects</title>
       </Head>
       <main>
-        <div className={`${styles.container}`}>
-          <div className={`${styles.header}`}>
-            <h1>Projects</h1>
-          </div>
-          <div className={`${styles.showcase}`}>
+        <Box>
+          <Box textAlign={'center'}>
+            <Heading>Projects</Heading>
+
+            <Text mt={2}>Things I&apos;ve built</Text>
+          </Box>
+          <Flex
+            direction={'column'}
+            gap={10}
+            maxW={'1200px'}
+            margin={'auto'}
+            marginTop={'8'}
+            marginBottom={'8'}
+            padding={['0 20px', '0 15px', '0 15px', '0 10px']}
+          >
             {projectList.length > 0 ? (
-              projectList.map((project, index) => <Card type="ProjectCard" project={project} key={index} />)
+              projectList?.map((project, index) => <Card type="ProjectCard" project={project} key={index} />)
             ) : (
-              <h1>Sorry! No Projects Available</h1>
+              <Heading>Sorry! No Projects Available</Heading>
             )}
-          </div>
-        </div>
+          </Flex>
+        </Box>
       </main>
     </>
   );
