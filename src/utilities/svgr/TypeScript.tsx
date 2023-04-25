@@ -1,7 +1,8 @@
+import { useColorModeValue } from '@chakra-ui/react';
 import { SVGProps } from 'react';
 
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448" {...props} fill={useColorModeValue('#2E2E2E', '#FFF')}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"

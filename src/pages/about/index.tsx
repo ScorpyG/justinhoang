@@ -1,10 +1,10 @@
 import Card from '@/components/Card';
 import { resume } from '@/utilities/constants/URLs';
 import techList from '@/utilities/constants/techList';
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
+import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { hobbyList } from '../../utilities/constants/cardData';
@@ -17,7 +17,7 @@ export default function About() {
   const [isProfileUrl, setProfileUrl] = useState(false);
 
   const biography = (
-    <div className={`${styles.header}`}>
+    <Box className={`${styles.header}`}>
       <Tilt scale={1.1} style={{ width: '100%', height: '100%', position: 'relative' }}>
         <Image
           src={isProfileUrl ? headshotImgUrl : ghostImgUrl}
@@ -41,21 +41,36 @@ export default function About() {
         </p>
         <br />
 
-        <Link href={resume} target="_blank">
+        <Link
+          href={resume}
+          target="_blank"
+          textDecoration={'none'}
+          padding={'10px 25px'}
+          border={'2px solid'}
+          borderRadius={'30px'}
+          transitionDuration={'.3s'}
+          _hover={{
+            borderColor: useColorModeValue('#2E2E2E', '#FFF'),
+            color: useColorModeValue('#FFF', '#2E2E2E'),
+            backgroundColor: useColorModeValue('#2E2E2E', '#FFF'),
+          }}
+        >
           resume.docx
         </Link>
       </Box>
-    </div>
+    </Box>
   );
 
   const technologies = (
     <div className={`${styles.technical}`}>
       <div className={`${styles.carousel}`}>
-        {techList.map((technology, key) => (
-          <div className={`${styles.technology}`} key={key}>
+        {techList?.map((technology, key) => (
+          <Flex className={`${styles.technology}`} key={key}>
             {technology.icon}
-            <h3>{technology.name}</h3>
-          </div>
+            <Heading as={'h3'} size={'md'}>
+              {technology.name}
+            </Heading>
+          </Flex>
         ))}
       </div>
     </div>
@@ -84,7 +99,7 @@ export default function About() {
 
       <Flex gap="20px" mt="8" flexWrap={'wrap'} justifyContent={'center'}>
         {hobbyList.length > 0 ? (
-          hobbyList.map((hobby, index) => <Card type="HobbyCard" key={index} hobbyData={hobby} />)
+          hobbyList?.map((hobby, index) => <Card type="HobbyCard" key={index} hobbyData={hobby} />)
         ) : (
           <h1>No Card Available!</h1>
         )}

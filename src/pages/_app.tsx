@@ -11,7 +11,6 @@ export default function App({ Component, pageProps }: AppProps) {
     ssr: false,
   });
 
-  // TODO: Fix component styling with ChakraUI
   return (
     <ChakraBaseProvider theme={theme} toastOptions={{ defaultOptions: { position: 'top-right' } }}>
       <Suspense fallback={null}>

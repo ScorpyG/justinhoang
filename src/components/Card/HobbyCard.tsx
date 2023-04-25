@@ -18,7 +18,15 @@ export default function HobbyCard(props: HobbyCardProps) {
 
   return (
     <Tilt>
-      <Card padding="20px" borderRadius="3xl" border={'4px'} borderColor={hobbyData.color} maxW="2xs" height="xs">
+      <Card
+        padding="20px"
+        borderRadius="3xl"
+        border={'4px'}
+        borderColor={hobbyData.color}
+        maxW="2xs"
+        height="xs"
+        background={'transparent'}
+      >
         <Box style={{ fill: hobbyData.color }} width="30px" mb="10px">
           {hobbyData.icon}
         </Box>

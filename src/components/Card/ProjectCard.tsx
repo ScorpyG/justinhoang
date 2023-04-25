@@ -22,7 +22,14 @@ export default function ProjectCard(props: ProjectCardProps) {
   const { project } = props;
 
   return (
-    <Card direction={{ base: 'column', md: 'row' }} overflow="hidden" variant={'outline'} padding={'4'} border={'2px'}>
+    <Card
+      direction={{ base: 'column', md: 'row' }}
+      overflow="hidden"
+      variant={'outline'}
+      backgroundColor={'transparent'}
+      padding={'4'}
+      border={'2px'}
+    >
       <Tilt>
         <Box w={[350, 480]} h={[197, 270]}>
           <Link href={project.siteLink} target="_blank">
@@ -33,7 +40,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 
       <Stack>
         <CardBody>
-          <Link href={project.repoLink} target="_blank" color="blue.400" _hover={{ color: 'blue.500' }}>
+          <Link href={project.repoLink} target="_blank" color="blue.400" _hover={{ color: 'blue.200' }}>
             <Heading size={'lg'}>
               {project.title} <LinkIcon boxSize={'6'} />
             </Heading>

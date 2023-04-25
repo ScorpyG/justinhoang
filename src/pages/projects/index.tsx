@@ -22,10 +22,11 @@ export default function Projects() {
             maxW={'1200px'}
             margin={'auto'}
             marginTop={'8'}
+            marginBottom={'8'}
             padding={['0 20px', '0 15px', '0 15px', '0 10px']}
           >
             {projectList.length > 0 ? (
-              projectList.map((project, index) => <Card type="ProjectCard" project={project} key={index} />)
+              projectList?.map((project, index) => <Card type="ProjectCard" project={project} key={index} />)
             ) : (
               <Heading>Sorry! No Projects Available</Heading>
             )}

@@ -9,7 +9,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0"
+    "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0",
+    "theme": "chakra-cli tokens 'src/utilities/theme.ts'",
+    "theme:watch": "chakra-cli tokens 'src/utilities/theme.ts' --watch",
+    "postinstall": "npm run gen:theme-typings"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
@@ -49,6 +52,7 @@
   },
   "main": "index.js",
   "devDependencies": {
+    "@chakra-ui/cli": "^2.3.0",
     "@commitlint/cli": "^17.6.0",
     "@commitlint/config-conventional": "^17.6.0",
     "@netlify/plugin-nextjs": "^4.33.0",

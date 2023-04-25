@@ -1,5 +1,6 @@
+import { Link } from '@chakra-ui/next-js';
+import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import { formatInTimeZone } from 'date-fns-tz';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { devCommunity, github, linkedin } from '../../utilities/constants/URLs';
 import DEVIcon from '../../utilities/svgr/DEV';
@@ -23,28 +24,35 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className={styles.footerContainer}>
-      <p className={styles.footerText}>&copy; {currentTime.getFullYear()} JUSTIN HOANG</p>
+    <Flex
+      maxWidth={'1512px'}
+      height={'80px'}
+      mx={'auto'}
+      padding={'0 20px'}
+      justifyContent={'space-between'}
+      className={styles.footerContainer}
+    >
+      <Text fontSize={['12px', '14px']} color={'#9c9c9c'}>
+        &copy; {currentTime.getFullYear()} JUSTIN HOANG
+      </Text>
 
-      <div className={styles.footerText}>
-        <div>
-          {`${formatInTimeZone(currentTime, 'America/Vancouver', 'h:mm:ss a')} | ${
-            timeZoneAsString(currentTime.toString())?.[1]
-          }`}
-        </div>
-      </div>
+      <Box fontSize={['12px', '14px']} color={'#9c9c9c'}>
+        {`${formatInTimeZone(currentTime, 'America/Vancouver', 'h:mm:ss a')} | ${
+          timeZoneAsString(currentTime.toString())?.[1]
+        }`}
+      </Box>
 
-      <div className={styles.media}>
-        <Link href={github} target="_blank">
-          <GithubIcon />
+      <Flex className={styles.media} gap={['30px', '15px']}>
+        <Link href={github} target="_blank" _hover={{ transform: 'translateY(-3px)' }}>
+          <GithubIcon fill={useColorModeValue('#2E2E2E', '#FFF')} />
         </Link>
-        <Link href={linkedin} target="_blank">
-          <LinkedInIcon />
+        <Link href={linkedin} target="_blank" _hover={{ transform: 'translateY(-3px)' }}>
+          <LinkedInIcon fill={useColorModeValue('#2E2E2E', '#FFF')} />
         </Link>
-        <Link href={devCommunity} target="_blank">
-          <DEVIcon />
+        <Link href={devCommunity} target="_blank" _hover={{ transform: 'translateY(-3px)' }}>
+          <DEVIcon fill={useColorModeValue('#2E2E2E', '#FFF')} />
         </Link>
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 }

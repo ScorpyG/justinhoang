@@ -36,6 +36,7 @@ export default function TopNavbar() {
       </Box>
 
       <Spacer />
+
       <IconButton
         aria-label="Theme Toggle"
         icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
@@ -49,25 +50,29 @@ export default function TopNavbar() {
       />
 
       <Menu closeOnSelect autoSelect={false}>
-        <MenuButton
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu Options"
-          variant={'outline'}
-          as={IconButton}
-          icon={menuOpen ? <CloseIcon /> : <HamburgerIcon />}
-          border={'2px'}
-          borderRadius={'9px'}
-          h={'45px'}
-          w={'45px'}
-        />
-
-        <MenuList border={'2px'} borderColor={'black'} borderRadius={'9px'}>
-          {routeUrls.map((route, index) => (
-            <Link href={route.url} key={index} onClick={() => setMenuOpen(!menuOpen)}>
-              <MenuItem icon={route.icon}>{route.pageName}</MenuItem>
-            </Link>
-          ))}
-        </MenuList>
+        {({ isOpen }) => (
+          <>
+            <MenuButton
+              aria-label="Menu Options"
+              variant={'outline'}
+              as={IconButton}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              border={'2px'}
+              borderRadius={'9px'}
+              h={'45px'}
+              w={'45px'}
+            />
+            <MenuList border={'2px'} borderRadius={'9px'}>
+              {routeUrls?.map((route, index) => (
+                <Link href={route.url} key={index} onClick={() => setMenuOpen(!menuOpen)}>
+                  <MenuItem icon={route.icon} iconSpacing={'5'}>
+                    {route.pageName}
+                  </MenuItem>
+                </Link>
+              ))}
+            </MenuList>
+          </>
+        )}
       </Menu>
     </Flex>
   );

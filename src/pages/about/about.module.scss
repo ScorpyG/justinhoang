@@ -46,7 +46,7 @@
   .bio {
     @include desktop-view {
       padding-left: 20px;
-      border-left: 2px solid $blackout;
+      border-left: 2px solid;
     }
 
     @include tablet-view {
@@ -60,22 +60,6 @@
     p {
       font-size: $subtitle-size;
       margin: 10px 0;
-    }
-
-    a {
-      margin: 10px 0;
-      color: $dark-theme;
-      padding: 10px 20px;
-      border: 2px solid $dark-theme;
-      border-radius: 30px;
-      background: transparent;
-      cursor: pointer;
-      @include standard-transition-time;
-
-      &:hover {
-        color: $light-theme;
-        background-color: $dark-theme;
-      }
     }
   }
 }

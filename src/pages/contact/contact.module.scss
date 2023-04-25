@@ -20,7 +20,7 @@
     flex-direction: column;
     padding: 0 15px 15px 15px;
     border-radius: 20px;
-    border: 3px solid $dark-theme;
+    border: 3px solid;
     margin-bottom: 10px;
 
     @include mobile-view {
@@ -29,7 +29,6 @@
     }
 
     label {
-      text-align: left;
       margin-top: 10px;
       margin-bottom: 5px;
     }
@@ -37,33 +36,15 @@
     input {
       border: none;
       border-radius: 5px;
-      background-color: $field;
       padding: 10px 10px;
     }
 
     textarea {
-      border: none;
-      border-radius: 5px;
-      background-color: $field;
-      padding: 10px 10px;
-      resize: none;
       width: 340px;
-      min-height: 150px;
 
       @include mobile-view {
         width: 100%;
       }
-    }
-  }
-
-  .button {
-    color: $dark-theme;
-    cursor: pointer;
-    @include standard-transition-time;
-
-    &:hover {
-      color: $light-theme;
-      background-color: $dark-theme;
     }
   }
 }

@@ -1,4 +1,5 @@
-import { extendTheme, ThemeConfig } from '@chakra-ui/react';
+import { ThemeConfig, extendTheme } from '@chakra-ui/react';
+import { GlobalStyleProps, mode } from '@chakra-ui/theme-tools';
 
 /**
  * By default, Chakra includes a comprehensive
@@ -15,10 +16,15 @@ const config: ThemeConfig = {
   useSystemColorMode: true,
 };
 
+const styles = {
+  global: (props: GlobalStyleProps) => ({
+    body: {
+      bg: mode('#fff', '#2E2E2E')(props),
+    },
+  }),
+};
+
 export const theme = extendTheme({
   config,
-  fonts: {
-    heading: `'DMSans-Bold', sans-serif`,
-    body: `'DMSans-Regular' , sans-serif`,
-  },
+  styles,
 });

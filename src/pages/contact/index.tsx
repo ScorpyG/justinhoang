@@ -10,6 +10,7 @@ import {
   Text,
   Textarea,
   chakra,
+  useColorModeValue,
   useToast,
 } from '@chakra-ui/react';
 import axios from 'axios';
@@ -78,7 +79,9 @@ export default function Contact() {
   const contactForm = (
     <form onSubmit={handleSubmit(onSubmit)} className={`${styles.form}`}>
       <FormControl isInvalid={errors.name && true}>
-        <FormLabel htmlFor="name">Full Name:</FormLabel>
+        <FormLabel htmlFor="name" textAlign={'left'}>
+          Full Name:
+        </FormLabel>
         <Input
           {...register('name', {
             pattern: {
@@ -88,12 +91,15 @@ export default function Contact() {
             required: 'Required Field',
           })}
           placeholder="Your Name"
+          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
         />
         <FormErrorMessage mt={1}>{errors.name && errors.name?.message}</FormErrorMessage>
       </FormControl>
 
       <FormControl isInvalid={errors.email && true}>
-        <FormLabel htmlFor="email">Email Address:</FormLabel>
+        <FormLabel htmlFor="email" textAlign={'left'}>
+          Email Address:
+        </FormLabel>
         <Input
           {...register('email', {
             pattern: {
@@ -105,12 +111,15 @@ export default function Contact() {
           })}
           placeholder="Your Email"
           type="email"
+          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
         />
         <FormErrorMessage mt={1}>{errors.email && errors.email?.message}</FormErrorMessage>
       </FormControl>
 
       <FormControl isInvalid={errors.message && true}>
-        <FormLabel htmlFor="message">Your Message:</FormLabel>
+        <FormLabel htmlFor="message" textAlign={'left'}>
+          Your Message:
+        </FormLabel>
         <Textarea
           {...register('message', {
             pattern: {
@@ -120,6 +129,12 @@ export default function Contact() {
             required: 'Required Field',
           })}
           placeholder="Your Message"
+          minH={'150px'}
+          borderRadius={'5px'}
+          padding={'10px 10px'}
+          resize={'none'}
+          border={'none'}
+          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
         />
         <FormErrorMessage mt={1}>{errors.message && errors.message.message}</FormErrorMessage>
       </FormControl>
@@ -131,11 +146,11 @@ export default function Contact() {
         background={'transparent'}
         border={'2px'}
         borderRadius={'30px'}
-        transitionDuration={'300ms'}
+        transitionDuration={'.3s'}
         _hover={{
-          border: 'inherit',
-          backgroundColor: '#2E2E2E',
-          color: '#FFF',
+          border: useColorModeValue('#2E2E2E', '#FFF'),
+          backgroundColor: useColorModeValue('#2E2E2E', '#FFF'),
+          color: useColorModeValue('#FFF', '#2E2E2E'),
         }}
       >
         SUBMIT
@@ -156,8 +171,8 @@ export default function Contact() {
             <Text mt={2}>Here how you can reach me</Text>
           </Box>
           <Flex gap={'15px'} justifyContent={'center'} alignItems={'center'}>
-            <Location />
-            <h3>Vancouver, BC</h3>
+            <Location fill={useColorModeValue('#2E2E2E', '#FFF')} />
+            <Heading size={'md'}>Vancouver, BC</Heading>
           </Flex>
           {contactForm}
         </Box>
