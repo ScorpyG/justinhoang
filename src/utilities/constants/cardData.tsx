@@ -54,7 +54,7 @@ export const projectList: Array<ProjectCardData> = [
   },
   {
     title: "What's the weather?",
-    image: '/images/weather.gif',
+    image: '/images/weatherapp.gif',
     technologies: ['HTML', 'CSS', 'JS'],
     desc: `The project is created with OpenWeatherMap API. Learning how to make an API request
       and resolving promises and manipulate the DOM to display requested content. Along with learning the basics of
