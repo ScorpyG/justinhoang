@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0",
-    "theme": "chakra-cli tokens 'src/utilities/theme.ts'",
+    "gen:theme-typings": "chakra-cli tokens 'src/utilities/theme.ts'",
     "theme:watch": "chakra-cli tokens 'src/utilities/theme.ts' --watch",
     "postinstall": "npm run gen:theme-typings"
   },
