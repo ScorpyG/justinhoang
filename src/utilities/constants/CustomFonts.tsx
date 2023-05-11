@@ -11,30 +11,9 @@ const Fonts = () => {
       }
 
       @font-face {
-        font-family: "DMSans-BoldItalic";
-        src: local("DMSansBoldItalic"),
-        url('/public/static/fonts/DMSans/DMSans-BoldItalic.ttf')
-        format("truetype");
-      }
-
-      @font-face {
         font-family: "DMSans-Italic";
         src: local("DMSansItalic"),
         url('/public/static/fonts/DMSans/DMSans-Italic.ttf')
-        format("truetype");
-      }
-
-      @font-face {
-        font-family: "DMSans-Medium";
-        src: local("DMSansMedium"),
-        url('/public/static/fonts/DMSans/DMSans-Medium.ttf')
-        format("truetype");
-      }
-
-      @font-face {
-        font-family: "DMSans-MediumItalic";
-        src: local("DMSansRegular"),
-        url('/public/static/fonts/DMSans/DMSans-MediumItalic.ttf')
         format("truetype");
       }
 
