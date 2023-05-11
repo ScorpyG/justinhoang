@@ -12,7 +12,7 @@ import { GlobalStyleProps, mode } from '@chakra-ui/theme-tools';
  */
 
 const config: ThemeConfig = {
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useSystemColorMode: true,
 };
 

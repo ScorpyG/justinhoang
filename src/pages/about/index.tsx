@@ -20,6 +20,7 @@ export default function About() {
     <Box className={`${styles.header}`}>
       <Tilt scale={1.1} style={{ width: '100%', height: '100%', position: 'relative' }}>
         <Image
+          priority={true}
           src={isProfileUrl ? headshotImgUrl : ghostImgUrl}
           alt="Headshot"
           onClick={() => setProfileUrl((profileUrl) => !profileUrl)}
