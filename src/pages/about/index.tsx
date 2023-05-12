@@ -15,6 +15,8 @@ export default function About() {
   const ghostImgUrl = '/images/ghost.gif';
 
   const [isProfileUrl, setProfileUrl] = useState(false);
+  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
 
   const biography = (
     <Box className={`${styles.header}`}>
@@ -50,10 +52,11 @@ export default function About() {
           border={'2px solid'}
           borderRadius={'30px'}
           transitionDuration={'.3s'}
+          fontWeight={'bold'}
           _hover={{
-            borderColor: useColorModeValue('#2E2E2E', '#FFF'),
-            color: useColorModeValue('#FFF', '#2E2E2E'),
-            backgroundColor: useColorModeValue('#2E2E2E', '#FFF'),
+            borderColor: colorStateForDarkMode,
+            color: colorStateForLightMode,
+            backgroundColor: colorStateForDarkMode,
           }}
         >
           resume.docx
@@ -87,7 +90,12 @@ export default function About() {
         <Image src="/images/git.png" width={50} height={50} alt="Git logo" />
         <Image src="/images/github.png" width={50} height={50} alt="Github logo" />
         <Image src="/images/notion.png" width={50} height={50} alt="Notion logo" />
-        <Image src="/images/apple.png" width={50} height={50} alt="Apple logo" />
+        <Image
+          src={useColorModeValue('/images/apple.png', '/images/apple-white.png')}
+          width={50}
+          height={50}
+          alt="Apple logo"
+        />
         <Image src="/images/win10.png" width={50} height={50} alt="window logo" />
       </Flex>
     </Flex>

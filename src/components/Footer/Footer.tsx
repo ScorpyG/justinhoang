@@ -13,6 +13,8 @@ export default function Footer() {
   const ChakraDEVIcon = chakra(DEVIcon);
   const ChakraLinkedInIcon = chakra(LinkedInIcon);
   const ChakraGithubIcon = chakra(GithubIcon);
+  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
 
   function timeZoneAsString(date: string) {
     if (date) {
@@ -51,42 +53,33 @@ export default function Footer() {
           target="_blank"
           _hover={{
             transform: 'translateY(-3px)',
-            bg: useColorModeValue('#2E2E2E', '#FFF'),
+            bg: colorStateForDarkMode,
           }}
           role="group"
         >
-          <ChakraGithubIcon
-            fill={useColorModeValue('#2E2E2E', '#FFF')}
-            _groupHover={{ fill: useColorModeValue('#FFF', '#2E2E2E') }}
-          />
+          <ChakraGithubIcon fill={colorStateForDarkMode} _groupHover={{ fill: colorStateForLightMode }} />
         </Link>
         <Link
           href={linkedin}
           target="_blank"
           _hover={{
             transform: 'translateY(-3px)',
-            bg: useColorModeValue('#2E2E2E', '#FFF'),
+            bg: colorStateForDarkMode,
           }}
           role="group"
         >
-          <ChakraLinkedInIcon
-            fill={useColorModeValue('#2E2E2E', '#FFF')}
-            _groupHover={{ fill: useColorModeValue('#FFF', '#2E2E2E') }}
-          />
+          <ChakraLinkedInIcon fill={colorStateForDarkMode} _groupHover={{ fill: colorStateForLightMode }} />
         </Link>
         <Link
           href={devCommunity}
           target="_blank"
           _hover={{
             transform: 'translateY(-3px)',
-            bg: useColorModeValue('#2E2E2E', '#FFF'),
+            bg: colorStateForDarkMode,
           }}
           role="group"
         >
-          <ChakraDEVIcon
-            fill={useColorModeValue('#2E2E2E', '#FFF')}
-            _groupHover={{ fill: useColorModeValue('#FFF', '#2E2E2E') }}
-          />
+          <ChakraDEVIcon fill={colorStateForDarkMode} _groupHover={{ fill: colorStateForLightMode }} />
         </Link>
       </Flex>
     </Flex>

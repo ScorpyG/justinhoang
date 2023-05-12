@@ -28,6 +28,8 @@ export interface ContactFormValues {
 
 export default function Contact() {
   const toastNotification = useToast();
+  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
 
   const {
     register,
@@ -148,9 +150,9 @@ export default function Contact() {
         borderRadius={'30px'}
         transitionDuration={'.3s'}
         _hover={{
-          border: useColorModeValue('#2E2E2E', '#FFF'),
-          backgroundColor: useColorModeValue('#2E2E2E', '#FFF'),
-          color: useColorModeValue('#FFF', '#2E2E2E'),
+          border: colorStateForDarkMode,
+          backgroundColor: colorStateForDarkMode,
+          color: colorStateForLightMode,
         }}
       >
         SUBMIT
@@ -171,7 +173,7 @@ export default function Contact() {
             <Text mt={2}>Here how you can reach me</Text>
           </Box>
           <Flex gap={'15px'} justifyContent={'center'} alignItems={'center'}>
-            <Location fill={useColorModeValue('#2E2E2E', '#FFF')} />
+            <Location fill={colorStateForDarkMode} />
             <Heading size={'md'}>Vancouver, BC</Heading>
           </Flex>
           {contactForm}
