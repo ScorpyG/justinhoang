@@ -12,7 +12,7 @@ import { GlobalStyleProps, mode } from '@chakra-ui/theme-tools';
  */
 
 const config: ThemeConfig = {
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useSystemColorMode: true,
 };
 
@@ -27,4 +27,8 @@ const styles = {
 export const theme = extendTheme({
   config,
   styles,
+  fonts: {
+    body: 'DMSans-Regular',
+    heading: 'DMSans-Bold',
+  },
 });

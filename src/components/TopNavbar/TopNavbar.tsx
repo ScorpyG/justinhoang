@@ -21,6 +21,8 @@ import styles from './topnavbar.module.scss';
 export default function TopNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { toggleColorMode } = useColorMode();
+  const colorState = useColorModeValue('#FFF', '#2E2E2E');
+  const menuColorState = useColorModeValue('blue.100', 'red.400');
 
   return (
     <Flex
@@ -62,10 +64,15 @@ export default function TopNavbar() {
               h={'45px'}
               w={'45px'}
             />
-            <MenuList border={'2px'} borderRadius={'9px'}>
+            <MenuList border={'2px'} borderRadius={'9px'} background={colorState}>
               {routeUrls?.map((route, index) => (
                 <Link href={route.url} key={index} onClick={() => setMenuOpen(!menuOpen)}>
-                  <MenuItem icon={route.icon} iconSpacing={'5'}>
+                  <MenuItem
+                    icon={route.icon}
+                    iconSpacing={'5'}
+                    background={colorState}
+                    _hover={{ background: menuColorState }}
+                  >
                     {route.pageName}
                   </MenuItem>
                 </Link>

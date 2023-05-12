@@ -1,5 +1,5 @@
 import { Link } from '@chakra-ui/next-js';
-import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, Text, chakra, useColorModeValue } from '@chakra-ui/react';
 import { formatInTimeZone } from 'date-fns-tz';
 import { useEffect, useState } from 'react';
 import { devCommunity, github, linkedin } from '../../utilities/constants/URLs';
@@ -10,6 +10,11 @@ import styles from './footer.module.scss';
 
 export default function Footer() {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const ChakraDEVIcon = chakra(DEVIcon);
+  const ChakraLinkedInIcon = chakra(LinkedInIcon);
+  const ChakraGithubIcon = chakra(GithubIcon);
+  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
 
   function timeZoneAsString(date: string) {
     if (date) {
@@ -43,14 +48,38 @@ export default function Footer() {
       </Box>
 
       <Flex className={styles.media} gap={['30px', '15px']}>
-        <Link href={github} target="_blank" _hover={{ transform: 'translateY(-3px)' }}>
-          <GithubIcon fill={useColorModeValue('#2E2E2E', '#FFF')} />
+        <Link
+          href={github}
+          target="_blank"
+          _hover={{
+            transform: 'translateY(-3px)',
+            bg: colorStateForDarkMode,
+          }}
+          role="group"
+        >
+          <ChakraGithubIcon fill={colorStateForDarkMode} _groupHover={{ fill: colorStateForLightMode }} />
         </Link>
-        <Link href={linkedin} target="_blank" _hover={{ transform: 'translateY(-3px)' }}>
-          <LinkedInIcon fill={useColorModeValue('#2E2E2E', '#FFF')} />
+        <Link
+          href={linkedin}
+          target="_blank"
+          _hover={{
+            transform: 'translateY(-3px)',
+            bg: colorStateForDarkMode,
+          }}
+          role="group"
+        >
+          <ChakraLinkedInIcon fill={colorStateForDarkMode} _groupHover={{ fill: colorStateForLightMode }} />
         </Link>
-        <Link href={devCommunity} target="_blank" _hover={{ transform: 'translateY(-3px)' }}>
-          <DEVIcon fill={useColorModeValue('#2E2E2E', '#FFF')} />
+        <Link
+          href={devCommunity}
+          target="_blank"
+          _hover={{
+            transform: 'translateY(-3px)',
+            bg: colorStateForDarkMode,
+          }}
+          role="group"
+        >
+          <ChakraDEVIcon fill={colorStateForDarkMode} _groupHover={{ fill: colorStateForLightMode }} />
         </Link>
       </Flex>
     </Flex>

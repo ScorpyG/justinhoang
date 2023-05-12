@@ -9,6 +9,8 @@ export default function Home() {
   const DynamicTypeWriter = dynamic(() => import('typewriter-effect'), {
     ssr: false,
   });
+  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
 
   return (
     <>
@@ -47,10 +49,11 @@ export default function Home() {
               border={'2px solid'}
               borderRadius={'30px'}
               transitionDuration={'.3s'}
+              fontWeight={'bold'}
               _hover={{
-                borderColor: useColorModeValue('#2E2E2E', '#FFF'),
-                color: useColorModeValue('#FFF', '#2E2E2E'),
-                backgroundColor: useColorModeValue('#2E2E2E', '#FFF'),
+                borderColor: colorStateForDarkMode,
+                color: colorStateForLightMode,
+                backgroundColor: colorStateForDarkMode,
               }}
             >
               LEARN MORE

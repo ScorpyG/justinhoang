@@ -33,7 +33,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       <Tilt>
         <Box w={[350, 480]} h={[197, 270]}>
           <Link href={project.siteLink} target="_blank">
-            <Image src={project.image} alt="Project GIF" fill style={{ objectFit: 'contain' }} />
+            <Image src={project.image} priority={true} alt="Project GIF" fill style={{ objectFit: 'contain' }} />
           </Link>
         </Box>
       </Tilt>
