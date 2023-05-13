@@ -1,10 +1,8 @@
-import { getPageTitle } from '@/utilities/helpers';
 import { theme } from '@/utilities/theme';
 import { ChakraBaseProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { Suspense } from 'react';
 import TopNavbar from '../components/TopNavbar/TopNavbar';
 
@@ -12,7 +10,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const DynamicFooter = dynamic(() => import('../components/Footer/Footer'), {
     ssr: false,
   });
-  const router = useRouter();
 
   return (
     <ChakraBaseProvider theme={theme} toastOptions={{ defaultOptions: { position: 'top-right' } }}>
@@ -22,7 +19,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/static/svgs/light-logo.svg" media="(prefers-color-scheme: dark)" />
           <link rel="icon" href="/static/svgs/dark-logo.svg" media="(prefers-color-scheme: light)" />
-          <title>Portfolio | {getPageTitle(router.pathname)}</title>
         </Head>
         <main>
           <TopNavbar />

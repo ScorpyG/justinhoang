@@ -3,6 +3,7 @@ import { resume } from '@/utilities/constants/URLs';
 import techList from '@/utilities/constants/techList';
 import { Link } from '@chakra-ui/next-js';
 import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
@@ -116,13 +117,18 @@ export default function About() {
   );
 
   return (
-    <main>
-      <div className={`${styles.container}`}>
-        {biography}
-        {technologies}
-        {tools}
-        {hobbies}
-      </div>
-    </main>
+    <>
+      <Head>
+        <title>Portfolio | About</title>
+      </Head>
+      <main>
+        <div className={`${styles.container}`}>
+          {biography}
+          {technologies}
+          {tools}
+          {hobbies}
+        </div>
+      </main>
+    </>
   );
 }

@@ -14,6 +14,7 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import axios from 'axios';
+import Head from 'next/head';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Location from '../../utilities/svgr/Location';
 import { ServerRes } from '../api/contact';
@@ -160,19 +161,24 @@ export default function Contact() {
   );
 
   return (
-    <main>
-      <Box className={`${styles.container}`}>
-        <Box>
-          <Heading>Get in touch!</Heading>
-          <chakra.hr color={'black'} />
-          <Text mt={2}>Here how you can reach me</Text>
+    <>
+      <Head>
+        <title>Portfolio | Contact</title>
+      </Head>
+      <main>
+        <Box className={`${styles.container}`}>
+          <Box>
+            <Heading>Get in touch!</Heading>
+            <chakra.hr color={'black'} />
+            <Text mt={2}>Here how you can reach me</Text>
+          </Box>
+          <Flex gap={'15px'} justifyContent={'center'} alignItems={'center'}>
+            <Location fill={colorStateForDarkMode} />
+            <Heading size={'md'}>Vancouver, BC</Heading>
+          </Flex>
+          {contactForm}
         </Box>
-        <Flex gap={'15px'} justifyContent={'center'} alignItems={'center'}>
-          <Location fill={colorStateForDarkMode} />
-          <Heading size={'md'}>Vancouver, BC</Heading>
-        </Flex>
-        {contactForm}
-      </Box>
-    </main>
+      </main>
+    </>
   );
 }
