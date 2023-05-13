@@ -20,7 +20,7 @@ export default function About() {
 
   const biography = (
     <Box className={`${styles.header}`}>
-      <Tilt scale={1.1} style={{ width: '100%', height: '100%', position: 'relative' }}>
+      <Tilt scale={1.1} className={styles.tiltGrid}>
         <Image
           priority={true}
           src={isProfileUrl ? headshotImgUrl : ghostImgUrl}
@@ -88,7 +88,12 @@ export default function About() {
         <Image src="/images/vscode.png" width={50} height={50} alt="vscode logo" />
         <Image src="/images/figma.png" width={30} height={50} alt="Figma logo" />
         <Image src="/images/git.png" width={50} height={50} alt="Git logo" />
-        <Image src="/images/github.png" width={50} height={50} alt="Github logo" />
+        <Image
+          src={useColorModeValue('/images/github-mark.png', '/images/github-mark-white.png')}
+          width={50}
+          height={50}
+          alt="Github logo"
+        />
         <Image src="/images/notion.png" width={50} height={50} alt="Notion logo" />
         <Image
           src={useColorModeValue('/images/apple.png', '/images/apple-white.png')}
@@ -102,7 +107,7 @@ export default function About() {
   );
 
   const hobbies = (
-    <Box className={`${styles.hobbies}`} textAlign="center">
+    <Box textAlign="center" mb={'8'}>
       <Heading>Hobbies</Heading>
       <Text>A bit of...insights!</Text>
 

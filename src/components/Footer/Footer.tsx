@@ -32,10 +32,12 @@ export default function Footer() {
     <Flex
       maxWidth={'1512px'}
       height={'80px'}
+      mt={'10px'}
       mx={'auto'}
       padding={'0 20px'}
       justifyContent={'space-between'}
       className={styles.footerContainer}
+      rowGap={'5px'}
     >
       <Text fontSize={['12px', '14px']} color={'#9c9c9c'}>
         &copy; {currentTime.getFullYear()} JUSTIN HOANG
