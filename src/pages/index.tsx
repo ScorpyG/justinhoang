@@ -1,7 +1,6 @@
 import { Link } from '@chakra-ui/next-js';
 import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
 import styles from './home.module.scss';
 
 export default function Home() {
@@ -14,9 +13,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Portfolio | Home</title>
-      </Head>
       <main>
         <Box className={styles.hero}>
           <Box className={styles.bio}>
