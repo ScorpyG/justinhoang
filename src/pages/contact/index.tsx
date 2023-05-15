@@ -27,7 +27,7 @@ export interface ContactFormValues {
 }
 
 export default function Contact() {
-  const toastNotification = useToast();
+  const toast = useToast();
   const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
   const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
 
@@ -53,7 +53,7 @@ export default function Contact() {
       const data: ServerRes = response.data;
 
       if (response.status === 200) {
-        toastNotification({
+        toast({
           title: data.title,
           description: data.description,
           status: data.toastStatus,
@@ -61,7 +61,7 @@ export default function Contact() {
         });
         reset();
       } else {
-        toastNotification({
+        toast({
           title: data.title,
           description: data.description,
           status: data.toastStatus,
@@ -69,7 +69,7 @@ export default function Contact() {
         });
       }
     } catch (err) {
-      toastNotification({
+      toast({
         title: `${err}`,
         description: `${err}`,
         status: 'error',
@@ -78,8 +78,18 @@ export default function Contact() {
     }
   };
 
+  const onInvalidSubmit = () => {
+    toast({
+      title: 'Missing information',
+      description: 'Please fill out the form',
+      status: 'error',
+      duration: 3500,
+      isClosable: true,
+    });
+  };
+
   const contactForm = (
-    <form onSubmit={handleSubmit(onSubmit)} className={`${styles.form}`}>
+    <form onSubmit={handleSubmit(onSubmit, onInvalidSubmit)} className={`${styles.form}`}>
       <FormControl isInvalid={errors.name && true}>
         <FormLabel htmlFor="name" textAlign={'left'}>
           Full Name:

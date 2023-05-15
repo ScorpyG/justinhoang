@@ -49,6 +49,7 @@ export default function TopNavbar() {
         h={'45px'}
         w={'45px'}
         mr={'10px'}
+        _hover={{ background: menuColorState }}
       />
 
       <Menu closeOnSelect autoSelect={false}>
@@ -63,6 +64,7 @@ export default function TopNavbar() {
               borderRadius={'9px'}
               h={'45px'}
               w={'45px'}
+              _hover={{ background: menuColorState }}
             />
             <MenuList border={'2px'} borderRadius={'9px'} background={colorState}>
               {routeUrls?.map((route, index) => (
