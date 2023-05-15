@@ -21,7 +21,7 @@ $title-size: 2em;
 
 @mixin center-a-div {
     /* screen height - topnav height - footer height */
-    height: calc(100vh - 80px - 80px);
+    height: calc(100vh - 80px - 90px);
 }
 
 @mixin cursor-as-pointer {
