@@ -3,7 +3,7 @@ import Code from '../svgr/Code';
 import HTML from '../svgr/HTML';
 import JavaScript from '../svgr/JavaScript';
 import MongoDB from '../svgr/MongoDB';
-import Next from '../svgr/Next';
+import NextLogo from '../svgr/NextLogo';
 import Node from '../svgr/Node';
 import Python from '../svgr/Python';
 import React from '../svgr/React';
@@ -27,7 +27,7 @@ const techList: Array<TechnologyLogo> = [
   },
   {
     name: 'Next.js',
-    icon: <Next />,
+    icon: <NextLogo />,
   },
   {
     name: 'HTML',
