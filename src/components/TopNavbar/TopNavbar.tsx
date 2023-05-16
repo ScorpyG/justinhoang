@@ -21,8 +21,8 @@ import styles from './topnavbar.module.scss';
 export default function TopNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { toggleColorMode } = useColorMode();
-  const colorState = useColorModeValue('#FFF', '#2E2E2E');
-  const menuColorState = useColorModeValue('blue.100', 'red.400');
+  const colorState = useColorModeValue('#FFF', 'gray.900');
+  const menuColorState = useColorModeValue('blue.100', 'red.200');
 
   return (
     <Flex

@@ -28,8 +28,9 @@ export interface ContactFormValues {
 
 export default function Contact() {
   const toast = useToast();
-  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
-  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
+  const colorStateForDarkMode = useColorModeValue('#000', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#000');
+  const colorStateTextField = useColorModeValue('#dbdbdb', 'whiteAlpha.300');
 
   const {
     register,
@@ -103,7 +104,7 @@ export default function Contact() {
             required: 'Required Field',
           })}
           placeholder="Your Name"
-          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
+          backgroundColor={colorStateTextField}
         />
         <FormErrorMessage mt={1}>{errors.name && errors.name?.message}</FormErrorMessage>
       </FormControl>
@@ -123,7 +124,7 @@ export default function Contact() {
           })}
           placeholder="Your Email"
           type="email"
-          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
+          backgroundColor={colorStateTextField}
         />
         <FormErrorMessage mt={1}>{errors.email && errors.email?.message}</FormErrorMessage>
       </FormControl>
@@ -146,7 +147,7 @@ export default function Contact() {
           padding={'10px 10px'}
           resize={'none'}
           border={'none'}
-          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
+          backgroundColor={colorStateTextField}
         />
         <FormErrorMessage mt={1}>{errors.message && errors.message.message}</FormErrorMessage>
       </FormControl>

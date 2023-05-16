@@ -13,8 +13,8 @@ export default function Footer() {
   const ChakraDEVIcon = chakra(DEVIcon);
   const ChakraLinkedInIcon = chakra(LinkedInIcon);
   const ChakraGithubIcon = chakra(GithubIcon);
-  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
-  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
+  const colorStateForDarkMode = useColorModeValue('#000', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#000');
 
   function timeZoneAsString(date: string) {
     if (date) {

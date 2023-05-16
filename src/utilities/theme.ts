@@ -19,7 +19,7 @@ const config: ThemeConfig = {
 const styles = {
   global: (props: GlobalStyleProps) => ({
     body: {
-      bg: mode('#fff', '#2E2E2E')(props),
+      bg: mode('#fff', 'gray.900')(props),
     },
   }),
 };
