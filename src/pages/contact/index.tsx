@@ -27,9 +27,10 @@ export interface ContactFormValues {
 }
 
 export default function Contact() {
-  const toastNotification = useToast();
-  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
-  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
+  const toast = useToast();
+  const colorStateForDarkMode = useColorModeValue('#000', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#000');
+  const colorStateTextField = useColorModeValue('#dbdbdbcd', 'whiteAlpha.300');
 
   const {
     register,
@@ -53,7 +54,7 @@ export default function Contact() {
       const data: ServerRes = response.data;
 
       if (response.status === 200) {
-        toastNotification({
+        toast({
           title: data.title,
           description: data.description,
           status: data.toastStatus,
@@ -61,7 +62,7 @@ export default function Contact() {
         });
         reset();
       } else {
-        toastNotification({
+        toast({
           title: data.title,
           description: data.description,
           status: data.toastStatus,
@@ -69,7 +70,7 @@ export default function Contact() {
         });
       }
     } catch (err) {
-      toastNotification({
+      toast({
         title: `${err}`,
         description: `${err}`,
         status: 'error',
@@ -78,8 +79,18 @@ export default function Contact() {
     }
   };
 
+  const onInvalidSubmit = () => {
+    toast({
+      title: 'Missing information',
+      description: 'Please fill out the form',
+      status: 'error',
+      duration: 3500,
+      isClosable: true,
+    });
+  };
+
   const contactForm = (
-    <form onSubmit={handleSubmit(onSubmit)} className={`${styles.form}`}>
+    <form onSubmit={handleSubmit(onSubmit, onInvalidSubmit)} className={`${styles.form}`}>
       <FormControl isInvalid={errors.name && true}>
         <FormLabel htmlFor="name" textAlign={'left'}>
           Full Name:
@@ -93,7 +104,7 @@ export default function Contact() {
             required: 'Required Field',
           })}
           placeholder="Your Name"
-          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
+          backgroundColor={colorStateTextField}
         />
         <FormErrorMessage mt={1}>{errors.name && errors.name?.message}</FormErrorMessage>
       </FormControl>
@@ -113,7 +124,7 @@ export default function Contact() {
           })}
           placeholder="Your Email"
           type="email"
-          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
+          backgroundColor={colorStateTextField}
         />
         <FormErrorMessage mt={1}>{errors.email && errors.email?.message}</FormErrorMessage>
       </FormControl>
@@ -136,7 +147,7 @@ export default function Contact() {
           padding={'10px 10px'}
           resize={'none'}
           border={'none'}
-          backgroundColor={useColorModeValue('#dbdbdb', '#707070')}
+          backgroundColor={colorStateTextField}
         />
         <FormErrorMessage mt={1}>{errors.message && errors.message.message}</FormErrorMessage>
       </FormControl>
