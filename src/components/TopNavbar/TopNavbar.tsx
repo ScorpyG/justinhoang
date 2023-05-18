@@ -22,7 +22,10 @@ export default function TopNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { toggleColorMode } = useColorMode();
   const colorState = useColorModeValue('#FFF', 'gray.900');
-  const menuColorState = useColorModeValue('blue.100', 'red.200');
+  const menuColorState = useColorModeValue('blackAlpha.300', 'whiteAlpha.400');
+
+  const colorStateForDarkMode = useColorModeValue('#2E2E2E', '#FFF');
+  const colorStateForLightMode = useColorModeValue('#FFF', '#2E2E2E');
 
   return (
     <Flex
@@ -49,7 +52,11 @@ export default function TopNavbar() {
         h={'45px'}
         w={'45px'}
         mr={'10px'}
-        _hover={{ background: menuColorState }}
+        _hover={{
+          borderColor: colorStateForDarkMode,
+          color: colorStateForLightMode,
+          backgroundColor: colorStateForDarkMode,
+        }}
       />
 
       <Menu closeOnSelect autoSelect={false}>
@@ -64,7 +71,11 @@ export default function TopNavbar() {
               borderRadius={'9px'}
               h={'45px'}
               w={'45px'}
-              _hover={{ background: menuColorState }}
+              _hover={{
+                borderColor: colorStateForDarkMode,
+                color: colorStateForLightMode,
+                backgroundColor: colorStateForDarkMode,
+              }}
             />
             <MenuList border={'2px'} borderRadius={'9px'} background={colorState}>
               {routeUrls?.map((route, index) => (

@@ -30,7 +30,7 @@ export default function Contact() {
   const toast = useToast();
   const colorStateForDarkMode = useColorModeValue('#000', '#FFF');
   const colorStateForLightMode = useColorModeValue('#FFF', '#000');
-  const colorStateTextField = useColorModeValue('#dbdbdb', 'whiteAlpha.300');
+  const colorStateTextField = useColorModeValue('#dbdbdbcd', 'whiteAlpha.300');
 
   const {
     register,
