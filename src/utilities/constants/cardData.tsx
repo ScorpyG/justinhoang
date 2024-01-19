@@ -43,7 +43,7 @@ export const hobbyList: Array<HobbyCardData> = [
 
 export const projectList: Array<ProjectCardData> = [
   {
-    title: 'Quote Generator',
+    title: 'Quote Generator (v.1)',
     image: '/images/quotegen.gif',
     technologies: ['MongoDB', 'Express', 'React', 'Node'],
     desc: `1st Full-stack application Quote generator app that allow user to view and add their own quotes.

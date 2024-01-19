@@ -1,6 +1,6 @@
+import { ContactFormValues } from '@/components/ContactForm/useContactForm';
 import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
-import { ContactFormValues } from '../contact';
 
 export interface ServerRes {
   title: string;
@@ -67,7 +67,7 @@ async function handler(request: NextApiRequest, response: NextApiResponse<Server
   const { name } = request.body;
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'Gmail',
     auth: {
       user: process.env.NEXT_PUBLIC_CONTACT_EMAIL,
       pass: process.env.NEXT_PUBLIC_CONTACT_PASS,
@@ -82,7 +82,11 @@ async function handler(request: NextApiRequest, response: NextApiResponse<Server
       ...generateEmailContent(request.body),
     });
 
-    return response.status(200).json({ title: 'Success', description: 'Email Sent!', toastStatus: 'success' });
+    return response.status(200).json({
+      title: 'Success',
+      description: 'Email Sent!',
+      toastStatus: 'success',
+    });
   } catch (err) {
     return response.status(500).json({
       title: 'Failed',

@@ -1,7 +1,6 @@
 import { LinkIcon } from '@chakra-ui/icons';
 import { Link } from '@chakra-ui/next-js';
-import { Box, Card, CardBody, Heading, Stack, Text } from '@chakra-ui/react';
-import Image from 'next/image';
+import { Box, Card, CardBody, Heading, Img, Stack, Text } from '@chakra-ui/react';
 import Tilt from 'react-parallax-tilt';
 
 export interface ProjectCardProps {
@@ -33,7 +32,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       <Tilt>
         <Box w={[350, 480]} h={[197, 270]}>
           <Link href={project.siteLink} target="_blank">
-            <Image src={project.image} priority={true} alt="Project GIF" fill style={{ objectFit: 'contain' }} />
+            <Img src={project.image} alt="Project GIF" style={{ objectFit: 'contain' }} />
           </Link>
         </Box>
       </Tilt>

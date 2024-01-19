@@ -16,9 +16,9 @@ import {
 import Link from 'next/link';
 import { useState } from 'react';
 import DarkLogo from '../../utilities/svgr/DarkLogo';
-import styles from './topnavbar.module.scss';
+import styles from './navbar.module.scss';
 
-export default function TopNavbar() {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { toggleColorMode } = useColorMode();
   const colorState = useColorModeValue('#FFF', 'gray.900');
@@ -37,7 +37,9 @@ export default function TopNavbar() {
       margin={'auto'}
     >
       <Box className={styles.logo}>
-        <Link href="/">{useColorModeValue(<DarkLogo />, <LightLogo />)}</Link>
+        <Link href="/" aria-label="Redirect back to homepage">
+          {useColorModeValue(<DarkLogo />, <LightLogo />)}
+        </Link>
       </Box>
 
       <Spacer />

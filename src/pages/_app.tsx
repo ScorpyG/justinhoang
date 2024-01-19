@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { Suspense } from 'react';
-import TopNavbar from '../components/TopNavbar/TopNavbar';
+import Navbar from '../components/Navbar/Navbar';
 
 export default function App({ Component, pageProps }: AppProps) {
   const DynamicFooter = dynamic(() => import('../components/Footer/Footer'), {
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <link rel="icon" href="/static/svgs/dark-logo.svg" media="(prefers-color-scheme: light)" />
         </Head>
         <main>
-          <TopNavbar />
+          <Navbar />
           <Component {...pageProps} />
           <DynamicFooter />
         </main>
