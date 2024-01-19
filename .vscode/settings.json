@@ -9,10 +9,10 @@
   "editor.formatOnSave": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.addMissingImports": true,
-    "source.organizeImports": true,
-    "source.autoFixOnSave": true
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit",
+    "source.autoFixOnSave": "explicit"
   },
   "editor.suggestSelection": "first",
   "diffEditor.ignoreTrimWhitespace": false,

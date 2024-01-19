@@ -37,7 +37,9 @@ export default function TopNavbar() {
       margin={'auto'}
     >
       <Box className={styles.logo}>
-        <Link href="/">{useColorModeValue(<DarkLogo />, <LightLogo />)}</Link>
+        <Link href="/" aria-label="Redirect back to homepage">
+          {useColorModeValue(<DarkLogo />, <LightLogo />)}
+        </Link>
       </Box>
 
       <Spacer />

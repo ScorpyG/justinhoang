@@ -5,7 +5,7 @@ import Head from 'next/head';
 import styles from './home.module.scss';
 
 export default function Home() {
-  // NO SSR
+  // ! TypeWriter component constantly re-renders the client side therefore lazy loading is needed to function properly
   const DynamicTypeWriter = dynamic(() => import('typewriter-effect'), {
     ssr: false,
   });
@@ -55,8 +55,9 @@ export default function Home() {
                 color: colorStateForLightMode,
                 backgroundColor: colorStateForDarkMode,
               }}
+              aria-label="Direct to about page"
             >
-              LEARN MORE
+              &gt;&gt; ABOUT ME
             </Link>
           </Box>
           <Box className={styles.model}></Box>

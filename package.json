@@ -52,7 +52,7 @@
   },
   "main": "index.js",
   "devDependencies": {
-    "@chakra-ui/cli": "^2.3.0",
+    "@chakra-ui/cli": "^2.4.1",
     "@commitlint/cli": "^17.6.0",
     "@commitlint/config-conventional": "^17.6.0",
     "@netlify/plugin-nextjs": "^4.36.0",
