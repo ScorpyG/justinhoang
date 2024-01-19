@@ -34,13 +34,15 @@ export default function About() {
       <Box className={`${styles.bio}`}>
         <Heading>ABOUT ME</Heading>
         <p>
-          I&apos;m a software developer based in <u>Vancouver</u> with a passion for technology and design. I enjoy
-          learning different technologies and building applications to challenge my own creativity, problem-solving,
-          planning, and organization.
+          I&apos;m a software developer based in <u>Vancouver</u>. I enjoy learning different technologies and building
+          applications to challenge my own creativity, problem-solving, planning, and organization.
         </p>
         <p>
           Skills/Interests:{' '}
-          <b>TypeScript, JavaScript, React.js, Git, NoSQL, Python, Next.js, Saas, Machine Learning, A.I, Robotics</b>
+          <b>
+            TypeScript, JavaScript, React.js, Git, GraphQL, NoSQL, Python, Next.js, SaaS, Machine Learning, A.I,
+            Robotics
+          </b>
         </p>
         <br />
 

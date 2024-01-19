@@ -82,7 +82,11 @@ async function handler(request: NextApiRequest, response: NextApiResponse<Server
       ...generateEmailContent(request.body),
     });
 
-    return response.status(200).json({ title: 'Success', description: 'Email Sent!', toastStatus: 'success' });
+    return response.status(200).json({
+      title: 'Success',
+      description: 'Email Sent!',
+      toastStatus: 'success',
+    });
   } catch (err) {
     return response.status(500).json({
       title: 'Failed',
