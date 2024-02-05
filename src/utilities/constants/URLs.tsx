@@ -4,7 +4,7 @@ import Profile from '../svgr/Profile';
 
 // professional
 export const resume =
-  'https://docs.google.com/document/d/1keGfeTA8uYQEpV_unXnjeFpRyvSMBYK9HhW1UxVVdN4/edit?usp=sharing';
+  'https://docs.google.com/document/d/1__VXh_jdY7ULvg9cxh5o-OTXCchmGNDhFlajnDKWDE8/edit?usp=sharing';
 
 // social media
 export const github = 'https://github.com/ScorpyG';
