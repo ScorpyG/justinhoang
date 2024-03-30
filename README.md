@@ -4,6 +4,8 @@
 
 - This is updated version of the portfolio using [Next.js v13.2.3](https://nextjs.org/) and [React.js v18.2.0](https://reactjs.org/)
 - Rewrite using [TypeScript](https://www.typescriptlang.org/)
+  
+<img width="1800" alt="Screenshot 2024-03-30 at 11 49 18 AM" src="https://github.com/ScorpyG/justinhoang/assets/69221471/afa3b5ab-dd07-4a65-9fe9-fe2a67d2543c">
 
 ## Getting Started
 
