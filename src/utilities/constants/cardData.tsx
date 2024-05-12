@@ -43,6 +43,14 @@ export const hobbyList: Array<HobbyCardData> = [
 
 export const projectList: Array<ProjectCardData> = [
   {
+    title: 'StudyBuddy (v.1)',
+    image: '/images/studybuddy.png',
+    technologies: ['Vue.js', 'Vuex', 'Springboot', 'MySQL'],
+    desc: `A full-stack application that allows students to pair with other learners and educators across the globe. `,
+    repoLink: 'https://github.com/ScorpyG/studybuddy-api',
+    siteLink: 'https://github.com/ScorpyG/studybuddy-web',
+  },
+  {
     title: 'Quote Generator (v.1)',
     image: '/images/quotegen.gif',
     technologies: ['MongoDB', 'Express', 'React', 'Node'],
