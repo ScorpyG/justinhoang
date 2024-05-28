@@ -51,14 +51,13 @@ export const projectList: Array<ProjectCardData> = [
     siteLink: 'https://github.com/ScorpyG/studybuddy-web',
   },
   {
-    title: 'Quote Generator (v.1)',
-    image: '/images/quotegen.gif',
-    technologies: ['MongoDB', 'Express', 'React', 'Node'],
-    desc: `1st Full-stack application Quote generator app that allow user to view and add their own quotes.
-     Expand further by building an API from scratch to explore and learn the structure of HTTPS requests and CORS
-     (Cross Origin Resources Sharing).`,
+    title: 'Quote Generator (v.2)',
+    image: '/images/quotegen.png',
+    technologies: ['TypeScript', 'Nexts.js', 'MongoDB'],
+    desc: `Reworked of the 1st Full-stack application Quote generator app that allow user to view and add their own quotes.
+      Using Next.js and Next API routes to handle the backend. Implement authentication and authorization with JWT.`,
     repoLink: 'https://github.com/ScorpyG/Quote-Generator',
-    siteLink: 'https://mern-quote-generator.netlify.app/',
+    siteLink: 'https://scorpy-quote-gen.vercel.app/',
   },
   {
     title: "What's the weather?",
