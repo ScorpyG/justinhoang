@@ -1,14 +1,14 @@
 import { HobbyCardData } from '@/components/Card/HobbyCard';
 import { ProjectCardData } from '@/components/Card/ProjectCard';
-import Brain from '../svgr/Brain';
-import Chat from '../svgr/Chat';
-import Crown from '../svgr/Crown';
-import Fan from '../svgr/Fan';
+import BrainIcon from '../icons/BrainIcon';
+import ChatIcon from '../icons/ChatIcon';
+import CrownIcon from '../icons/CrownIcon';
+import FanIcon from '../icons/FanIcon';
 
 export const hobbyList: Array<HobbyCardData> = [
   {
     color: '#ffc0cb',
-    icon: <Brain />,
+    icon: <BrainIcon width={'max-content'} height={'max-content'} />,
     text: `I like spending time learning different
     things outside of programming, like psychology,
     cooking and sports. Which allow me to keep on
@@ -17,7 +17,7 @@ export const hobbyList: Array<HobbyCardData> = [
   },
   {
     color: '#add8e6',
-    icon: <Fan />,
+    icon: <FanIcon width={'max-content'} height={'max-content'} />,
     text: `By combining both of my background in art and
     science help me design interactive interfaces allows
     me to illuminating and underline the beauty and the
@@ -25,7 +25,7 @@ export const hobbyList: Array<HobbyCardData> = [
   },
   {
     color: '#ffa500',
-    icon: <Crown />,
+    icon: <CrownIcon width={'max-content'} height={'max-content'} />,
     text: `Growing up playing video games has turned me
     into a competitive player. With some of that competitiveness
     being translated into my present working life.
@@ -33,7 +33,7 @@ export const hobbyList: Array<HobbyCardData> = [
   },
   {
     color: '#81be83',
-    icon: <Chat />,
+    icon: <ChatIcon width={'max-content'} height={'max-content'} />,
     text: `Growing up playing video games has turned me into a competitive
     player. With some of that competitiveness being translated into
     my present working life. So, I always thrive towards becoming
