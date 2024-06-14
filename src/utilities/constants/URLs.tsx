@@ -1,6 +1,6 @@
-import LightBulb from '../svgr/Lightbulb';
-import PaperPlane from '../svgr/PaperPlane';
-import Profile from '../svgr/Profile';
+import LightBulbIcon from '../icons/LightbulbIcon';
+import PaperPlaneIcon from '../icons/PaperPlaneIcon';
+import ProfileIcon from '../icons/ProfileIcon';
 
 // professional
 export const resume =
@@ -14,17 +14,17 @@ export const devCommunity = 'https://dev.to/scorpyg';
 export const routeUrls = [
   {
     pageName: 'About',
-    icon: <Profile />,
+    icon: <ProfileIcon boxSize={6} />,
     url: '/about',
   },
   {
     pageName: 'Projects',
-    icon: <LightBulb />,
+    icon: <LightBulbIcon boxSize={6} />,
     url: '/projects',
   },
   {
     pageName: 'Contact',
-    icon: <PaperPlane />,
+    icon: <PaperPlaneIcon boxSize={6} />,
     url: '/contact',
   },
 ];

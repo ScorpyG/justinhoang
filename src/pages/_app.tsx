@@ -1,4 +1,4 @@
-import { theme } from '@/utilities/theme';
+import { theme } from '@/lib/theme';
 import { ChakraBaseProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';

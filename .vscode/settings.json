@@ -1,7 +1,7 @@
 {
   // <-- SPELLING-SPECIFIC SETTINGS --> //
   "cSpell.language": "en-GB",
-  "cSpell.words": ["HOANG", "SASS", "semistandard", "topnavbar"],
+  "cSpell.words": ["Airble", "Benevity", "HOANG", "Kanban", "SASS", "semistandard", "topnavbar"],
   // <-- EDITOR --> //
   "editor.tabSize": 2,
   "editor.formatOnPaste": true,
