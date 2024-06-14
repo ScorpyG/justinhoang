@@ -7,7 +7,7 @@ import FanIcon from '../icons/FanIcon';
 
 export const hobbyList: Array<HobbyCardData> = [
   {
-    color: '#ffc0cb',
+    color: '#FBB6CE',
     icon: <BrainIcon width={'max-content'} height={'max-content'} />,
     text: `I like spending time learning different
     things outside of programming, like psychology,
@@ -16,7 +16,7 @@ export const hobbyList: Array<HobbyCardData> = [
     improve myself as individual.`,
   },
   {
-    color: '#add8e6',
+    color: '#90cdf4',
     icon: <FanIcon width={'max-content'} height={'max-content'} />,
     text: `By combining both of my background in art and
     science help me design interactive interfaces allows

@@ -2,6 +2,7 @@ import Biography from '@/components/ProfileSection/Biography/Biography';
 import Hobbies from '@/components/ProfileSection/Hobbies/Hobbies';
 import Technologies from '@/components/ProfileSection/Technologies/Technologies';
 import Tools from '@/components/ProfileSection/Tools/Tools';
+import WorkExp from '@/components/ProfileSection/WorkExp/WorkExp';
 import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import styles from './about.module.scss';
@@ -16,6 +17,7 @@ export default function About() {
         <Box className={`${styles.container}`}>
           <Biography />
           <Technologies />
+          <WorkExp />
           <Tools />
           <Hobbies />
         </Box>
