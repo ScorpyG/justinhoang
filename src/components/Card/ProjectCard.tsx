@@ -27,7 +27,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       overflow="hidden"
       variant={'outline'}
       backgroundColor={'transparent'}
-      padding={'4'}
+      padding={4}
       border={'2px'}
     >
       <Tilt>

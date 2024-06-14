@@ -1,12 +1,10 @@
 import ContactForm from '@/components/ContactForm/ContactForm';
-import { Box, Flex, Heading, Text, chakra, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, chakra } from '@chakra-ui/react';
 import Head from 'next/head';
-import Location from '../../utilities/svgr/Location';
+import LocationIcon from '../../utilities/icons/LocationIcon';
 import styles from './contact.module.scss';
 
 export default function Contact() {
-  const colorStateForDarkMode = useColorModeValue('#000', '#FFF');
-
   return (
     <>
       <Head>
@@ -20,7 +18,7 @@ export default function Contact() {
             <Text mt={2}>Here how you can reach me</Text>
           </Box>
           <Flex gap={'15px'} justifyContent={'center'} alignItems={'center'}>
-            <Location fill={colorStateForDarkMode} />
+            <LocationIcon />
             <Heading size={'md'}>Vancouver, BC</Heading>
           </Flex>
           <ContactForm />
