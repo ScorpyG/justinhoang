@@ -3,8 +3,7 @@ import PaperPlaneIcon from '../icons/PaperPlaneIcon';
 import ProfileIcon from '../icons/ProfileIcon';
 
 // professional
-export const resume =
-  'https://docs.google.com/document/d/1__VXh_jdY7ULvg9cxh5o-OTXCchmGNDhFlajnDKWDE8/edit?usp=sharing';
+export const resume = '/static/docs/resume.pdf';
 
 // social media
 export const github = 'https://github.com/ScorpyG';
