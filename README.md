@@ -1,50 +1,36 @@
-# Justin Hoang's Portfolio
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ae6e4ecf-512f-4617-bea8-8f1e01e619e0/deploy-status)](https://app.netlify.com/sites/justinhoang/deploys)
-
-- This is updated version of the portfolio using [Next.js v13.2.3](https://nextjs.org/) and [React.js v18.2.0](https://reactjs.org/)
-- Rewrite using [TypeScript](https://www.typescriptlang.org/)
-  
-<img width="1800" alt="Screenshot 2024-03-30 at 11 49 18 AM" src="https://github.com/ScorpyG/justinhoang/assets/69221471/afa3b5ab-dd07-4a65-9fe9-fe2a67d2543c">
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, after you cloned the repository install all necessary dependencies
+First, run the development server:
 
 ```bash
-yarn install
-```
-
-Second, run the development server:
-
-```bash
+npm run dev
+# or
 yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<!-- TODO: Adding docs on create build through netlify cli -->
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Development Resources
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- [ChakraUI Docs](https://chakra-ui.com/getting-started) - learn how to use chakra.
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Sass Documentation](https://sass-lang.com/documentation/) - learn a better to style your website.
-- [React.js Documentation](https://reactjs.org/docs/getting-started.html) - this framework is well known! No need to explain.
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/handbook/intro.html) - better version of JavaScript for web development.
-- [three.js Documentation](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene) - WebGL framework allows for 3D rendering on your website.
-- [netlify cli Documentation](https://cli.netlify.com/) - website hosting service command-line tool for direct integration.
-- [date-fns](https://date-fns.org/) - Modern JavaScript date & time utility library
-- [NodeMailer](https://nodemailer.com/about/) - Module for email sending
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-<br/>
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-**Useful resources**
+## Deploy on Vercel
 
-- Using Three.js with React project: [react three fiber docs](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
-- Cool Tilt animations for on hover affects: [react-parallax-tilt](https://github.com/mkosir/react-parallax-tilt)
-- If you need to name a color variable: [reverse color name lookup](https://www.color-name.com/).
-- If you need to generate gradient: [CSS Gradient](https://cssgradient.io/)
-- If you need help figuring out the standard structure for **Design System**: [Material Design](https://m3.material.io/foundations)
-- If you need to convert .svg file into .tsx file: [SVGR playground](https://react-svgr.com/playground/?typescript=true), [Frontend Toolkit](https://www.fetoolkit.io/)
-- Common viewport sizing look-up: [General](https://yesviz.com/viewport/), [Mobile-only](https://www.icwebdesign.co.uk/common-viewport-sizes).
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
