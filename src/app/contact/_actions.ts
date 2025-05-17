@@ -1,57 +1,68 @@
 'use server';
 import { ContactFormValues } from '@/components/Form';
-import { google } from 'googleapis';
 import nodemailer, { SendMailOptions } from 'nodemailer';
 
 // -------------------------------------------------------------
-const GoogleOAuth2 = google.auth.OAuth2;
-
-const googleOAuth2Client = new GoogleOAuth2({
-  clientId: process.env.GOOGLE_CLIENT_ID,
-  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-});
-
-googleOAuth2Client.setCredentials({
-  refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
-});
-
-// -------------------------------------------------------------
 export async function sendMail(formData: ContactFormValues) {
-  // ! Something went wrong with the access token
-  //   const accessToken = await googleOAuth2Client.getAccessToken();
-
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    service: 'gmail',
-    auth: {
-      type: 'OAuth2',
-      user: process.env.EMAIL_USER,
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
-      accessToken: process.env.GOOGLE_ACCESS_TOKEN,
-      //   expires: 1484314697598,
-    },
-  });
-
   try {
-    // ...
-    await transporter.verify();
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
+    // ...
     const mailOptions: SendMailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
+      replyTo: formData.email,
       subject: `Contact request from ${formData.fullname}`,
-      text: formData.content,
-      html: `<p>From: ${formData.fullname} (${formData.email})</p><p>${formData.content}</p>`,
+      html: `
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                <title>Contact Form</title>
+            </head>
+            <body>
+                <div
+                style="
+                    width: 600px;
+                    margin: 0 auto;
+                    padding: 10px;
+                    border: 1px solid #e7e7e7;
+                    border-radius: 5px;
+                    font-family: sans-serif;
+                "
+                >
+                <h2><strong>You have a new message!</strong></h2>
+                <p>
+                    <strong>Name:<br /> </strong> ${formData.fullname}
+                </p>
+                <p>
+                    <strong>E-Mail: </strong><br />
+                    ${formData.email}
+                </p>
+                <p>
+                    <strong>Message: </strong><br />
+                    ${formData.content}
+                </p>
+                </div>
+            </body>
+        </html>`,
     };
 
     const mailResult = await transporter.sendMail(mailOptions);
 
     return mailResult;
   } catch (error) {
-    return error;
+    throw new Error(`Error sending email: ${error}`);
   }
 }
