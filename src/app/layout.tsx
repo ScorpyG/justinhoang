@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import './globals.css';
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   );
