@@ -18,10 +18,22 @@ export type ContactFormValues = z.infer<typeof ContactFormSchema>;
 export default function useContactForm() {
   const onSubmit: SubmitHandler<ContactFormValues> = useCallback(
     async (data) => {
-      // TODO: Handle form submission
-
-      // eslint-disable-next-line no-console
-      console.log(data);
+      toast.promise(
+        // ...
+        fetch('/contact/api', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }),
+        // ...
+        {
+          pending: 'Sending message...',
+          success: '🎉 Message sent!',
+          error: 'Something went wrong! Please try again later.',
+        },
+      );
     },
     [],
   );

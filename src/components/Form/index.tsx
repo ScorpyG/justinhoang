@@ -1,3 +1,7 @@
 import ContactForm from './components/ContactForm';
+import {
+  ContactFormSchema,
+  type ContactFormValues,
+} from './hooks/useContactForm';
 
-export { ContactForm };
+export { ContactForm, ContactFormSchema, ContactFormValues };
