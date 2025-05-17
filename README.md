@@ -1,50 +1,141 @@
-# Justin Hoang's Portfolio
+<!-- README-Template reference - https://github.com/othneildrew/Best-README-Template -->
+<a id="readme-top"></a>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ae6e4ecf-512f-4617-bea8-8f1e01e619e0/deploy-status)](https://app.netlify.com/sites/justinhoang/deploys)
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/light-logo.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/dark-logo.svg">
+    <img alt="Spair logo" src="/public/light-logo.svg" width="120" height="120" />
+  </picture>
 
-- This is updated version of the portfolio using [Next.js v13.2.3](https://nextjs.org/) and [React.js v18.2.0](https://reactjs.org/)
-- Rewrite using [TypeScript](https://www.typescriptlang.org/)
-  
-<img width="1800" alt="Screenshot 2024-03-30 at 11 49 18 AM" src="https://github.com/ScorpyG/justinhoang/assets/69221471/afa3b5ab-dd07-4a65-9fe9-fe2a67d2543c">
+  <br />
 
+  <h1 align="center">Portfolio Website Documentation</h1>
+
+  <p align="center">
+    Repository for <b>BuildBuddies API</b>, a platform to help people connect, collaborate and build the future.
+    <br />
+    <a href="https://github.com/ScorpyG/justinhoang">
+      <strong>Explore the docs! »</strong>
+    </a>
+  </p>
+</div>
+
+------
+<div>
+    <p align="center">Updated on <strong>30/04/2025</strong></p>
+</div>
+
+<br />
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Tables of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ol>
+        <li>
+          <a href="#prerequisites">Prerequisites</a>
+        </li>
+        <li>
+          <a href="#installation">Installation</a>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <a href="#resources">Resources</a>
+    </li>
+  </ol>
+</details>
+
+<!-- ABOUT -->
+## About The Project
+This repository contains the code for the portfolio website.
+
+> [!NOTE]
+> The document is still in working progress. Please contribute anyway you can to help us and the team at BuildBuddies improve the on-boarding process. Thank you!
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
-First, after you cloned the repository install all necessary dependencies
+> [!IMPORTANT]
+> *This guide was written with macOS system and [Homebrew](https://brew.sh/) as the default package manager. Therefore the installation commands and UI might be different for Linux or Windows operating system.*
 
-```bash
+<!-- If you wish to contribute. Down here is the Official Github docs on markdown syntax -->
+<!-- https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github -->
+
+
+### Prerequisites
+1. Install [Node](https://nodejs.org/en/download/package-manager/current). Recommend download the latest LTS version of node ***(v20.17.0 @ 28/08/2024)***
+```sh
+brew install node
+```
+
+2. **Optional** - Install [Yarn (Yet Another Resource Negotiator)](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable). By default when you install Node.js ([npm - Package Manager for JavaScript](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)) will be included in the installation. But Yarn is prefer... [Here is Why?](https://www.geeksforgeeks.org/difference-between-npm-and-yarn/)
+```sh
+brew install yarn
+```
+***OR*** (if you already have Node installed)
+```sh
+npm install --global yarn
+```
+
+3. **Optional** - Install [NVM (Node Version Manager)](https://github.com/nvm-sh/nvm). NVM allows you to switch between different versions of Node (might be useful if you want to test backwards compatibility on whatever features you're working on)
+```sh
+brew install nvm
+```
+<br />
+<p align="right">(<a href="#readme-top">&uarr; back to top</a>)</p>
+
+---
+
+### Installation
+1. Clone the repository
+```sh
+git clone git@github.com:ScorpyG/justinhoang.git
+```
+
+2. Install all dependencies
+```sh
 yarn install
 ```
 
-Second, run the development server:
-
-```bash
+3. Start the development server :tada: :tada: :tada:
+```sh
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- RESOURCES -->
+## Resources
 
-<!-- TODO: Adding docs on create build through netlify cli -->
+> [!CAUTION]
+> If you find any (documents, tutorials or blog posts) that are useful. Please check it with the lead first before install and use it. Due to Open-Source usage in proprietary software.
 
-## Development Resources
+External resources and documentations that this was based on. These should be the source of truth when you configure or extend the documentation.
 
-- [ChakraUI Docs](https://chakra-ui.com/getting-started) - learn how to use chakra.
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Sass Documentation](https://sass-lang.com/documentation/) - learn a better to style your website.
-- [React.js Documentation](https://reactjs.org/docs/getting-started.html) - this framework is well known! No need to explain.
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/handbook/intro.html) - better version of JavaScript for web development.
-- [three.js Documentation](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene) - WebGL framework allows for 3D rendering on your website.
-- [netlify cli Documentation](https://cli.netlify.com/) - website hosting service command-line tool for direct integration.
-- [date-fns](https://date-fns.org/) - Modern JavaScript date & time utility library
-- [NodeMailer](https://nodemailer.com/about/) - Module for email sending
+- [Next.js (App Router)](https://nextjs.org/docs) - SSR React Framework.
 
-<br/>
+- [React.js](https://react.dev/) - Web UI Framework.
 
-**Useful resources**
+- [React-hook-form](https://www.react-hook-form.com/) - Forms but better.
 
-- Using Three.js with React project: [react three fiber docs](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
-- Cool Tilt animations for on hover affects: [react-parallax-tilt](https://github.com/mkosir/react-parallax-tilt)
-- If you need to name a color variable: [reverse color name lookup](https://www.color-name.com/).
-- If you need to generate gradient: [CSS Gradient](https://cssgradient.io/)
-- If you need help figuring out the standard structure for **Design System**: [Material Design](https://m3.material.io/foundations)
-- If you need to convert .svg file into .tsx file: [SVGR playground](https://react-svgr.com/playground/?typescript=true), [Frontend Toolkit](https://www.fetoolkit.io/)
-- Common viewport sizing look-up: [General](https://yesviz.com/viewport/), [Mobile-only](https://www.icwebdesign.co.uk/common-viewport-sizes).
+- [React-toastify](https://fkhadra.github.io/react-toastify/introduction/) - Cool pop-up.
+
+- [Date-fns](https://date-fns.org/) - JS date utility.
+
+- [Zod](https://zod.dev/) - TypeScript schema type validation.
+
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/) - Because JavaScript fucking sucks.
+
+- [Tailwindcss](https://tailwindcss.com/) - CSS framework for styling.
+
+- [Motion](https://motion.dev/) - Animation shit idk (I'm suck at it)
+
+- [Git Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - The global standards for commit message.
+
+<br />
+<p align="right">(<a href="#readme-top">&uarr; back to top</a>)</p>
