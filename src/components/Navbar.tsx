@@ -51,7 +51,7 @@ export default function Navbar() {
             priority
             src={WebsiteLogoDark}
             alt="portfolio default link"
-            className="rounded-full"
+            className="rounded-full h-12 w-12 md:h-16 md:w-16"
           />
         </Link>
 

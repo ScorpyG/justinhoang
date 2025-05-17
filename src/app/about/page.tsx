@@ -17,14 +17,14 @@ export default function AboutPage() {
     <div className="flex-1 flex flex-col items-center justify-start gap-20 max-w-11/12 md:max-w-2/3 mx-auto">
       {/* ------------------------------ About me ------------------------------ */}
       <FadeIn duration={100}>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 mt-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-6">
           <Image
             priority
             src={isHeadshot ? HeadshotImage : GhostGif}
             alt="profile image"
             height={200}
             width={200}
-            className="rounded-full transition duration-200 ease-in-out cursor-pointer"
+            className="rounded-full transition duration-200 ease-in-out cursor-pointer hover:scale-95"
             onClick={() => setIsHeadshot((prev) => !prev)}
           />
 

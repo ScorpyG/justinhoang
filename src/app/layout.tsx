@@ -2,10 +2,11 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import type { Metadata } from 'next';
-import { Geist } from 'next/font/google';
+import { Inter } from 'next/font/google';
+import { ToastContainer } from 'react-toastify';
 import './globals.css';
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Justin H',
@@ -35,12 +36,18 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
-        className={`${geistSans.variable} antialiased scroll-smooth 
+        className={`${inter.className} antialiased scroll-smooth 
 			mx-auto flex max-w-7xl flex-col min-h-screen`}
       >
         <Navbar />
         {children}
         <Footer />
+        <ToastContainer
+          autoClose={1500} // 1.5 seconds
+          position="top-right"
+          stacked
+          limit={5}
+        />
         <ScrollToTopButton />
       </body>
     </html>
