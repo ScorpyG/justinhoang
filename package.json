@@ -1,7 +1,12 @@
 {
   "name": "justinhoang",
   "version": "0.1.0",
+  "author": "Justin H",
+  "description": "Website repository for Portfolio",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
