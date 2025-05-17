@@ -43,7 +43,7 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/docs/resume.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-row items-center justify-center gap-2 px-4 py-2 rounded-full
