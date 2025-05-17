@@ -1,5 +1,0 @@
-*.css
-*.scss
-*.svg
-!.eslintrc.js
-node_modules
