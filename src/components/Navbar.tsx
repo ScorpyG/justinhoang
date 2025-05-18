@@ -124,6 +124,24 @@ export default function Navbar() {
               <span className="font-medium">{tab.name}</span>
             </DisclosureButton>
           ))}
+
+          <Link
+            href="https://github.com/ScorpyG"
+            target="_blank"
+            className="flex flex-row items-center justify-start gap-2.5 px-2 py-3 rounded-md"
+          >
+            <GitHubIcon className="size-5" />
+            <span className="font-medium">GitHub</span>
+          </Link>
+
+          <Link
+            href="https://www.linkedin.com/in/justin-gia-hoang/"
+            target="_blank"
+            className="flex flex-row items-center justify-start gap-2.5 px-2 py-3 rounded-md"
+          >
+            <LinkedInIcon className="size-5" />
+            <span className="font-medium">LinkedIn</span>
+          </Link>
         </div>
       </DisclosurePanel>
     </Disclosure>
