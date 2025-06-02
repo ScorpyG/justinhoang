@@ -5,6 +5,7 @@ import PasswordGeneratorMedia from '../../public/images/passgen.gif';
 import PingPingMedia from '../../public/images/pingpong.gif';
 import QuoteGenMedia from '../../public/images/quotegen.png';
 import SpairMedia from '../../public/images/spair.png';
+import SpairLogo from '../../public/images/spair_logo.png';
 import StudyBuddyMedia from '../../public/images/studybuddy.png';
 import WeatherAppMedia from '../../public/images/weatherapp.gif';
 
@@ -59,7 +60,7 @@ export const experiences = [
   },
   {
     title: 'Founder',
-    media: null,
+    media: SpairLogo,
     company: 'Spair',
     startDate: new Date('2024-09-01'),
     endDate: null,
