@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 import AirbleLogo from '../../public/images/airble.png';
 import BenevityLogo from '../../public/images/benevity.png';
+import BuildbuddiesMedia from '../../public/images/buildbuddies.png';
 import PasswordGeneratorMedia from '../../public/images/passgen.gif';
 import PingPingMedia from '../../public/images/pingpong.gif';
 import QuoteGenMedia from '../../public/images/quotegen.png';
@@ -24,7 +25,7 @@ export const skills = [
   'REST',
   'HTML',
   'CSS',
-  'Tailwind',
+  'TailwindCSS',
   'SASS',
   'Git',
   'Figma',
@@ -81,6 +82,23 @@ export interface Project {
 }
 
 export const projects: Array<Project> = [
+  {
+    title: 'BuildBuddies',
+    media: BuildbuddiesMedia,
+    source: 'https://buidlbuddies.ca',
+    description: `A platform that connects entrepreneur with builders and help them kick start their projects and ideas to a new.`,
+    technologies: [
+      'TypeScript',
+      'Next.js',
+      'TailwindCSS',
+      'GraphQL',
+      'Prisma',
+      'PostgreSQL',
+      'Clerk',
+      'Stripe',
+      'OpenAI',
+    ],
+  },
   {
     title: 'Spair',
     media: SpairMedia,
