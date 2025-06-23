@@ -18,7 +18,10 @@ export const skills = [
   'Next.js',
   'Node.js',
   'Express.js',
+  'Prisma',
+  'Redis',
   'MongoDB',
+  'MySQL',
   'PostgreSQL',
   'Neo4j',
   'GraphQL',
@@ -71,6 +74,19 @@ export const experiences = [
     Integrated AI capabilities with OpenAI, Anthropic and Qdrant to help improve active recall learning and information retention. 
     Developed real-time collaboration and peer-to-peer communication features with WebRTC and CRDT. Designed and integrated email invite system with MailerSend service enabling seamless communication.`,
   },
+  {
+    title: 'Co-Founder',
+    media: null,
+    company: 'BuildBuddies',
+    startDate: new Date('2025-04-02'),
+    endDate: null,
+    description: `Co-founded a platform that connects entrepreneurs with builders, helping them kickstart their projects and ideas. 
+    Led architecture design and development of 10+ new features. 
+    Oversaw the development and maintenance of the products, technical documentation and workflows. 
+    Analyzed user feedback and implemented improvements, resulting in a 30% increase in user engagement. 
+    Planned, tracked and managed deliverables using Agile methodologies, ensuring timely delivery of features and bug fixes of more than
+    20 sprints and +10 deployments.`,
+  },
 ];
 
 export interface Project {
@@ -85,7 +101,7 @@ export const projects: Array<Project> = [
   {
     title: 'BuildBuddies',
     media: BuildbuddiesMedia,
-    source: 'https://buidlbuddies.ca',
+    source: 'https://buildbuddies.ca',
     description: `A platform that connects entrepreneur with builders and help them kick start their projects and ideas to a new.`,
     technologies: [
       'TypeScript',
@@ -93,6 +109,7 @@ export const projects: Array<Project> = [
       'TailwindCSS',
       'GraphQL',
       'Prisma',
+      'Redis',
       'PostgreSQL',
       'Clerk',
       'Stripe',
@@ -112,6 +129,7 @@ export const projects: Array<Project> = [
       'GraphQL',
       'Prisma',
       'PostgreSQL',
+      'Redis',
       'Clerk',
       'Stripe',
       'OpenAI',

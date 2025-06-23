@@ -16,7 +16,7 @@ export default function ProjectsPage() {
       </FadeIn>
 
       <FadeIn duration={300}>
-        <div className="flex flex-wrap items-stretch justify-center gap-6 my-8">
+        <div className="flex flex-wrap items-stretch justify-start gap-6 my-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
