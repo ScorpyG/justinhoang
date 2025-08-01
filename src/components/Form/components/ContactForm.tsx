@@ -59,7 +59,7 @@ export default function ContactForm() {
         </label>
         <input
           id="email"
-          placeholder="Enter full name"
+          placeholder="Enter your email"
           autoComplete="email"
           className={`ring-0 outline-none rounded-md placeholder:text-gray-400 border-2 bg-gray-100 ${errors.email ? 'border-red-500' : 'border-gray-100'}`}
           // ...
