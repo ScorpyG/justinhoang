@@ -13,7 +13,7 @@
   <h1 align="center">Portfolio Website Documentation</h1>
 
   <p align="center">
-    Repository for <b>BuildBuddies API</b>, a platform to help people connect, collaborate and build the future.
+    Repository for <b>Justin Hoang Portfolio</b>.
     <br />
     <a href="https://github.com/ScorpyG/justinhoang">
       <strong>Explore the docs! »</strong>
@@ -23,7 +23,7 @@
 
 ------
 <div>
-    <p align="center">Updated on <strong>30/04/2025</strong></p>
+    <p align="center">Updated on <strong>20/08/2025</strong></p>
 </div>
 
 <br />
@@ -138,4 +138,4 @@ External resources and documentations that this was based on. These should be th
 - [Git Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - The global standards for commit message.
 
 <br />
-<p align="right">(<a href="#readme-top">&uarr; back to top</a>)</p>
+<p align="right"><a href="#readme-top">&uarr; back to top</a></p>
