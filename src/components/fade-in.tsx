@@ -53,7 +53,8 @@ export default function FadeIn({
       {...props}
       ref={elementRef}
       className={cn(
-        'transition-all duration-700 ease-out',
+        // Scroll anchoring follows this translate and shifts the page on refresh.
+        '[overflow-anchor:none] transition-all duration-700 ease-out',
         isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0',
         className
       )}

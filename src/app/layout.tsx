@@ -48,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html
       lang="en"
       className={cn(
-        'h-full overscroll-none scroll-smooth',
+        'h-full overscroll-none scroll-smooth no-scrollbar',
         'antialiased',
         geistSans.variable,
         geistMono.variable,
