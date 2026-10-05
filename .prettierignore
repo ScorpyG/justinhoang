@@ -1,9 +1,5 @@
 # Ignore artifacts:
 build
 coverage
-node_modules
 
-# Ignore specific files:
-.env
-.DS_Store
-README.md
+.vscode

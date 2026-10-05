@@ -1,11 +1,15 @@
-import { relative } from 'path';
+import path from 'path';
 
-// https://nextjs.org/docs/app/api-reference/config/eslint#running-lint-on-staged-files
+/**
+ * @see https://nextjs.org/docs/app/api-reference/config/eslint#running-lint-on-staged-files
+ */
 const buildEslintCommand = (filenames) =>
-  `next lint --fix --file ${filenames
-    .map((f) => relative(process.cwd(), f))
-    .join(' --file ')}`;
+  `eslint --fix ${filenames
+    .map((f) => `"${path.relative(process.cwd(), f)}"`)
+    .join(' ')}`;
 
-const config = { '*.{js,jsx,ts,tsx}': [buildEslintCommand] };
+const config = {
+  '*.{js,jsx,ts,tsx}': [buildEslintCommand],
+};
 
 export default config;
